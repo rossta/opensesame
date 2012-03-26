@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenSesame</title>
+  <%= stylesheet_link_tag    "open_sesame/application", :media => "all" %>
+  <%= javascript_include_tag "open_sesame/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <div class="inner-container">
+    <% flash.each do |type, message| %>
+      <div class="alert alert-<%= type %> <%= type %>" data-role="flash-<%= type %>">
+        <%= message %>
+      </div>
+    <% end %>
+    <%= yield %>
+  </div>
+</div>
+
+</body>
+</html>
