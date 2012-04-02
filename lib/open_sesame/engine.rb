@@ -25,8 +25,8 @@ module OpenSesame
       if defined?(Devise)
         Devise.setup do |config|
           config.warden do |manager|
-            manager.failure_app = OpenSesame::FailureApp.new
             manager.default_strategies(:opensesame_github, :scope => :opensesame)
+            manager.failure_app = OpenSesame::FailureApp.new
           end
         end
       else

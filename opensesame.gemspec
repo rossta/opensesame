@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = OpenSesame::VERSION
   s.authors     = ["Ross Kaffenberger"]
   s.email       = ["rosskaff@gmail.com"]
-  s.homepage    = "https://github.com/challengepost/gardenwall-challengepost"
+  s.homepage    = "https://github.com/rossta/opensesame"
   s.summary     = "Rails engine for authenticating internal applications and private-access products"
   s.description = "Rails engine for authenticating internal applications and private-access products"
 
