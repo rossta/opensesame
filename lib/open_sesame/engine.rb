@@ -21,7 +21,15 @@ module OpenSesame
 
       OpenSesame::Github.organization_name = OpenSesame.organization_name
 
-      middleware.use OmniAuth::Strategies::GitHub, OpenSesame.github_client[:id], OpenSesame.github_client[:secret]
+      middleware.use OmniAuth::Builder do
+        configure do |config|
+          config.path_prefix = '/auth'
+        end
+
+        provider :github, OpenSesame.github_client[:id], OpenSesame.github_client[:secret]
+      end
+
+
       if defined?(Devise)
         Devise.setup do |config|
           config.warden do |manager|
