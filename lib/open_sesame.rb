@@ -4,6 +4,7 @@ module OpenSesame
   autoload :Configuration, 'open_sesame/configuration'
   autoload :ControllerHelper, 'open_sesame/controller_helper'
   autoload :ViewHelper, 'open_sesame/view_helper'
+  autoload :FailureApp, 'open_sesame/failure_app'
 
   delegate *Configuration::CONFIGURABLE_ATTRIBUTES, :to => :configuration
 
