@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.summary     = "Rails engine for authenticating internal applications and private-access products"
   s.description = "Rails engine for authenticating internal applications and private-access products"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.1"
