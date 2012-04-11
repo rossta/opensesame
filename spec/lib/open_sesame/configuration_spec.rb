@@ -55,4 +55,60 @@ describe OpenSesame::Configuration do
       configuration.validate!.should be_true
     end
   end
+
+  describe "enabled?" do
+    let(:conditional) { mock('conditional', :true? => true) }
+
+    it { configuration.enabled?.should be_false }
+
+    it "true if enabled!" do
+      configuration.enable!
+      configuration.should be_enabled
+    end
+
+    it "false if disabled" do
+      configuration.disable!
+      configuration.should_not be_enabled
+    end
+
+    it "false if enable_if clause is false" do
+      conditional.stub!(:true?).and_return(false)
+      configuration.enable_if conditional.true?
+      configuration.should_not be_enabled
+    end
+
+    it "true if enable_if clause is true" do
+      conditional.stub!(:true?).and_return(true)
+      configuration.enable_if conditional.true?
+      configuration.should be_enabled
+    end
+
+    it "true if enable_if clause is false but then enabled!" do
+      conditional.stub!(:true?).and_return(false)
+      configuration.enable_if conditional.true?
+      configuration.enable!
+      configuration.should be_enabled
+    end
+
+    it "false if enable_if clause is true but then disabled!" do
+      conditional.stub!(:true?).and_return(true)
+      configuration.enable_if conditional.true?
+      configuration.disable!
+      configuration.should_not be_enabled
+    end
+
+    it "false if enabled! then supplied with enable_if clause that is false" do
+      configuration.enable!
+      conditional.stub!(:true?).and_return(false)
+      configuration.enable_if conditional.true?
+      configuration.should_not be_enabled
+    end
+
+    it "true if disabled! then supplied with enable_if clause that is true" do
+      configuration.disable!
+      conditional.stub!(:true?).and_return(true)
+      configuration.enable_if conditional.true?
+      configuration.should be_enabled
+    end
+  end
 end

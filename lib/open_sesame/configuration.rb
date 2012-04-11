@@ -2,7 +2,7 @@ module OpenSesame
   class ConfigurationError < RuntimeError; end
 
   class Configuration
-    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :github_client]
+    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :github_client, :enabled, :enable_clause]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
     def mounted_at(mount_prefix)
@@ -17,6 +17,26 @@ module OpenSesame
       self.organization_name = organization_name
     end
 
+    def enable_if(conditional)
+      self.enabled = nil
+      self.enable_clause = lambda { conditional }
+    end
+
+    def enable!
+      self.enable_clause = nil
+      self.enabled = true
+    end
+
+    def disable!
+      self.enable_clause = nil
+      self.enabled = false
+    end
+
+    def enabled?
+      (!self.enabled.nil? && self.enabled) ||
+      (!self.enable_clause.nil? && self.enable_clause.call)
+    end
+
     def configure
       yield self
     end
@@ -28,10 +48,13 @@ module OpenSesame
       [:id, :secret].all? { |key| self.github_client.keys.include?(key) }
     end
 
+    def configured?
+      [:organization_name, :mount_prefix, :github_client].any? { |required| send(required).present? }
+    end
+
     def validate!
       return true if valid?
       message = <<-MESSAGE
-
 
       Update your OpenSesame configuration. Example:
 
