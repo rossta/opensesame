@@ -29,7 +29,6 @@ module OpenSesame
         provider :github, OpenSesame.github_client[:id], OpenSesame.github_client[:secret]
       end
 
-
       if defined?(Devise)
         Devise.setup do |config|
           config.warden do |manager|
@@ -40,7 +39,7 @@ module OpenSesame
       else
         app.config.middleware.use Warden::Manager do |manager|
           manager.default_strategies(:opensesame_github, :scope => :opensesame)
-          manager.failure_app = lambda { OpenSesame::SessionsController.action(:new).call(env)}
+          manager.failure_app = lambda { |env| OpenSesame::SessionsController.action(:new).call(env)}
         end
       end
 

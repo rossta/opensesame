@@ -1,6 +1,5 @@
 module OpenSesame
   class SessionsController < ApplicationController
-    unloadable
 
     skip_before_filter :authenticate_opensesame!
     skip_authorization_check if defined?(CanCan)
