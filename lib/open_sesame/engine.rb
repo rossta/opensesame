@@ -24,6 +24,7 @@ module OpenSesame
       middleware.use OmniAuth::Builder do
         configure do |config|
           config.path_prefix = '/auth'
+          config.full_host = OpenSesame.full_host if OpenSesame.full_host
         end
 
         provider :github, OpenSesame.github_client[:id], OpenSesame.github_client[:secret]

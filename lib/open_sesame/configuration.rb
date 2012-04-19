@@ -2,11 +2,15 @@ module OpenSesame
   class ConfigurationError < RuntimeError; end
 
   class Configuration
-    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :github_client, :enabled, :enable_clause]
+    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :github_client, :enabled, :enable_clause, :full_host]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
     def mounted_at(mount_prefix)
       self.mount_prefix = mount_prefix
+    end
+
+    def host(full_host)
+      self.full_host = full_host
     end
 
     def github(client_id, client_secret)
