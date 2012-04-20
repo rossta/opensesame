@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Opensesame : Rails engine for authenticating internal applications and private-access products" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Opensesame</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/rossta/opensesame">Fork Me on GitHub</a>
+
+          <h1 id="project_title">Opensesame</h1>
+          <h2 id="project_tagline">Rails engine for authenticating internal applications and private-access products</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/rossta/opensesame/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/rossta/opensesame/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>OpenSesame</h1>
+
+<p>OpenSesame is a <a href="https://github.com/hassox/warden">Warden</a> strategy for providing "walled garden" authentication for access to Rack-based applications via Omniauth. For example, your company has internal apps and/or staging enviroments for multiple projects and you want something better than HTTP basic auth. The intent is protect the visibility of your app from the outside world.</p>
+
+<p>Enter OpenSesame. To authenticate, OpenSesame currently uses Omniauth and the Github API to require that a user is both logged in to Github and a member of the configurable Github organization.</p>
+
+<h2>Usage</h2>
+
+<p>In your Gemfile:</p>
+
+<pre><code>$ gem "opensesame"
+</code></pre>
+
+<p>Register your application(s) with Github for OAuth access. For each application, you need a name, the site url,
+and a callback for OAuth. The OmniAuth-Github OAuth strategy used under the hood will expect the callback at mount path + '/auth/github/callback'. So the development version of your client application might be registered as:</p>
+
+<pre><code>Name: MyApp - local
+URL: http://localhost:3000
+Callback URL: http://localhost:3000/welcome/auth/github/callback
+</code></pre>
+
+<p>Configure OpenSesame:</p>
+
+<div class="highlight">
+<pre><span class="c1"># Rails config/initializers/opensesame.rb or Sinatra app.rb</span>
+
+<span class="nb">require</span> <span class="s1">'opensesame'</span>
+
+<span class="no">OpenSesame</span><span class="o">.</span><span class="n">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">github</span>       <span class="no">ENV</span><span class="o">[</span><span class="s1">'CAPITAN_GITHUB_KEY'</span><span class="o">]</span><span class="p">,</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">'CAPITAN_GITHUB_SECRET'</span><span class="o">]</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">organization</span> <span class="s1">'challengepost'</span>
+  <span class="n">config</span><span class="o">.</span><span class="n">mounted_at</span>   <span class="s1">'/welcome'</span>
+<span class="k">end</span>
+</pre>
+</div>
+
+
+<p>Mount OpenSesame in your Rails routes.rb:</p>
+
+<div class="highlight">
+<pre><span class="c1"># Rails config/routes.rb</span>
+
+<span class="n">mount</span> <span class="no">OpenSesame</span><span class="o">::</span><span class="no">Engine</span> <span class="o">=&gt;</span> <span class="s2">"/welcome"</span><span class="p">,</span> <span class="ss">:as</span> <span class="o">=&gt;</span> <span class="s2">"opensesame"</span>
+</pre>
+</div>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Opensesame maintained by <a href="https://github.com/rossta">rossta</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
