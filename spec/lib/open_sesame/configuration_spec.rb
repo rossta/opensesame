@@ -21,6 +21,11 @@ describe OpenSesame::Configuration do
     configuration.mount_prefix.should == "/foobar"
   end
 
+  it "auto_access sets provider to attempt auto login" do
+    configuration.auto_login "github"
+    configuration.auto_access_provider.should == "github"
+  end
+
   describe "valid?" do
     it "false when values not set" do
       configuration.organization "challengepost"

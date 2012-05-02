@@ -1,3 +1,5 @@
+require "opensesame"
+
 OpenSesame.configure do |config|
   config.organization 'challengepost'
   config.mounted_at   '/welcome'
