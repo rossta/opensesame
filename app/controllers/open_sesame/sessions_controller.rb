@@ -14,14 +14,12 @@ module OpenSesame
     end
 
     def create
-      warden.authenticate!(:scope => :opensesame)
-      flash[:success] = "Welcome!"
+      login_opensesame
       redirect_to main_app.root_url
     end
 
     def destroy
-      warden.logout(:opensesame)
-      flash[:notice] = "Logged out!"
+      logout_opensesame
       redirect_to main_app.root_url
     end
 
@@ -33,19 +31,38 @@ module OpenSesame
 
     def attempt_auto_authenticate
       return unless attempt_auto_access?
-      
+
       redirect_to identity_request_path(OpenSesame.auto_access_provider)
     end
 
     def attempt_auto_access?
+      return false if just_logged_out?
       return false unless OpenSesame.auto_access_provider.present?
       attempts = session[:opensesame_auto_access_attempt].to_i
       session[:opensesame_auto_access_attempt] = attempts + 1
       attempts < 1
     end
 
+    def just_logged_out?
+      !!session[:opensesame_logged_out].tap do
+        session[:opensesame_logged_out] = nil
+      end
+    end
+
     def clear_auto_attempt!
       session[:opensesame_auto_access_attempt] = nil
     end
+
+    def login_opensesame
+      warden.authenticate!(:scope => :opensesame)
+      flash[:success] = "Welcome!"
+    end
+
+    def logout_opensesame
+      warden.logout(:opensesame)
+      session[:opensesame_logged_out] = 1
+      flash[:notice] = "Logged out!"
+    end
+
   end
 end
