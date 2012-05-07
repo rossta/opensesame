@@ -6,7 +6,8 @@ module OpenSesame
   autoload :ViewHelper, 'open_sesame/view_helper'
   autoload :FailureApp, 'open_sesame/failure_app'
 
-  delegate *Configuration::CONFIGURABLE_ATTRIBUTES, :to => :configuration
+  @to_configuration = Configuration::CONFIGURABLE_ATTRIBUTES + [:to => :configuration]
+  delegate *@to_configuration
   delegate :enabled?, :to => :configuration
 
   mattr_accessor :configuration
