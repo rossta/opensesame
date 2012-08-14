@@ -15,7 +15,7 @@ and a callback for OAuth. The OmniAuth-Github OAuth strategy used under the hood
 
     Name: MyApp - local
     URL: http://localhost:3000
-    Callback URL: http://localhost:3000/welcome/auth/github/callback
+    Callback URL: http://localhost:3000/opensesame/auth/github/callback
 
 Configure OpenSesame:
 
@@ -25,9 +25,9 @@ Configure OpenSesame:
 require 'opensesame'
 
 OpenSesame.configure do |config|
-  config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
+  config.client ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
   config.organization 'challengepost'
-  config.mounted_at   '/welcome'
+  config.mounted_at   '/opensesame'
 end
 ```
 
@@ -36,5 +36,5 @@ Mount OpenSesame in your Rails routes.rb:
 ```ruby
 # Rails config/routes.rb
 
-mount OpenSesame::Engine => "/welcome", :as => "opensesame"
+mount OpenSesame::Engine => "/opensesame", :as => "opensesame"
 ```

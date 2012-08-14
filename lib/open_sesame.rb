@@ -4,7 +4,9 @@ module OpenSesame
   autoload :Configuration, 'open_sesame/configuration'
   autoload :ControllerHelper, 'open_sesame/controller_helper'
   autoload :ViewHelper, 'open_sesame/view_helper'
-  autoload :FailureApp, 'open_sesame/failure_app'
+  autoload :AuthApp, 'open_sesame/auth_app'
+  autoload :Strategy, 'open_sesame/strategy'
+  autoload :FailureApp, 'open_sesame/failure_app' if defined?(Devise)
 
   delegate *Configuration::CONFIGURABLE_ATTRIBUTES, :to => :configuration
   delegate :enabled?, :to => :configuration

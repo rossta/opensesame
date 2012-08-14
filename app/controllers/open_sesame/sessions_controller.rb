@@ -34,7 +34,7 @@ module OpenSesame
     def attempt_auto_authenticate
       return unless attempt_auto_access?
       
-      redirect_to identity_request_path(OpenSesame.auto_access_provider)
+      redirect_to auth_request_path
     end
 
     def attempt_auto_access?

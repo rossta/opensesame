@@ -10,10 +10,10 @@ describe OpenSesame::Configuration do
     configuration.organization_name.should == "challengepost"
   end
 
-  it "github sets github client credentials" do
-    configuration.github "client_id", "client_secret"
-    configuration.github_client[:id].should == "client_id"
-    configuration.github_client[:secret].should == "client_secret"
+  it "sets client credentials" do
+    configuration.client "client_id", "client_secret"
+    configuration.client_id.should == "client_id"
+    configuration.client_secret.should == "client_secret"
   end
 
   it "mounted_at sets mount_prefix" do
@@ -22,8 +22,8 @@ describe OpenSesame::Configuration do
   end
 
   it "auto_access sets provider to attempt auto login" do
-    configuration.auto_login "github"
-    configuration.auto_access_provider.should == "github"
+    configuration.auto_login "alibaba"
+    configuration.auto_access_provider.should == "alibaba"
   end
 
   describe "valid?" do
@@ -32,17 +32,18 @@ describe OpenSesame::Configuration do
       configuration.should_not be_valid
 
       configuration.organization_name = nil
-      configuration.github "client_id", "client_secret"
+      configuration.client "client_id", "client_secret"
       configuration.should_not be_valid
 
-      configuration.github_client = nil
+      configuration.client_id = nil
+      configuration.client_secret = nil
       configuration.mounted_at "/foobar"
       configuration.should_not be_valid
     end
 
     it "true when all values set" do
       configuration.organization "challengepost"
-      configuration.github "client_id", "client_secret"
+      configuration.client "client_id", "client_secret"
       configuration.mounted_at "/foobar"
       configuration.should be_valid
     end
@@ -53,7 +54,7 @@ describe OpenSesame::Configuration do
 
     it "succeeds when valid" do
       configuration.organization "challengepost"
-      configuration.github "client_id", "client_secret"
+      configuration.client "client_id", "client_secret"
       configuration.mounted_at "/foobar"
       configuration.should be_valid
 

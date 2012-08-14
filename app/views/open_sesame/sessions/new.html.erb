@@ -5,7 +5,7 @@
   <p>Welcome! You have arrived at a <%= OpenSesame.organization_name.titleize %> application requiring additional credentials. To continue, please log in via:</p>
   <div class="table">
     <div class="table-cell align-middle">
-      <%= login_image_link_to('github') %>
+      <%= link_to(OpenSesame.organization_name, auth_request_path) %>
     </div>
   </div>
 </div>
