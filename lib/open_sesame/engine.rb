@@ -17,6 +17,8 @@ module OpenSesame
     end
 
     initializer "opensesame.middleware", :after => :load_config_initializers do |app|
+      require 'bootstrap-sass'
+
       OpenSesame.configuration.validate!
 
       OpenSesame::Github.organization_name = OpenSesame.organization_name
