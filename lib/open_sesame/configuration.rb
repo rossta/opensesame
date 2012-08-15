@@ -71,7 +71,7 @@ module OpenSesame
       OpenSesame.configure do |config|
         config.organization 'challengepost'
         config.mounted_at   '/opensesame'
-        config.client       ENV['ALIBABA_CLIENT_ID'], ENV['ALIBABA_CLIENT_SECRET']
+        config.client       ENV['SESAMESTREET_APP_ID'], ENV['SESAMESTREET_SECRET']
       end
 
       When you register the app, make sure to point the callback url to

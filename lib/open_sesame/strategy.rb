@@ -5,7 +5,7 @@ module OpenSesame
     attr_writer :organization
 
     def valid?
-      auth_hash && auth_hash["provider"] == "alibaba"
+      auth_hash && auth_hash["provider"] == "sesamestreet"
     end
 
     def authenticate!

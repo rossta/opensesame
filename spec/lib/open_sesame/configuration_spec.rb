@@ -22,8 +22,8 @@ describe OpenSesame::Configuration do
   end
 
   it "auto_access sets provider to attempt auto login" do
-    configuration.auto_login "alibaba"
-    configuration.auto_access_provider.should == "alibaba"
+    configuration.auto_login "sesamestreet"
+    configuration.auto_access_provider.should == "sesamestreet"
   end
 
   describe "valid?" do

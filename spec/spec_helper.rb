@@ -23,7 +23,7 @@ module TestHelper
   def setup_for_opensesame_login(options = {})
     OpenSesame.configuration.mock_auth = {
       "uid" => "1234",
-      "provider" => "alibaba"
+      "provider" => "sesamestreet"
     }.merge(options)
   end
 end

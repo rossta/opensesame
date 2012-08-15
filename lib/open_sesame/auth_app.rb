@@ -43,14 +43,14 @@ module OpenSesame
     end
 
     def provider
-      'alibaba'
+      'sesamestreet'
     end
 
     def site
       _site = if Rails.env.test? || Rails.env.development?
         'http://localhost:3001'
       else
-        'https://alibabapost.herokuapp.com'
+        'https://sesamestreet.herokuapp.com'
       end
       log :info, "site: #{_site}"
       _site

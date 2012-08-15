@@ -18,8 +18,7 @@ module OpenSesame
     end
 
     initializer "opensesame.middleware", :after => :load_config_initializers do |app|
-      require 'bootstrap-sass'
-      app.config.assets.precompile += ['opensesame.js', 'opensesame.css']
+      app.config.assets.precompile += ['opensesame.css']
 
       OpenSesame.configuration.validate!
 

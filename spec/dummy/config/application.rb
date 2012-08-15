@@ -10,8 +10,6 @@ require "sprockets/railtie"
 
 Bundler.require
 
-require "bootstrap-sass"
-
 module Dummy
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
