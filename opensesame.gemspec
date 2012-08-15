@@ -17,7 +17,6 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.1"
-  s.add_dependency "bootstrap-sass", "~> 2.0.1"
   s.add_dependency "oauth2"
   s.add_dependency "warden"
 
