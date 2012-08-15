@@ -8,7 +8,8 @@ module OpenSesame
   autoload :Strategy, 'open_sesame/strategy'
   autoload :FailureApp, 'open_sesame/failure_app' if defined?(Devise)
 
-  delegate *Configuration::CONFIGURABLE_ATTRIBUTES, :to => :configuration
+  @to_configuration = Configuration::CONFIGURABLE_ATTRIBUTES + [:to => :configuration]
+  delegate *@to_configuration
   delegate :enabled?, :to => :configuration
 
   mattr_accessor :configuration

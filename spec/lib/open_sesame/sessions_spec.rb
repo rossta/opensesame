@@ -15,19 +15,35 @@ describe "Session", :type => :request do
       page.should have_content "Welcome Home"
     end
 
-    it "allows auto login" do
-      OpenSesame.stub!(:auto_access_provider).and_return('alibaba')
-      visit root_path
-      page.should have_content "Welcome Home"
+    describe "auto login" do
+      before { OpenSesame.stub!(:auto_access_provider).and_return('alibaba') }
+
+      it "allows auto login" do
+        OpenSesame.stub!(:auto_access_provider).and_return('alibaba')
+        visit root_path
+        page.should have_content "Welcome Home"
+      end
+
+      it "skips auto login if just logged out" do
+        visit root_path
+
+        click_link "Logout"
+
+        page.should_not have_content "Welcome Home"
+        page.should have_content "Login"
+
+        visit root_path  # auto login now works on refresh
+        page.should have_content "Welcome Home"
+        page.should_not have_content "Login"
+      end
+
+      it "tries auto login and ends up on opensesame page after failure" do
+        OpenSesame.stub!(:auto_access_provider).and_return('alibaba')
+        visit root_path
+        page.should have_content "Login"
+        page.should_not have_content "Welcome Home"
+      end
+
     end
-
-  end
-
-  it "tries auto login and ends up on opensesame page after failure" do
-    OpenSesame.stub!(:auto_access_provider).and_return('alibaba')
-    visit root_path
-    page.should have_content "Login"
-    page.should_not have_content "Welcome Home"
-  end
 
 end
