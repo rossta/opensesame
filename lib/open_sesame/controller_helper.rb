@@ -1,3 +1,4 @@
+# encoding: utf-8
 module OpenSesame
   module ControllerHelper
     extend ActiveSupport::Concern

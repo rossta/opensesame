@@ -1,8 +1,9 @@
+# encoding: utf-8
 module OpenSesame
   class ConfigurationError < RuntimeError; end
 
   class Configuration
-    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :client_id, :client_secret, 
+    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :client_id, :client_secret,
       :enabled, :enable_clause, :full_host, :auto_access_provider, :test_mode, :mock_auth]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 

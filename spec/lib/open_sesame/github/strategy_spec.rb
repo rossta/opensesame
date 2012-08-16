@@ -13,17 +13,17 @@ describe OpenSesame::Github::Strategy do
     OpenSesame::Github::Strategy.ancestors.should include(Warden::Strategies::Base)
   end
 
-  it "is valid when github is provider in request env omniauth key" do
-    @env['omniauth.auth'] = { "provider" => "github" }
+  it "is valid when github is provider in request env opensesame key" do
+    @env['opensesame.auth'] = { "provider" => "github" }
     strategy.should be_valid
   end
 
-  it "is not valid when provider is other in request env omniauth key" do
-    @env['omniauth.auth'] = { "provider" => "another" }
+  it "is not valid when provider is other in request env opensesame key" do
+    @env['opensesame.auth'] = { "provider" => "another" }
     strategy.should_not be_valid
   end
 
-  it "is not valid when omniauth key is missing in request env" do
+  it "is not valid when opensesame key is missing in request env" do
     strategy.should_not be_valid
   end
 
@@ -37,7 +37,7 @@ describe OpenSesame::Github::Strategy do
     let(:team_members) { OpenSesame::Github::Collection.new }
 
     before do
-      @env['omniauth.auth'] = { "provider" => "github", "uid" => 123 }
+      @env['opensesame.auth'] = { "provider" => "github", "uid" => 123 }
 
       team_members.stub!(:find => nil)
       organization.team_members = team_members

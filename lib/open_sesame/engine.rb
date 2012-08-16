@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'warden'
 require 'open_sesame/strategy'
 
@@ -22,8 +23,8 @@ module OpenSesame
 
       OpenSesame.configuration.validate!
 
-      app.config.middleware.use OpenSesame::AuthApp, 
-        :client_id => OpenSesame.configuration.client_id, 
+      app.config.middleware.use OpenSesame::AuthApp,
+        :client_id => OpenSesame.configuration.client_id,
         :client_secret => OpenSesame.configuration.client_secret
 
       if defined?(Devise)

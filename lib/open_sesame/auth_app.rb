@@ -1,3 +1,4 @@
+# encoding: utf-8
 require 'oauth2'
 
 module OpenSesame
@@ -166,7 +167,7 @@ module OpenSesame
       uri.path = ''
       uri.query = nil
       #sometimes the url is actually showing http inside rails because the other layers (like nginx) have handled the ssl termination.
-      uri.scheme = 'https' if(request.env['HTTP_X_FORWARDED_PROTO'] == 'https')          
+      uri.scheme = 'https' if(request.env['HTTP_X_FORWARDED_PROTO'] == 'https')
       uri.to_s
     end
 
@@ -189,7 +190,7 @@ module OpenSesame
     end
 
     def redirect(uri)
-      Rack::Response.new.tap do |r|     
+      Rack::Response.new.tap do |r|
         if options[:iframe]
           r.write("<script type='text/javascript' charset='utf-8'>top.location.href = '#{uri}';</script>")
         else
@@ -259,7 +260,7 @@ module OpenSesame
       verifier = request.params['code']
       client.auth_code.get_token(verifier, :redirect_uri => callback_url)
     end
- 
+
    # An error that is indicated in the OAuth 2.0 callback.
     # This could be a `redirect_uri_mismatch` or other
     class CallbackError < StandardError

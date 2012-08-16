@@ -7,19 +7,19 @@ module OpenSesame
       attr_writer :organization
 
       def valid?
-        omniauth && omniauth["provider"] == "github"
+        auth_hash && auth_hash["provider"] == "github"
       end
 
       def authenticate!
-        if team_member = organization.find_team_member(omniauth["uid"])
+        if team_member = organization.find_team_member(auth_hash["uid"])
           success! team_member
         else
           fail 'Sorry, you do not have access'
         end
       end
 
-      def omniauth
-        request.env['omniauth.auth']
+      def auth_hash
+        request.env['opensesame.auth']
       end
 
       def organization
