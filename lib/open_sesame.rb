@@ -7,6 +7,7 @@ module OpenSesame
   autoload :AuthApp, 'open_sesame/auth_app'
   autoload :Strategy, 'open_sesame/strategy'
   autoload :FailureApp, 'open_sesame/failure_app' if defined?(Devise)
+  autoload :Github, 'open_sesame/github'
 
   @to_configuration = Configuration::CONFIGURABLE_ATTRIBUTES + [:to => :configuration]
   delegate *@to_configuration

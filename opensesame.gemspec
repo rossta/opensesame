@@ -19,6 +19,8 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 3.2"
   s.add_dependency "oauth2"
   s.add_dependency "warden"
+  s.add_dependency "faraday", '~> 0.8'
+  s.add_dependency "faraday_middleware"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails", "~> 2.9.0"
@@ -26,4 +28,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "launchy"
   s.add_development_dependency "pry"
   s.add_development_dependency "pry-nav"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "fakeweb"
 end
