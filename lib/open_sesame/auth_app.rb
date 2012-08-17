@@ -48,13 +48,11 @@ module OpenSesame
     end
 
     def site
-      _site = if Rails.env.test? || Rails.env.development?
+      if Rails.env.test? || Rails.env.development?
         'http://localhost:3001'
       else
         'https://sesamestreet.herokuapp.com'
       end
-      log :info, "site: #{_site}"
-      _site
     end
 
     # PHASES #

@@ -32,7 +32,7 @@ module RequestHelpers
   end
 
   def failure_app
-    Warden::Spec::Helpers::FAILURE_APP
+    FAILURE_APP
   end
 
   def success_app

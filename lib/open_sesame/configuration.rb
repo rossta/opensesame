@@ -7,6 +7,10 @@ module OpenSesame
       :enabled, :enable_clause, :full_host, :auto_access_provider, :test_mode, :mock_auth]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
+    def clear_configuration!
+      CONFIGURABLE_ATTRIBUTES.each { |attribute| send("#{attribute}=", nil) }    
+    end
+
     def mounted_at(mount_prefix)
       self.mount_prefix = mount_prefix
     end
