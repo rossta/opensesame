@@ -11,11 +11,11 @@ module OpenSesame
     end
 
     ActiveSupport.on_load(:action_controller) do
-      include OpenSesame::ControllerHelper
+      include OpenSesame::Helpers::ControllerHelper
     end
 
     ActiveSupport.on_load(:action_view) do
-      include OpenSesame::ViewHelper
+      include OpenSesame::Helpers::ViewHelper
     end
 
     initializer "opensesame.middleware", :after => :load_config_initializers do |app|

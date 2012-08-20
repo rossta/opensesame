@@ -1,6 +1,6 @@
 # encoding: utf-8
 module OpenSesame
-  module ControllerHelper
+  module Helpers::ControllerHelper
     extend ActiveSupport::Concern
 
     def warden

@@ -1,6 +1,6 @@
 module OpenSesame
   class ApplicationController < ActionController::Base
-    include OpenSesame::ViewHelper
+    include OpenSesame::Helpers::ViewHelper
 
   end
 end
