@@ -12,8 +12,8 @@ module OpenSesame
       [OpenSesame.mount_prefix, 'auth', provider].join('/')
     end
 
-    def auth_request_path
-      [OpenSesame.mount_prefix, 'auth', 'request'].join('/')
+    def auth_request_path(provider)
+      [OpenSesame.mount_prefix, 'auth', provider, 'request'].join('/')
     end
 
   end

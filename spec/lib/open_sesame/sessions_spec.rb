@@ -16,7 +16,7 @@ describe "Session", :type => :request do
     end
 
     describe "auto login" do
-      before { OpenSesame.stub!(:auto_access_provider).and_return('sesamestreet') }
+      before { OpenSesame.stub!(:auto_access).and_return(true) }
 
       it "allows auto login" do
         visit root_path
@@ -37,7 +37,7 @@ describe "Session", :type => :request do
       end
 
       it "tries auto login and ends up on opensesame page after failure" do
-        OpenSesame.stub!(:auto_access_provider).and_return('sesamestreet')
+        OpenSesame.stub!(:auto_access).and_return(true)
         OpenSesame.mock_with('uid' => nil)
         visit root_path
         page.should have_content "Login"

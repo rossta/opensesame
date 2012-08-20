@@ -31,12 +31,12 @@ module OpenSesame
 
     def attempt_auto_authenticate
       return unless attempt_auto_access?
-      redirect_to auth_request_path
+      redirect_to auth_request_path(OpenSesame.provider_name)
     end
 
     def attempt_auto_access?
       return false if just_logged_out?
-      return false unless OpenSesame.auto_access_provider.present?
+      return false unless OpenSesame.auto_access
       attempts = session[:opensesame_auto_access_attempt].to_i
       session[:opensesame_auto_access_attempt] = attempts + 1
       attempts < 1

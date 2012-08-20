@@ -3,8 +3,18 @@ module OpenSesame
   class ConfigurationError < RuntimeError; end
 
   class Configuration
-    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :client_id, :client_secret,
-      :enabled, :enable_clause, :full_host, :auto_access_provider, :test_mode, :mock_auth]
+    CONFIGURABLE_ATTRIBUTES = [
+      :organization_name,
+      :mount_prefix,
+      :client_id,
+      :client_secret,
+      :enabled, :enable_clause,
+      :full_host,
+      :auto_access,
+      :provider_name,
+      :test_mode,
+      :mock_auth
+    ]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
     def clear_configuration!
@@ -28,8 +38,12 @@ module OpenSesame
       self.organization_name = organization_name
     end
 
-    def auto_login(provider)
-      self.auto_access_provider = provider
+    def provider(provider_name)
+      self.provider_name = provider_name
+    end
+
+    def enable_auto_access(enabled)
+      self.auto_access = !!enabled
     end
 
     def enable_if(conditional)
@@ -58,6 +72,7 @@ module OpenSesame
 
     def valid?
       self.organization_name && self.organization_name.is_a?(String) &&
+      self.provider_name && self.provider_name.is_a?(String) &&
       self.mount_prefix && self.mount_prefix.is_a?(String) &&
       self.client_id && self.client_secret
     end

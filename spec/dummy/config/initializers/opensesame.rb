@@ -15,6 +15,7 @@ end
 
 OpenSesame.configure do |config|
   config.organization 'challengepost'
+  config.provider     'sesamestreet'
   config.mounted_at   '/opensesame'
   config.client       app_id, secret
 end

@@ -10,7 +10,7 @@ module OpenSesame
     end
 
     def authenticate!
-      if auth_hash["uid"].present?  # instantiate a OpenSesame::User
+      if auth_hash["uid"].present?
         success! auth_hash["uid"]
       else
         fail 'Sorry, you do not have access'

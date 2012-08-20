@@ -32,7 +32,9 @@ module OpenSesame
     end
 
     def default_options
-      {}
+      {
+        :client_options => { :site => site }
+      }
     end
 
     def log(level, message)
@@ -40,7 +42,7 @@ module OpenSesame
     end
 
     def client
-      ::OAuth2::Client.new(options[:client_id], options[:client_secret], :site => site)
+      ::OAuth2::Client.new(options[:client_id], options[:client_secret], options[:client_options])
     end
 
     def provider
@@ -136,11 +138,11 @@ module OpenSesame
     end
 
     def request_path
-      options[:request_path] || "#{mount_prefix}/auth/request"
+      options[:request_path] || "#{mount_prefix}/auth/#{provider}/request"
     end
 
     def callback_path
-      options[:callback_path] || "#{mount_prefix}/auth/callback"
+      options[:callback_path] || "#{mount_prefix}/auth/#{provider}/callback"
     end
 
     def current_path

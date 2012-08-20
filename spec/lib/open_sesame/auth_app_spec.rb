@@ -23,7 +23,7 @@ describe OpenSesame::AuthApp do
 
   describe "#request_path" do
     it "should returns <mount_prefix>/auth/request" do
-      auth_app.request_path.should eq('/opensesame/auth/request')
+      auth_app.request_path.should eq('/opensesame/auth/sesamestreet/request')
     end
   end
 

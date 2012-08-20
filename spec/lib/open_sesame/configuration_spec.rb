@@ -22,13 +22,16 @@ describe OpenSesame::Configuration do
   end
 
   it "auto_access sets provider to attempt auto login" do
-    configuration.auto_login "sesamestreet"
-    configuration.auto_access_provider.should == "sesamestreet"
+    configuration.enable_auto_access true
+    configuration.auto_access.should be_true
   end
 
   describe "valid?" do
     it "false when values not set" do
       configuration.organization "challengepost"
+      configuration.should_not be_valid
+
+      configuration.provider "sesamestreet"
       configuration.should_not be_valid
 
       configuration.organization_name = nil
@@ -42,6 +45,7 @@ describe OpenSesame::Configuration do
     end
 
     it "true when all values set" do
+      configuration.provider "sesamestreet"
       configuration.organization "challengepost"
       configuration.client "client_id", "client_secret"
       configuration.mounted_at "/foobar"
@@ -53,6 +57,7 @@ describe OpenSesame::Configuration do
     it { lambda { configuration.validate! }.should raise_error(OpenSesame::ConfigurationError) }
 
     it "succeeds when valid" do
+      configuration.provider "sesamestreet"
       configuration.organization "challengepost"
       configuration.client "client_id", "client_secret"
       configuration.mounted_at "/foobar"
