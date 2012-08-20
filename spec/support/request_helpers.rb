@@ -12,6 +12,12 @@ module RequestHelpers
     Rack::MockRequest.env_for("#{path}?#{Rack::Utils.build_query(params)}", env)
   end
 
+  def env_with_rack_session(path = "/", params = {}, env = {})
+    env_with_params(path, params, env).tap do |rack_env|
+      rack_env['rack.session'] ||= {}
+    end
+  end
+
   def setup_rack(app = nil, opts = {}, &block)
     app ||= block if block_given?
 
@@ -41,7 +47,7 @@ module RequestHelpers
 
   class Session
     attr_accessor :app
-    def initialize(app,configs = {})
+    def initialize(app, configs = {})
       @app = app
     end
 

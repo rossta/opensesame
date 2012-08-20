@@ -60,14 +60,13 @@ module OpenSesame
     # Performs the steps necessary to run the request phase of a strategy.
     def request_call
       log :info, "Request phase initiated."
-
       #store query params from the request url, extracted in the callback_phase
       session['opensesame.params'] = request.params
 
       if request.params['origin']
-        @env['rack.session']['opensesame.origin'] = request.params['origin']
+        session['opensesame.origin'] = request.params['origin']
       elsif env['HTTP_REFERER'] && !env['HTTP_REFERER'].match(/#{request_path}$/)
-        @env['rack.session']['opensesame.origin'] = @env['HTTP_REFERER']
+        session['opensesame.origin'] = @env['HTTP_REFERER']
       end
       request_phase
     end
@@ -114,9 +113,9 @@ module OpenSesame
 
     def mock_request_call
       if request.params['origin']
-        @env['rack.session']['opensesame.origin'] = request.params['origin']
+        session['opensesame.origin'] = request.params['origin']
       elsif env['HTTP_REFERER'] && !env['HTTP_REFERER'].match(/#{request_path}$/)
-        @env['rack.session']['opensesame.origin'] = env['HTTP_REFERER']
+        session['opensesame.origin'] = env['HTTP_REFERER']
       end
       redirect(script_name + callback_path + query_string)
     end

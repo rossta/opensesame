@@ -40,4 +40,71 @@ describe OpenSesame::AuthApp do
       auth_app.on_path?("/").should be_false
     end
   end
+
+  describe "#call" do
+    it "sets env on each call" do
+      env_1 = env_with_params('/first')
+      env_2 = env_with_params('/second')
+      auth_app.call(env_1)
+      auth_app.env.should eq(env_1)
+
+      auth_app.call(env_2)
+      auth_app.env.should eq(env_2)
+    end
+  end
+
+  describe "#request_call" do
+    before do
+      @params = { "foo" => 'bar', "legit" => 'param' }
+    end
+
+    it "sets query params on opensesame rack session" do
+      auth_app.env = env_with_rack_session("/auth", @params)
+      auth_app.request_call
+      auth_app.env['rack.session']['opensesame.params'].should eq(@params)
+    end
+
+    it "sets the origin from params on rack session" do
+      @params['origin'] = "/home"
+      auth_app.env = env_with_rack_session("/auth", @params)
+      auth_app.request_call
+      auth_app.env['rack.session']['opensesame.origin'].should eq('/home')
+    end
+
+    it "sets the origin from HTTP_REFERER otherwise on rack session" do
+      env = env_with_rack_session("/auth", @params, 'HTTP_REFERER' => '/home')
+      auth_app.env = env
+      auth_app.request_call
+      auth_app.env['rack.session']['opensesame.origin'].should eq('/home')
+    end
+
+  end
+
+  describe "#callback_call" do
+    before do
+      @params = { "foo" => 'bar', "legit" => 'param', 'origin' => '/home' }
+      @env = env_with_rack_session("/auth", @params)
+      auth_app.env = @env
+      auth_app.request_call
+      
+      client = mock(OAuth2::Client)
+      OAuth2::Client.stub!(:new => client)
+      auth_code = mock(OAuth2::Strategy::AuthCode)
+      access_token = mock(OAuth2::AccessToken, :expired? => false, :expires? => false, :refresh! => nil, :options => {}, :token => "1234abcd")
+      access_token.stub!(:get).with('/api/me').and_return(mock("Response", :parsed => {}))
+      auth_code.stub!(:get_token => access_token)
+      client.stub!(:auth_code => auth_code)
+    end
+
+    it "sets query params on opensesame env from rack session following request_call" do
+      auth_app.callback_call
+      auth_app.env['opensesame.params'].should eq(@params)
+    end
+
+    it "sets the origin from params on env from rack session" do
+      auth_app.callback_call
+      auth_app.env['opensesame.origin'].should eq('/home')
+    end
+
+  end
 end
