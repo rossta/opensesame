@@ -8,7 +8,7 @@ module OpenSesame
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
     def clear_configuration!
-      CONFIGURABLE_ATTRIBUTES.each { |attribute| send("#{attribute}=", nil) }    
+      CONFIGURABLE_ATTRIBUTES.each { |attribute| send("#{attribute}=", nil) }
     end
 
     def mounted_at(mount_prefix)
@@ -92,8 +92,12 @@ module OpenSesame
       raise ConfigurationError.new(message)
     end
 
-    def mock_auth
-      @mock_auth ||= {}
+    def mock_with(options = {})
+      @mock_auth = AuthHash.new(options)
+    end
+
+    def mock_auth(options = {})
+      @mock_auth ||= mock_with(options)
     end
 
   end

@@ -1,10 +1,11 @@
 # encoding: utf-8
 module OAuthHelper
   def setup_for_opensesame_login(options = {})
-    OpenSesame.configuration.mock_auth = {
+    OpenSesame.mock_with({
       "uid" => "1234",
-      "provider" => "sesamestreet"
-    }.merge(options)
+      "provider" => "sesamestreet",
+      "raw_info" => { "name" => "Bob" }
+    }.merge(options))
   end
 end
 

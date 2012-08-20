@@ -15,7 +15,7 @@ module OpenSesame
 
   @to_configuration = Configuration::CONFIGURABLE_ATTRIBUTES + [:to => :configuration]
   delegate *@to_configuration
-  delegate :enabled?, :to => :configuration
+  delegate :enabled?, :mock_with, :to => :configuration
 
   mattr_accessor :configuration
   @@configuration = Configuration.new

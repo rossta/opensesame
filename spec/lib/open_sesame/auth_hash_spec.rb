@@ -14,7 +14,7 @@ describe OpenSesame::AuthHash do
         :token => "1234abcd"
     }
 
-    let(:auth_hash) { OpenSesame::AuthHash.new(access_token, :provider => 'sesamestreet') }
+    let(:auth_hash) { OpenSesame::AuthHash.new(access_token: access_token, provider: 'sesamestreet') }
 
     before do
       access_token.stub!(:get).with('/api/me').and_return(mock("Response", :parsed => raw_info))

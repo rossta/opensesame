@@ -121,16 +121,12 @@ module OpenSesame
     end
 
     def mock_callback_call
-      mocked_auth = OpenSesame.configuration.mock_auth
-      if mocked_auth.is_a?(Symbol)
-        fail!(mocked_auth)
-      else
-        @env['opensesame.auth'] = mocked_auth
-        @env['opensesame.params'] = session.delete('query_params') || {}
-        @env['opensesame.origin'] = session.delete('opensesame.origin')
-        @env['opensesame.origin'] = nil if env['opensesame.origin'] == ''
-        call_app
-      end
+      mocked_auth = OpenSesame.mock_auth
+      @env['opensesame.auth'] = mocked_auth
+      @env['opensesame.params'] = session.delete('query_params') || {}
+      @env['opensesame.origin'] = session.delete('opensesame.origin')
+      @env['opensesame.origin'] = nil if env['opensesame.origin'] == ''
+      call_app
     end
 
     # PATHS #
@@ -198,7 +194,7 @@ module OpenSesame
     end
 
     def auth_hash
-      AuthHash.new(access_token, provider: provider)
+      AuthHash.new(access_token: access_token, provider: provider)
     end
 
     def fail!(message_key, exception = nil)

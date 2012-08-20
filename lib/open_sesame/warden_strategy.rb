@@ -2,11 +2,11 @@
 require 'warden'
 
 module OpenSesame
-  class Strategy < ::Warden::Strategies::Base
+  class WardenStrategy < ::Warden::Strategies::Base
     attr_writer :organization
 
     def valid?
-      auth_hash && auth_hash["provider"] == "sesamestreet"
+      auth_hash && auth_hash.valid? && auth_hash["provider"] == "sesamestreet"
     end
 
     def authenticate!
@@ -25,4 +25,4 @@ module OpenSesame
 
 end
 
-Warden::Strategies.add(:opensesame, OpenSesame::Strategy)
+::Warden::Strategies.add(:opensesame, OpenSesame::WardenStrategy)

@@ -1,6 +1,6 @@
 # encoding: utf-8
 require 'warden'
-require 'open_sesame/strategy'
+require 'open_sesame/warden_strategy'
 
 module OpenSesame
   class Engine < ::Rails::Engine
@@ -35,7 +35,7 @@ module OpenSesame
           end
         end
       else
-        app.config.middleware.use Warden::Manager do |manager|
+        app.config.middleware.use ::Warden::Manager do |manager|
           manager.default_strategies(:opensesame, :scope => :opensesame)
           manager.failure_app = lambda { |env| OpenSesame::SessionsController.action(:new).call(env)}
         end
