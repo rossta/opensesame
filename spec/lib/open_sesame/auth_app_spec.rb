@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe OpenSesame::AuthApp do 
+describe OpenSesame::AuthApp do
   let(:auth_app) { OpenSesame::AuthApp.new(success_app, \
      :client_id => 'client_id',
      :client_secret => 'client_secret'
@@ -8,7 +8,7 @@ describe OpenSesame::AuthApp do
 
   describe "#client" do
     it "is an OAuth2::Client" do
-      auth_app.client.should be_a(OAuth2::Client)    
+      auth_app.client.should be_a(OAuth2::Client)
     end
 
     it "contains given client_id and client_secret" do
@@ -31,7 +31,7 @@ describe OpenSesame::AuthApp do
     before(:each) do
       auth_app.call(env_with_params("/auth/request/success"))
     end
-   
+
     it "is true if current_path matches given path" do
       auth_app.on_path?("/auth/request/success").should be_true
     end
@@ -86,11 +86,17 @@ describe OpenSesame::AuthApp do
       @env = env_with_rack_session("/auth", @params)
       auth_app.env = @env
       auth_app.request_call
-      
+
       client = mock(OAuth2::Client)
       OAuth2::Client.stub!(:new => client)
       auth_code = mock(OAuth2::Strategy::AuthCode)
-      access_token = mock(OAuth2::AccessToken, :expired? => false, :expires? => false, :refresh! => nil, :options => {}, :token => "1234abcd")
+      access_token = mock(OAuth2::AccessToken,
+        :expired? => false,
+        :expires? => false,
+        :refresh! => nil,
+        :options => {},
+        :token => "1234abcd"
+      )
       access_token.stub!(:get).with('/api/me').and_return(mock("Response", :parsed => {}))
       auth_code.stub!(:get_token => access_token)
       client.stub!(:auth_code => auth_code)
@@ -107,4 +113,5 @@ describe OpenSesame::AuthApp do
     end
 
   end
+
 end
