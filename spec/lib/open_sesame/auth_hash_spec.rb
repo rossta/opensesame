@@ -14,11 +14,44 @@ describe OpenSesame::AuthHash do
         :token => "1234abcd"
     }
 
-    let(:auth_hash) { OpenSesame::AuthHash.new(access_token, :provider => 'sesamestreet').to_hash }
+    let(:auth_hash) { OpenSesame::AuthHash.new(access_token, :provider => 'sesamestreet') }
 
     before do
       access_token.stub!(:get).with('/api/me').and_return(mock("Response", :parsed => raw_info))
     end
+
+    describe "#valid?" do
+      it "is valid when uid? && provider? && info? && info name?" do
+        auth_hash['uid'] = "123"
+        auth_hash['provider'] = 'sesamestreet'
+        auth_hash['info'] = { "name" => "Bob" }
+        auth_hash.valid?.should be_true
+      end
+
+      context "invalid" do
+        it "has no uid" do
+          auth_hash['uid'] = nil
+          auth_hash.valid?.should be_false
+        end
+
+        it "has no provider" do
+          auth_hash['provider'] = nil
+          auth_hash.valid?.should be_false
+        end
+
+        it "has no info" do
+          auth_hash['info'] = nil
+          auth_hash.valid?.should be_false
+        end
+
+        it "has no name in info" do
+          auth_hash['info'] = {}
+          auth_hash.valid?.should be_false
+        end
+      end
+
+    end
+
     # main
     # {
     #   'uid' => uid,

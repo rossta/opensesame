@@ -198,7 +198,7 @@ module OpenSesame
     end
 
     def auth_hash
-      AuthHash.new(access_token, provider: provider).to_hash
+      AuthHash.new(access_token, provider: provider)
     end
 
     def fail!(message_key, exception = nil)
