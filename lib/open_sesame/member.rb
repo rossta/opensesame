@@ -9,13 +9,18 @@ module OpenSesame
     end
 
     def self.find(member_id)
+      return nil unless member_id.present?
       attributes = organization_members.detect { |member| member.id.to_s == member_id.to_s }
-      return nil unless attributes.present? && attributes.any?
+      return nil unless attributes.present?
       new(attributes)
     end
 
     def self.organization_members
-      Octokit.new.organization_members(organization_name)
+      github_api.organization_members(organization_name)
+    end
+
+    def self.github_api
+      @github_api ||= Octokit.new
     end
 
     def self.lazy_attr_reader(*attrs)

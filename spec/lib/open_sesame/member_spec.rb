@@ -16,6 +16,24 @@ describe OpenSesame::Member, :vcr, :record => :new_episodes do
       member = OpenSesame::Member.find(nonexisting_id)
       member.should be_nil
     end
+
+    context "github api" do
+      let(:github_api) { mock('Octokit') }
+
+      before do
+        OpenSesame::Member.stub!(:github_api => github_api)
+      end
+
+      it "looks up organization member for given id" do
+        github_api.should_receive(:organization_members).with(OpenSesame.organization_name).and_return([])
+        OpenSesame::Member.find(123)
+      end
+
+      it "skips lookup if no id given" do
+        github_api.should_not_receive(:organization_members)
+        OpenSesame::Member.find(nil)
+      end
+    end
   end
 
   describe "warden serialization" do
