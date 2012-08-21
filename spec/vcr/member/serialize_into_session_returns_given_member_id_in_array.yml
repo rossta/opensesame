@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/orgs/challengepost/members
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "c2VydmVy":
+      - !binary |-
+        bmdpbngvMS4wLjEz
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAyMSBBdWcgMjAxMiAxMzowNzo1NSBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0
+      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
+      - !binary |-
+        NTAwMA==
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        U2F0LCAxOCBBdWcgMjAxMiAwMDoyMDo1NyBHTVQ=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBzLW1heGFnZT02MCwgbWF4LWFnZT02MA==
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjkzMTA4NmZjZDlmYzMwNjMxODMzNTRiMTg2OGIwZTNkIg==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
+      - !binary |-
+        NDk5NQ==
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA7WY24rjRhCG38WQu127q7r6UAshd/sCuQwh9KHao1nZHnQI
+        TMK+e9rZnVkpDki60IXBYOn/Sx9/dZX829+H9nZurodPh/hF+r6V7vDhcO7C
+        n2EI3R9Nrj8UpRiVCZ45B0Qkn1JQ0TkMkjhxvWHs2nrh0zC89J9Op/DSHM/N
+        8DTGY7pdTmMvXX+ayH8Xn9/USxo7Ob5Z/3vntwtPSwX8kn9+t67VHeUYvoRL
+        aI5XGU6h72XoJ/X8hJ+bSzhLX7+8uU2/fwRSx5fruT7W/fHBaO0Iv36Ykrq1
+        0j9w8iVGX9gkrzlnV1IOlshTBF2izbiW03fxrZSW7HemhMqBm1JKtzY/j+3r
+        AyeTgmNhH41nwGQpKTQhFkyIGRjWcZrIbyW1VMCupKxyxs5APd3a9hXu8Zj3
+        nVbCkTWzoDGqhOJJiYmCUDsxeVrH6Yf6VkxL/rtiIo9Oq2memva1tvXw1wMn
+        yWxcThySdioUhbY447VxseSkYSWnifxWUEsF7AoKPRqgKajndBnb/zvIMaPK
+        SnIyDMkJGaR6TgkKBIbIdl2gJvJbQS0VsC8o5Y2aJeoSOrnmhzwRp0SG2Bip
+        5zizsSC5WIreIhnj1mF6F98Kacl+V0jgmDX9l9L1tb/Uef5AKqlS14IAEZKh
+        QJkcRBWj9rHoLGU9qR8GW2ktlbArLcvMbtZ7lyaPD5iQmcCRDsrW5vMhAXsp
+        PtWPeJG4MlDfpLcCWjLfFRD4ugvN0zTUs+lxJwCXM5BNVooNqQ43MgqYTN0K
+        itiycne6vIlvhbRkvy8kZDsfdddmrAvqQ44y6TrQLDmKWQU0WAePcpmsAciS
+        V7bbu/hWSEv2u0JCVU/f2Rb+8tzdYnPtb9cHUAXRq6AjsfdZW23EYqqQSQqn
+        Ou3WNdzMYCuspRJ2hQUWkJWeLgWdDGN3HbrxMVYC4O4buRKMFBNFTZa80jHX
+        +WdVWkdrZrCV1lIJu9IyrMHNotXd+n64p2S+kEcFloPzxRtgW1+Jfba6vh2G
+        rIBcXrk/vYtvhbRkvyskAOtmgfpV6vIUQN1f1+aYgHVBnVFbzmyjdQmFstT/
+        C5TXya/M01R/K6mlCvYl5aEmyn39/R/7gCt0XBEAAA==
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 21 Aug 2012 13:07:55 GMT
+recorded_with: VCR 2.2.4

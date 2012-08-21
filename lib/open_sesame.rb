@@ -7,6 +7,7 @@ module OpenSesame
   autoload :GithubAuth, 'open_sesame/github_auth'
   autoload :GithubWarden, 'open_sesame/github_warden'
   autoload :FailureApp, 'open_sesame/failure_app'
+  autoload :Member, 'open_sesame/member'
 
   @to_configuration = Configuration::CONFIGURABLE_ATTRIBUTES + [:to => :configuration]
   delegate *@to_configuration

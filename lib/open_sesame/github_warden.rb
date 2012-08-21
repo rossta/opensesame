@@ -1,6 +1,5 @@
 # encoding: utf-8
 require 'warden'
-require "octokit"
 
 module OpenSesame
   class GithubWarden < ::Warden::Strategies::Base
@@ -11,8 +10,11 @@ module OpenSesame
     end
 
     def authenticate!
-      if org_member = organization_member(auth_hash["uid"])
-        success! org_member
+      Rails.logger.info "auth_hash.inspect<<<<<<<<<<<<<<<<<<<<<<<<"
+      Rails.logger.info auth_hash.inspect
+      
+      if member = OpenSesame::Member.find(auth_hash["uid"])
+        success! member
       else
         fail 'Sorry, you do not have access'
       end
