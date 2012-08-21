@@ -10,6 +10,12 @@ describe OpenSesame::Member, :vcr, :record => :new_episodes do
       member.id.should == ROSSTA_GITHUB_ID
       member.login.should == 'rossta'
     end
+
+    it "returns nil if no github member found" do
+      nonexisting_id = -1
+      member = OpenSesame::Member.find(nonexisting_id)
+      member.should be_nil
+    end
   end
 
   describe "warden serialization" do

@@ -10,6 +10,7 @@ module OpenSesame
 
     def self.find(member_id)
       attributes = organization_members.detect { |member| member.id.to_s == member_id.to_s }
+      return nil unless attributes.present? && attributes.any?
       new(attributes)
     end
 
