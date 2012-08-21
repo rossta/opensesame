@@ -16,33 +16,32 @@ module OpenSesame
       include OpenSesame::Helpers::ViewHelper
     end
 
+    initializer "openseseame precompile" do |app|
+      app.config.assets.precompile += ['open_sesame/opensesame.css']
+    end
+
     initializer "opensesame.middleware", :after => :load_config_initializers do |app|
-      if OpenSesame.enabled?
-        require 'open_sesame/github_warden'
+      require 'open_sesame/github_warden'
 
-        app.config.assets.precompile += ['opensesame.css']
+      app.config.middleware.use OpenSesame::GithubAuth,
+        OpenSesame.github_client[:id],
+        OpenSesame.github_client[:secret],
+        :path_prefix => OpenSesame.mount_prefix
 
-        OpenSesame.configuration.validate!
-
-        app.config.middleware.use OpenSesame::GithubAuth,
-          OpenSesame.github_client[:id],
-          OpenSesame.github_client[:secret],
-          :path_prefix => OpenSesame.mount_prefix
-
-        if defined?(Devise)
-          Devise.setup do |config|
-            config.warden do |manager|
-              manager.default_strategies(:opensesame_github, :scope => :opensesame)
-              manager.failure_app = OpenSesame::Failure::DeviseApp.new
-            end
-          end
-        else
-          app.config.middleware.use ::Warden::Manager do |manager|
+      if defined?(Devise)
+        Devise.setup do |config|
+          config.warden do |manager|
             manager.default_strategies(:opensesame_github, :scope => :opensesame)
-            manager.failure_app = OpenSesame::Failure::App.new
+            manager.failure_app = OpenSesame::Failure::DeviseApp.new
           end
         end
+      else
+        app.config.middleware.use ::Warden::Manager do |manager|
+          manager.default_strategies(:opensesame_github, :scope => :opensesame)
+          manager.failure_app = OpenSesame::Failure::App.new
+        end
       end
+
     end
   end
 end

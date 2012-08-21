@@ -45,6 +45,8 @@ module OpenSesame
 
     def configure
       yield self
+      validate!
+      self
     end
 
     def valid?
@@ -68,7 +70,7 @@ module OpenSesame
       OpenSesame.configure do |config|
         config.organization 'challengepost'
         config.mounted_at   '/opensesame'
-        config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
+        config.github       ENV['GITHUB_APP_ID'], ENV['GITHUB_SECRET']
       end
 
       When you register the app, make sure to point the callback url to
