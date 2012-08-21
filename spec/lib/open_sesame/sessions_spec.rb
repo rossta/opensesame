@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe "Session", :type => :request do
+describe "Session", :vcr, :record => :new_episodes, :type => :request do
 
   context "successful login" do
-    before { setup_for_github_login } # provided by opensesame-github/capybara
+    before { setup_for_github_login }
 
     it "enforces opensesame login" do
       visit root_path
@@ -36,11 +36,10 @@ describe "Session", :type => :request do
         page.should_not have_content "Login"
       end
     end
-
   end
 
   it "tries auto login and ends up on opensesame page after failure" do
-    OpenSesame.stub!(:auto_access_provider).and_return('github')
+    setup_for_github_login(mock('NonUser', :id => "123"))
     visit root_path
     page.should have_content "Login"
     page.should_not have_content "Welcome Home"

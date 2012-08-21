@@ -1,9 +1,10 @@
+# encoding: utf-8
 module OpenSesame
   class ConfigurationError < RuntimeError; end
 
   class Configuration
-    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :github_client, 
-      :enabled, :enable_clause, :full_host, :auto_access_provider]
+    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :github_client,
+      :enabled, :full_host, :auto_access_provider]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
     def mounted_at(mount_prefix)
@@ -26,24 +27,20 @@ module OpenSesame
       self.auto_access_provider = provider
     end
 
-    def enable_if(conditional)
-      self.enabled = nil
-      self.enable_clause = lambda { conditional }
-    end
-
     def enable!
-      self.enable_clause = nil
       self.enabled = true
     end
 
     def disable!
-      self.enable_clause = nil
       self.enabled = false
     end
 
+    def enable(enabled)
+      self.enabled = !!enabled
+    end
+
     def enabled?
-      (!self.enabled.nil? && self.enabled) ||
-      (!self.enable_clause.nil? && self.enable_clause.call)
+      self.enabled
     end
 
     def configure
@@ -70,14 +67,14 @@ module OpenSesame
       # config/initializers/open_sesame.rb
       OpenSesame.configure do |config|
         config.organization 'challengepost'
-        config.mounted_at   '/welcome'
+        config.mounted_at   '/opensesame'
         config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
       end
 
       When you register the app, make sure to point the callback url to
       the engine mountpoint + /auth/github/callback. For example, if your
       development app is on http://localhost:3000 and you're mounting
-      the OpenSesame::Engine at '/welcome', your github
+      the OpenSesame::Engine at '/opensesame', your github
       callback url should be:
 
       http://localhost:3000/auth/github/callback

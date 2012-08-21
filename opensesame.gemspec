@@ -17,10 +17,17 @@ Gem::Specification.new do |s|
   s.test_files = Dir["spec/**/*"]
 
   s.add_dependency "rails", "~> 3.2"
-  s.add_dependency "opensesame-github"
+  s.add_dependency "omniauth-github"
+  s.add_dependency "octokit", "~> 1.10"
+  s.add_dependency "warden"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails", "~> 2.9.0"
   s.add_development_dependency "capybara"
   s.add_development_dependency "launchy"
+  s.add_development_dependency "pry"
+  s.add_development_dependency "pry-nav"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "fakeweb"
+  s.add_development_dependency "guard-rspec"
 end

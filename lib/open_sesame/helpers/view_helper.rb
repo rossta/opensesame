@@ -1,5 +1,6 @@
+# encoding: utf-8
 module OpenSesame
-  module ViewHelper
+  module Helpers::ViewHelper
 
     def login_image_link_to(provider)
       link_to identity_request_path(provider), :class => "btn btn-large" do
@@ -8,7 +9,7 @@ module OpenSesame
     end
 
     def identity_request_path(provider)
-      [OpenSesame.mount_prefix, 'auth', provider].join('/')
+      [OpenSesame.mount_prefix, provider].join('/')
     end
 
   end
