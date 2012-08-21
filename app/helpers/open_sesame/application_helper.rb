@@ -1,6 +1,6 @@
 module OpenSesame
   module ApplicationHelper
-    include OpenSesame::ViewHelper
+    include OpenSesame::Helpers::ViewHelper
 
   end
 end
