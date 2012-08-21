@@ -16,11 +16,15 @@ module OpenSesame
       include OpenSesame::Helpers::ViewHelper
     end
 
+    initializer "opensesame precompile hook" do |app|
+      app.config.assets.precompile += ['open_sesame/opensesame.css']
+    end
+
     initializer "opensesame.middleware", :after => :load_config_initializers do |app|
+
       if OpenSesame.enabled?
         require 'open_sesame/github_warden'
 
-        app.config.assets.precompile += ['opensesame.css']
 
         OpenSesame.configuration.validate!
 
