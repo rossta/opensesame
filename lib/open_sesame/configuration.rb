@@ -42,6 +42,14 @@ module OpenSesame
       self.provider_name = provider_name
     end
 
+    def client_options
+      strategy.client_options
+    end
+
+    def strategy
+      @strategy ||= "OpenSesame::AuthStrategies::#{self.provider_name.titleize}".constantize.new
+    end
+
     def enable_auto_access(enabled)
       self.auto_access = !!enabled
     end

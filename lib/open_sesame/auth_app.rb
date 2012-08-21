@@ -33,7 +33,7 @@ module OpenSesame
 
     def default_options
       {
-        :client_options => { :site => site }
+        :client_options => OpenSesame.strategy.client_options
       }
     end
 
@@ -46,15 +46,7 @@ module OpenSesame
     end
 
     def provider
-      'sesamestreet'
-    end
-
-    def site
-      if Rails.env.test? || Rails.env.development?
-        'http://localhost:3001'
-      else
-        'https://sesamestreet.herokuapp.com'
-      end
+      OpenSesame.strategy.name
     end
 
     # PHASES #
