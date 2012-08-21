@@ -8,7 +8,7 @@ module OpenSesame
     end
 
     def identity_request_path(provider)
-      [OpenSesame.mount_prefix, 'auth', provider].join('/')
+      [OpenSesame.mount_prefix, provider].join('/')
     end
 
   end

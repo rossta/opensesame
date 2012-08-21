@@ -1,4 +1,5 @@
-require 'opensesame-github'
+require 'opensesame'
+require 'open_sesame/github_warden'
 
 module OpenSesame
   class Engine < ::Rails::Engine
@@ -21,16 +22,10 @@ module OpenSesame
 
       OpenSesame.configuration.validate!
 
-      OpenSesame::Github.organization_name = OpenSesame.organization_name
-
-      middleware.use OmniAuth::Builder do
-        configure do |config|
-          config.path_prefix = '/auth'
-          config.full_host = OpenSesame.full_host if OpenSesame.full_host
-        end
-
-        provider :github, OpenSesame.github_client[:id], OpenSesame.github_client[:secret]
-      end
+      app.config.middleware.use OpenSesame::GithubAuth, 
+        OpenSesame.github_client[:id], 
+        OpenSesame.github_client[:secret],
+        :path_prefix => OpenSesame.mount_prefix
 
       if defined?(Devise)
         Devise.setup do |config|
@@ -40,7 +35,7 @@ module OpenSesame
           end
         end
       else
-        app.config.middleware.use Warden::Manager do |manager|
+        app.config.middleware.use ::Warden::Manager do |manager|
           manager.default_strategies(:opensesame_github, :scope => :opensesame)
           manager.failure_app = lambda { |env| OpenSesame::SessionsController.action(:new).call(env)}
         end

@@ -70,14 +70,14 @@ module OpenSesame
       # config/initializers/open_sesame.rb
       OpenSesame.configure do |config|
         config.organization 'challengepost'
-        config.mounted_at   '/welcome'
+        config.mounted_at   '/opensesame'
         config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
       end
 
       When you register the app, make sure to point the callback url to
       the engine mountpoint + /auth/github/callback. For example, if your
       development app is on http://localhost:3000 and you're mounting
-      the OpenSesame::Engine at '/welcome', your github
+      the OpenSesame::Engine at '/opensesame', your github
       callback url should be:
 
       http://localhost:3000/auth/github/callback
