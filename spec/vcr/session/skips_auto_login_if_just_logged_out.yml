@@ -24,7 +24,7 @@ http_interactions:
         bmdpbngvMS4wLjEz
       !binary "ZGF0ZQ==":
       - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAwNDoxOTo0MiBHTVQ=
+        VHVlLCAyMSBBdWcgMjAxMiAwNDozMjo1NyBHTVQ=
       !binary "Y29udGVudC10eXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
@@ -40,42 +40,42 @@ http_interactions:
       !binary "bGFzdC1tb2RpZmllZA==":
       - !binary |-
         U3VuLCAwNSBBdWcgMjAxMiAxODo0ODowNSBHTVQ=
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDkyMg==
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
       !binary "eC1yYXRlbGltaXQtbGltaXQ=":
       - !binary |-
         NTAwMA==
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBzLW1heGFnZT02MCwgbWF4LWFnZT02MA==
       !binary "ZXRhZw==":
       - !binary |-
         IjI3MzQ5NmY0MzhiMmVlZWQxOWZiMTUxZGM5NjlhOWI1Ig==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
+      - !binary |-
+        NDkxMQ==
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0
       !binary "Y29udGVudC1lbmNvZGluZw==":
       - !binary |-
         Z3ppcA==
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA4VSTU+EMBD9K5sm3ligsAtIYjQx8WLiwehBL5sBhtJsoaQt
-        ko3xvzt1F129eJvOe/P1Xt+ZO4zISvZs0bCAVVKzcpiUChi8gQOzm4wiuHNu
-        tGUUWawng6EwRzSsdR8dw6iKeXYJedEWW36ZJfG2aLI0TXNoYr7Jm+y6uVq6
-        QLIpQgxhDz3IcEAXgbXobCik66bKd71I7mQPAi0Fy7TzeM03cTgOgnYep0rJ
-        emdw1JaVaRGwViulZ0lomaQBU7oGJ/VAdzzgvHrRZr+6le5AtbVBcNjswBGY
-        xHGxjrfrJH/iRZnkJc9ePUf3IwyHkwokwjzPYd2BUjgIP9T5hYm47LmTDZH/
-        04MKlBbSb2W0tQ5+ThHSOjqFZ2QIcX5P9uQ9tO1pKJKE3qElfSN84gQO0Htz
-        H6lkdU81OFRoxJfTv32FUZ6JH030G2z0vVYnSaZKUasWlMWA+QM5z3IS96g1
-        0SlDz8716s+f+TF16fjxCQ17tZd3AgAA
+        H4sIAAAAAAAAA4VSy07DMBD8lcoStzTPNkkjIZCQuCBxQHCAS7VJNo5VJ45s
+        h6hC/DtrmpT2xM0ez87M7vqL2eOArGBvBjXz2DCWUlR7jYMyrEjyM8KFsYRE
+        qccaJaWaRM9ZEScek6oCK1RPIs84rd6VPqwehD2SWis0QilJvwFp0GMV3S3W
+        e7DEjsMwX4fbdZy9RnkRZyT+QUWV6gboj0RorR2KIJimya9akBJ77nJZnyhE
+        5Bo+wYLei5rIZRilO8jyJt9GuzQOt3mdJkmSQR1Gm6xOqUAqLlxMrYyxQEAp
+        FCv6UUqPzVKjlrOxIWeD1ajRX4ycb3AiBv/Z3dW3Lr5TgXiT++jDAToQfo82
+        AGPQGp8L246lU72JH0UHHA0dFrfL8zrahP5AE6fM1MX1bFw7B2iaeSxILq6J
+        Bb7nDpgfe+jctl+oZPVENdiXqPnv6q9bh0Fc5AtG+h4mOA/OTTyK0ozWf/oN
+        9EoIXVvbyf211F+bi8D3D3L12gB3AgAA
     http_version: !binary |-
       MS4x
-  recorded_at: Tue, 21 Aug 2012 04:19:58 GMT
+  recorded_at: Tue, 21 Aug 2012 04:33:13 GMT
 - request:
     method: get
     uri: https://api.github.com/users/rossta
@@ -100,7 +100,7 @@ http_interactions:
         bmdpbngvMS4wLjEz
       !binary "ZGF0ZQ==":
       - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAwNDoxOTo0MiBHTVQ=
+        VHVlLCAyMSBBdWcgMjAxMiAwNDozMjo1OCBHTVQ=
       !binary "Y29udGVudC10eXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
@@ -113,131 +113,45 @@ http_interactions:
       !binary "c3RhdHVz":
       - !binary |-
         MjAwIE9L
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjI3MzQ5NmY0MzhiMmVlZWQxOWZiMTUxZGM5NjlhOWI1Ig==
       !binary "bGFzdC1tb2RpZmllZA==":
       - !binary |-
         U3VuLCAwNSBBdWcgMjAxMiAxODo0ODowNSBHTVQ=
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
       !binary "eC1yYXRlbGltaXQtbGltaXQ=":
       - !binary |-
         NTAwMA==
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDkyMQ==
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4VSTU+DQBD9K80m3iifLVASo4mJFxMPRg96aQYYlk0Xluwu
-        ksb4351tIbZevA0zj3nvzdsvZo8DsoK9GdTMY6VQrOhHKT3WKCnVJHrOijih
-        iVRUsdbaoQiCaZp8rYw5QNP4leroV6kqsEL1BHrGafWu9GH1IOyRRpVGsFjv
-        wdIwDsN8HW7XcfYa5UWcFVH64TCqG6A/XlNULUiJPcdBGTvzcA2fYEHvRU3g
-        MozSHWR5k2+jXRqH27xOkyTJoA6jTVanJ2FcOFVOrwVqDGMpRbXnwljDiN5j
-        2IGQM8RZuueuMRPOdKN2COff0AEMVqNGfxHjoMEZGPwn6a6+XbZAvMl99OEA
-        xOf3aAMwBq3xubDtWLqtN/Gj6ICjoWJhu6zX0Sb0B0rJYz10LsoX8rl6IhfY
-        l6j5Kddr8TCIC4ZgpOxN8Pc82h2dFUnusVZQgKWk5Q1Igx5zp4+iNKN3cX4m
-        tIA69NnaTu6v2X69LBzfPznKrr93AgAA
-    http_version: !binary |-
-      MS4x
-  recorded_at: Tue, 21 Aug 2012 04:19:58 GMT
-- request:
-    method: get
-    uri: https://api.github.com/orgs/challengepost/members
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        bmdpbngvMS4wLjEz
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAwNDoxOTo0MiBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        U2F0LCAxOCBBdWcgMjAxMiAwMDoyMDo1NyBHTVQ=
       !binary "Y2FjaGUtY29udHJvbA==":
       - !binary |-
         cHVibGljLCBzLW1heGFnZT02MCwgbWF4LWFnZT02MA==
       !binary "ZXRhZw==":
       - !binary |-
-        IjkzMTA4NmZjZDlmYzMwNjMxODMzNTRiMTg2OGIwZTNkIg==
+        IjI3MzQ5NmY0MzhiMmVlZWQxOWZiMTUxZGM5NjlhOWI1Ig==
       !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
       - !binary |-
         bm9zbmlmZg==
       !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
       - !binary |-
-        NDkyMA==
+        NDkxMA==
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0
       !binary "Y29udGVudC1lbmNvZGluZw==":
       - !binary |-
         Z3ppcA==
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA7WY24rjRhCG38WQu127q7r6UAshd/sCuQwh9KHao1nZHnQI
-        TMK+e9rZnVkpDki60IXBYOn/Sx9/dZX829+H9nZurodPh/hF+r6V7vDhcO7C
-        n2EI3R9Nrj8UpRiVCZ45B0Qkn1JQ0TkMkjhxvWHs2nrh0zC89J9Op/DSHM/N
-        8DTGY7pdTmMvXX+ayH8Xn9/USxo7Ob5Z/3vntwtPSwX8kn9+t67VHeUYvoRL
-        aI5XGU6h72XoJ/X8hJ+bSzhLX7+8uU2/fwRSx5fruT7W/fHBaO0Iv36Ykrq1
-        0j9w8iVGX9gkrzlnV1IOlshTBF2izbiW03fxrZSW7HemhMqBm1JKtzY/j+3r
-        AyeTgmNhH41nwGQpKTQhFkyIGRjWcZrIbyW1VMCupKxyxs5APd3a9hXu8Zj3
-        nVbCkTWzoDGqhOJJiYmCUDsxeVrH6Yf6VkxL/rtiIo9Oq2memva1tvXw1wMn
-        yWxcThySdioUhbY447VxseSkYSWnifxWUEsF7AoKPRqgKajndBnb/zvIMaPK
-        SnIyDMkJGaR6TgkKBIbIdl2gJvJbQS0VsC8o5Y2aJeoSOrnmhzwRp0SG2Bip
-        5zizsSC5WIreIhnj1mF6F98Kacl+V0jgmDX9l9L1tb/Uef5AKqlS14IAEZKh
-        QJkcRBWj9rHoLGU9qR8GW2ktlbArLcvMbtZ7lyaPD5iQmcCRDsrW5vMhAXsp
-        PtWPeJG4MlDfpLcCWjLfFRD4ugvN0zTUs+lxJwCXM5BNVooNqQ43MgqYTN0K
-        itiycne6vIlvhbRkvy8kZDsfdddmrAvqQ44y6TrQLDmKWQU0WAePcpmsAciS
-        V7bbu/hWSEv2u0JCVU/f2Rb+8tzdYnPtb9cHUAXRq6AjsfdZW23EYqqQSQqn
-        Ou3WNdzMYCuspRJ2hQUWkJWeLgWdDGN3HbrxMVYC4O4buRKMFBNFTZa80jHX
-        +WdVWkdrZrCV1lIJu9IyrMHNotXd+n64p2S+kEcFloPzxRtgW1+Jfba6vh2G
-        rIBcXrk/vYtvhbRkvyskAOtmgfpV6vIUQN1f1+aYgHVBnVFbzmyjdQmFstT/
-        C5TXya/M01R/K6mlCvYl5aEmyn39/R/7gCt0XBEAAA==
+        H4sIAAAAAAAAA4VSy07DMBD8lcoStzTPNkkjIZCQuCBxQHCAS7VJNo5VJ45s
+        h6hC/DtrmpT2xM0ez87M7vqL2eOArGBvBjXz2DCWUlR7jYMyrEjyM8KFsYRE
+        qccaJaWaRM9ZEScek6oCK1RPIs84rd6VPqwehD2SWis0QilJvwFp0GMV3S3W
+        e7DEjsMwX4fbdZy9RnkRZyT+QUWV6gboj0RorR2KIJimya9akBJ77nJZnyhE
+        5Bo+wYLei5rIZRilO8jyJt9GuzQOt3mdJkmSQR1Gm6xOqUAqLlxMrYyxQEAp
+        FCv6UUqPzVKjlrOxIWeD1ajRX4ycb3AiBv/Z3dW3Lr5TgXiT++jDAToQfo82
+        AGPQGp8L246lU72JH0UHHA0dFrfL8zrahP5AE6fM1MX1bFw7B2iaeSxILq6J
+        Bb7nDpgfe+jctl+oZPVENdiXqPnv6q9bh0Fc5AtG+h4mOA/OTTyK0ozWf/oN
+        9EoIXVvbyf211F+bi8D3D3L12gB3AgAA
     http_version: !binary |-
       MS4x
-  recorded_at: Tue, 21 Aug 2012 04:19:58 GMT
+  recorded_at: Tue, 21 Aug 2012 04:33:14 GMT
 - request:
     method: get
     uri: https://api.github.com/orgs/challengepost/members
@@ -262,7 +176,7 @@ http_interactions:
         bmdpbngvMS4wLjEz
       !binary "ZGF0ZQ==":
       - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAwNDoxOTo0MiBHTVQ=
+        VHVlLCAyMSBBdWcgMjAxMiAwNDozMjo1OCBHTVQ=
       !binary "Y29udGVudC10eXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
@@ -295,7 +209,7 @@ http_interactions:
         QWNjZXB0
       !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
       - !binary |-
-        NDkxOQ==
+        NDkwOQ==
       !binary "Y29udGVudC1lbmNvZGluZw==":
       - !binary |-
         Z3ppcA==
@@ -323,5 +237,91 @@ http_interactions:
         jHfTBZhu5U8zT5ZE2Z+ffwEiuSu+XBEAAA==
     http_version: !binary |-
       MS4x
-  recorded_at: Tue, 21 Aug 2012 04:19:58 GMT
+  recorded_at: Tue, 21 Aug 2012 04:33:14 GMT
+- request:
+    method: get
+    uri: https://api.github.com/orgs/challengepost/members
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "c2VydmVy":
+      - !binary |-
+        bmdpbngvMS4wLjEz
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAyMSBBdWcgMjAxMiAwNDozMjo1OCBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBzLW1heGFnZT02MCwgbWF4LWFnZT02MA==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0
+      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
+      - !binary |-
+        NDkwOA==
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        U2F0LCAxOCBBdWcgMjAxMiAwMDoyMDo1NyBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjkzMTA4NmZjZDlmYzMwNjMxODMzNTRiMTg2OGIwZTNkIg==
+      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
+      - !binary |-
+        NTAwMA==
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA72Yy47bOBBF/8XA7BKbLBYf1UCQ3fzALAeDBh9Ft7pluaHH
+        AD2D/HtoO07olRQttDBAmNfS9cFlVUl//7/z//rR989T3+6edi/j+D48HQ4D
+        x6nn/bG/7e7j+XS4LQ9ZCAKhvSNKHgDQxehFsBY8R4r0NX25X8WXzT3v/Zs/
+        +Wbf8Xjww8DjsD8248sULlf9A/5sTv7IQ1nc71avP0sU+/fuuPu0u28/N6k4
+        nbNRftCej01XpOGNh6Hlvnz1+C/9e1NZOUwD98OhUl9uJLVSFuHbp98n5XII
+        LpOOTlFKNsfkDaLDIFUOJsFGpOZsPJA6tzws5fRDe6MEwkq7hpKO3hKTC9qR
+        hGgwCtA+ZIgASZLciNKcjYpSPLfpdWo/lnGq1BdSRlhtVoFSgimQImLQWmSf
+        HQrWgUGWoxgdbgRqzkYF6uXcth8SlnH6Jb5gQgdWiTV54kTapkg+Kit8FmCy
+        1U5pG3KKSm6Fac5GhalpP0qJHP9bxqlSX0CBAy1xDShIIJLgFDXJaBk1YKlS
+        DCw9yUBmozzN2ahAvcbT1C4u5JX6Cko4LVYlCilG1Ehac6njRNpITtlgcAZQ
+        a7sRqDkbFaiT77lLy/L0U3ut45ZI4SpKUeQyFHgZZNToMaGVQYSgXMgqcd6K
+        0pyNR0rdx3Aqs8hiUr/011pORHbd2SNCaVF5YcoBdD5KcpxdLB92zGGjSMGM
+        jRpWk6aFmG7Ka5xcGX1WpUnalCSaaDgbH0t3Qy0koS5zQWaTt5qd5mzUgMZS
+        mxbOBKe79goJyKxrdQlVaWkGLYYkPGgoTUfYhEZLmThtdeTmbFSQumYqw/6y
+        HP3U/qjeBlZN4RnACa8CknNJGaXZQCzEkTPF0us2OmpzNipI76/9OTTdcO6W
+        gXrQXxNlSqaEWjMUsJT2Mo8LhoAhYlBo0AkVUul9RsSNaM3ZqGj1PE59N/bT
+        wlg96C+0NClpV0UrCGnIW5edlmTKQ7FLRpXHRZ+ERJu2mqDmbNSwzsMw+mWx
+        6u/aa6SksasCJUllUAmUoUQmGBuBMXF5XSCcim6rQM3ZqBj9xWV48lLIZZhq
+        +a3nyZIo++2f784cGuFcEQAA
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 21 Aug 2012 04:33:14 GMT
 recorded_with: VCR 2.2.4

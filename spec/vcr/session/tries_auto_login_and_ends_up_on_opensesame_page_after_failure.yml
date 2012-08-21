@@ -110,82 +110,6 @@ http_interactions:
         bmdpbngvMS4wLjEz
       !binary "ZGF0ZQ==":
       - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAwNDoxODozNiBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        U3VuLCAwNSBBdWcgMjAxMiAxODo0ODowNSBHTVQ=
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDk0MQ==
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjI3MzQ5NmY0MzhiMmVlZWQxOWZiMTUxZGM5NjlhOWI1Ig==
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4VSy07DMBD8lcoStzTPNkkjIZCQuCBxQHCAS7VJNo5VJ45s
-        h6hC/DvrNqUtF277Gs/ujL/YMJZSVFsujDWsiFKPVRrBYr0FywoWh2G+DNfL
-        OHuN8iLOaOKDeczuB6Tum0FNmVRc9JRqZYwFKpRUoby1diiCYJom37V20DR+
-        pToaaJSUakLtKBOPBju5HbWcMYZAXNh2LN148PvsvKvGQREwyT2GHQiHOj1/
-        z11hJoFPsKD/vGuwGjX6XB+7B4JjGJRhlG4gy5t8HW3SOFzndZokSQZ1GK2y
-        Or2rb91FbjuIV7mPPuyA+PwebQDGoDX+ee2b+FF0wNFQcGK7jJfRKvSHnv+q
-        ISguYlJDqgqsUE7RZ5wW70rvFg/C7mmSth2g319rW7UgJfbcyWLn21tBLpaS
-        TGpAGvTYaYWtqAn936lE1UPnLH4h4xZP5Bz2JWp+8PvaKRjExdnBSH/CnD0r
-        hWJFP0rpMcccRWmWfP8AO1wJUncCAAA=
-    http_version: !binary |-
-      MS4x
-  recorded_at: Tue, 21 Aug 2012 04:18:52 GMT
-- request:
-    method: get
-    uri: https://api.github.com/users/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        bmdpbngvMS4wLjEz
-      !binary "ZGF0ZQ==":
-      - !binary |-
         VHVlLCAyMSBBdWcgMjAxMiAwNDoxOToxMiBHTVQ=
       !binary "Y29udGVudC10eXBl":
       - !binary |-
@@ -314,4 +238,80 @@ http_interactions:
     http_version: !binary |-
       MS4x
   recorded_at: Tue, 21 Aug 2012 04:19:56 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/rossta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "c2VydmVy":
+      - !binary |-
+        bmdpbngvMS4wLjEz
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAyMSBBdWcgMjAxMiAwNDozMjo1NSBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjI3MzQ5NmY0MzhiMmVlZWQxOWZiMTUxZGM5NjlhOWI1Ig==
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        U3VuLCAwNSBBdWcgMjAxMiAxODo0ODowNSBHTVQ=
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
+      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
+      - !binary |-
+        NTAwMA==
+      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
+      - !binary |-
+        NDkxOA==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA4VSTU+DQBD9K80m3iifLVASo4mJFxMPRg96aQYYlk0Xluwu
+        ksb4351tIbZevA0zj3nvzdsvZo8DsoK9GdTMY6VQrOhHKT3WKCnVJHrOijih
+        iVRUsdbaoQiCaZp8rYw5QNP4leroV6kqsEL1BHrGafWu9GH1IOyRRpVGsFjv
+        wdIwDsN8HW7XcfYa5UWcFVH64TCqG6A/XlNULUiJPcdBGTvzcA2fYEHvRU3g
+        MozSHWR5k2+jXRqH27xOkyTJoA6jTVanJ2FcOFVOrwVqDGMpRbXnwljDiN5j
+        2IGQM8RZuueuMRPOdKN2COff0AEMVqNGfxHjoMEZGPwn6a6+XbZAvMl99OEA
+        xOf3aAMwBq3xubDtWLqtN/Gj6ICjoWJhu6zX0Sb0B0rJYz10LsoX8rl6IhfY
+        l6j5Kddr8TCIC4ZgpOxN8Pc82h2dFUnusVZQgKWk5Q1Igx5zp4+iNKN3cX4m
+        tIA69NnaTu6v2X69LBzfPznKrr93AgAA
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 21 Aug 2012 04:33:12 GMT
 recorded_with: VCR 2.2.4

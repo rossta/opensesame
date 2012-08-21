@@ -18,29 +18,30 @@ module OpenSesame
     end
 
     initializer "opensesame.middleware", :after => :load_config_initializers do |app|
-      app.config.assets.precompile += ['opensesame.css']
+      if OpenSesame.enabled?
+        app.config.assets.precompile += ['opensesame.css']
 
-      OpenSesame.configuration.validate!
+        OpenSesame.configuration.validate!
 
-      app.config.middleware.use OpenSesame::GithubAuth, 
-        OpenSesame.github_client[:id], 
-        OpenSesame.github_client[:secret],
-        :path_prefix => OpenSesame.mount_prefix
+        app.config.middleware.use OpenSesame::GithubAuth, 
+          OpenSesame.github_client[:id], 
+          OpenSesame.github_client[:secret],
+          :path_prefix => OpenSesame.mount_prefix
 
-      if defined?(Devise)
-        Devise.setup do |config|
-          config.warden do |manager|
+        if defined?(Devise)
+          Devise.setup do |config|
+            config.warden do |manager|
+              manager.default_strategies(:opensesame_github, :scope => :opensesame)
+              manager.failure_app = OpenSesame::FailureApp.new
+            end
+          end
+        else
+          app.config.middleware.use ::Warden::Manager do |manager|
             manager.default_strategies(:opensesame_github, :scope => :opensesame)
-            manager.failure_app = OpenSesame::FailureApp.new
+            manager.failure_app = lambda { |env| OpenSesame::SessionsController.action(:new).call(env)}
           end
         end
-      else
-        app.config.middleware.use ::Warden::Manager do |manager|
-          manager.default_strategies(:opensesame_github, :scope => :opensesame)
-          manager.failure_app = lambda { |env| OpenSesame::SessionsController.action(:new).call(env)}
-        end
       end
-
     end
   end
 end

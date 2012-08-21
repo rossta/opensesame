@@ -3,7 +3,7 @@ module OpenSesame
 
   class Configuration
     CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :github_client, 
-      :enabled, :enable_clause, :full_host, :auto_access_provider]
+      :enabled, :full_host, :auto_access_provider]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
     def mounted_at(mount_prefix)
@@ -26,24 +26,20 @@ module OpenSesame
       self.auto_access_provider = provider
     end
 
-    def enable_if(conditional)
-      self.enabled = nil
-      self.enable_clause = lambda { conditional }
-    end
-
     def enable!
-      self.enable_clause = nil
       self.enabled = true
     end
 
     def disable!
-      self.enable_clause = nil
       self.enabled = false
     end
 
+    def enable(enabled)
+      self.enabled = !!enabled
+    end
+
     def enabled?
-      (!self.enabled.nil? && self.enabled) ||
-      (!self.enable_clause.nil? && self.enable_clause.call)
+      self.enabled
     end
 
     def configure
