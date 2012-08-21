@@ -1,241 +1,132 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.2.4
+http_interactions: 
+- request: 
     method: get
     uri: https://api.github.com/users/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
+    body: 
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        bmdpbngvMS4wLjEz
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAwNDozMjo1NyBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        U3VuLCAwNSBBdWcgMjAxMiAxODo0ODowNSBHTVQ=
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBzLW1heGFnZT02MCwgbWF4LWFnZT02MA==
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjI3MzQ5NmY0MzhiMmVlZWQxOWZiMTUxZGM5NjlhOWI1Ig==
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDkxNA==
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4VRwU6EMBD9lU0TbyxQ2AWWxGhi4sXEg9GDXsgAAzRbKGmL
-        ZGP8d6cKunvyNp2+ee/Nmw9WaQSLdQGW5SwKw2wb7rdR+syzPEpznrwxj9nT
-        iPT7YlDTS6pWDPTUyhgL1OgEcZSSIA1Igx5rlJRqRm1YzmP6t70sJi1pprN2
-        NHkQtMJ2U+lXqg9+abAH4TCucYSmuW1dw2FIoxSK5cMkJZVkYKEipnme/XVi
-        wY5TKUVVtMJY5yBZDYmB5iIyJFUFVii3xCPOm1elj5s7YU+kQ2ojDKdL/qoD
-        KXFocVTGLiKthnewoAtRE7gMeXKANGuyPT8kUbjP6iSO4xTqkO/SOiHmxZV2
-        JCyPM48N0LtYn2jfzQMtjEOJuv3O+DItGIV/lthEdzB/uS0+LkcMVpNGf3X5
-        nfQPMPjP6019vZ4Jol3mow9HoFP4A9oAjEFrztxcRfeihxYNFavaeb3lu9Af
-        KXmPuaQ4T9L48wtL3OhvdwIAAA==
-    http_version: !binary |-
-      MS4x
-  recorded_at: Tue, 21 Aug 2012 04:33:13 GMT
-- request:
+      message: OK
+    headers: 
+      x-content-type-options: 
+      - nosniff
+      etag: 
+      - "\"273496f438b2eeed19fb151dc969a9b5\""
+      last-modified: 
+      - Sun, 05 Aug 2012 18:48:05 GMT
+      x-ratelimit-limit: 
+      - "5000"
+      connection: 
+      - close
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Tue, 21 Aug 2012 15:42:29 GMT
+      server: 
+      - nginx/1.0.13
+      content-length: 
+      - "631"
+      x-ratelimit-remaining: 
+      - "4990"
+      cache-control: 
+      - public, max-age=60, s-maxage=60
+      vary: 
+      - Accept
+      status: 
+      - 200 OK
+    body: 
+      string: "{\"type\":\"User\",\"bio\":null,\"following\":23,\"blog\":\"http://www.rosskaff.com\",\"location\":\"New York City\",\"created_at\":\"2008-05-27T18:27:16Z\",\"company\":\"http://www.challengepost.com\",\"gravatar_id\":\"b0169a78f851962058d63337ad0147d6\",\"login\":\"rossta\",\"public_gists\":16,\"email\":\"rosskaff@gmail.com\",\"avatar_url\":\"https://secure.gravatar.com/avatar/b0169a78f851962058d63337ad0147d6?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"name\":\"Ross Kaffenberger\",\"url\":\"https://api.github.com/users/rossta\",\"public_repos\":38,\"hireable\":false,\"id\":11673,\"followers\":13,\"html_url\":\"https://github.com/rossta\"}"
+    http_version: "1.1"
+  recorded_at: Tue, 21 Aug 2012 15:42:29 GMT
+- request: 
     method: get
     uri: https://api.github.com/users/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
+    body: 
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        bmdpbngvMS4wLjEz
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAwNDozMjo1NyBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjI3MzQ5NmY0MzhiMmVlZWQxOWZiMTUxZGM5NjlhOWI1Ig==
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        U3VuLCAwNSBBdWcgMjAxMiAxODo0ODowNSBHTVQ=
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDkxMw==
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4VSTU+DQBD9K80m3iifLVASo4mJFxMPRg96aQYYlk0Xluwu
-        ksb4351tIbZevA0zj3nvzdsvZo8DsoK9GdTMY6VQrOhHKT3WKCnVJHrOijih
-        iVRUsdbaoQiCaZp8rYw5QNP4leroV6kqsEL1BHrGafWu9GH1IOyRRpVGsFjv
-        wdIwDsN8HW7XcfYa5UWcFVH64TCqG6A/XlNULUiJPcdBGTvzcA2fYEHvRU3g
-        MozSHWR5k2+jXRqH27xOkyTJoA6jTVanJ2FcOFVOrwVqDGMpRbXnwljDiN5j
-        2IGQM8RZuueuMRPOdKN2COff0AEMVqNGfxHjoMEZGPwn6a6+XbZAvMl99OEA
-        xOf3aAMwBq3xubDtWLqtN/Gj6ICjoWJhu6zX0Sb0B0rJYz10LsoX8rl6IhfY
-        l6j5Kddr8TCIC4ZgpOxN8Pc82h2dFUnusVZQgKWk5Q1Igx5zp4+iNKN3cX4m
-        tIA69NnaTu6v2X69LBzfPznKrr93AgAA
-    http_version: !binary |-
-      MS4x
-  recorded_at: Tue, 21 Aug 2012 04:33:13 GMT
-- request:
+      message: OK
+    headers: 
+      x-content-type-options: 
+      - nosniff
+      etag: 
+      - "\"273496f438b2eeed19fb151dc969a9b5\""
+      x-ratelimit-limit: 
+      - "5000"
+      last-modified: 
+      - Sun, 05 Aug 2012 18:48:05 GMT
+      connection: 
+      - close
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Tue, 21 Aug 2012 15:42:29 GMT
+      server: 
+      - nginx/1.0.13
+      content-length: 
+      - "631"
+      x-ratelimit-remaining: 
+      - "4989"
+      cache-control: 
+      - public, s-maxage=60, max-age=60
+      vary: 
+      - Accept
+      status: 
+      - 200 OK
+    body: 
+      string: "{\"type\":\"User\",\"bio\":null,\"avatar_url\":\"https://secure.gravatar.com/avatar/b0169a78f851962058d63337ad0147d6?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"public_repos\":38,\"following\":23,\"location\":\"New York City\",\"created_at\":\"2008-05-27T18:27:16Z\",\"company\":\"http://www.challengepost.com\",\"gravatar_id\":\"b0169a78f851962058d63337ad0147d6\",\"login\":\"rossta\",\"public_gists\":16,\"blog\":\"http://www.rosskaff.com\",\"email\":\"rosskaff@gmail.com\",\"name\":\"Ross Kaffenberger\",\"url\":\"https://api.github.com/users/rossta\",\"hireable\":false,\"id\":11673,\"followers\":13,\"html_url\":\"https://github.com/rossta\"}"
+    http_version: "1.1"
+  recorded_at: Tue, 21 Aug 2012 15:42:30 GMT
+- request: 
     method: get
     uri: https://api.github.com/orgs/challengepost/members
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
+    body: 
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        bmdpbngvMS4wLjEz
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAwNDozMjo1NyBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDkxMg==
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        U2F0LCAxOCBBdWcgMjAxMiAwMDoyMDo1NyBHTVQ=
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjkzMTA4NmZjZDlmYzMwNjMxODMzNTRiMTg2OGIwZTNkIg==
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBzLW1heGFnZT02MCwgbWF4LWFnZT02MA==
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA73YTY/bNhAG4P9ioLfE5gyHHxMgyK1/oMeiCPgx9Goj2wtJ
-        LrAt8t9L23Ei9SJBBx0WEFaw/O7jl+R4//x3116OzXn3aRe/Sd+30u0+7MLf
-        YQjd12vX1t+/DMNb/+lw6CVdO9kfu8fdfbqcDo/LQ1GKUZngmXNARPIpBRWd
-        wyCJE3/Jn59PCfXmXvbhWziFZn+W4RD6XoZ+f2yGl2u8PfU3/L05haP09eL5
-        buPrj0Bq/3Y+1qDP21+bXJPOxagvmP5J4a0Zve/h2kvXH0YOt6eC0doRfv8w
-        lrq00q9w8iVGX9gkrzlnV1IOlshTBF2izbiR01yMpU4/FB5KqBy4sVK6tPn1
-        2r6vcDIpOBb20XgGTJaSQhNiwYSYgWEjp7kYy5xGDjcpq5yxE6iXS9u+A65w
-        0ko4smYWNEaVUDwpMVEQ6kpMnjZymouxzOkXw42JPDqtxn1q2ve6awz/rHCS
-        zMblxCFpp0JRaIszXhsXS04atnKai7HMaeRwg0KPBmgM9ZpO13bdRo4ZVVaS
-        k2FITsgg1X1KUCAwRLYbFWouxjKokcMdSnmjJo06hU7OeUWfiFMiQ2yM1H2c
-        2ViQXCxFb5GMcRsxzcVYxvRT4b6PO2ZN/1c6v/enejyvkEqq1LEgQIRkKFAm
-        B1HFqH0sOkvZSmouxmKpXxL3vZyZ3WTtnZp8XcGEzASOdFC2Lj4fErCX4lP9
-        ES8SNyrUXIyFTA+De518nXSmbRrq3rRmJgCXM5BNVooNqR5uZBQwmToVFLFl
-        q9lpLsZCoqfCHQnZTo+6c3Ot8++KHmXS9UCz5ChmFdBgPXKUy2QNQJa81XKb
-        i7EM6afCj93b4mQKf3vtLrE595fzCqiC6FXQkdj7rK02YjHVj4GkcKqn3UYL
-        bi7GMqiJxL1RtnZK6fFQ0Mlw7c5Dd11TKwFwt4lcCUaKiaImS17pmOv5Z1Xa
-        SGsuxjKticRNy7AGN6lWd+n7IayoVVRgOThfvAG29Suxz1bX748hKyCXt5qf
-        5mIshHoq3CsF1k0K9YfU4SmAghVMwLqgzqgtZ7bRuoRCWer/C5TXyW/Vp7kY
-        y5jGEI8zD2qj3Pe//gOrEsJ6XBEAAA==
-    http_version: !binary |-
-      MS4x
-  recorded_at: Tue, 21 Aug 2012 04:33:13 GMT
-recorded_with: VCR 2.2.4
+      message: OK
+    headers: 
+      x-content-type-options: 
+      - nosniff
+      etag: 
+      - "\"931086fcd9fc3063183354b1868b0e3d\""
+      last-modified: 
+      - Sat, 18 Aug 2012 00:20:57 GMT
+      x-ratelimit-limit: 
+      - "5000"
+      connection: 
+      - close
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Tue, 21 Aug 2012 15:42:29 GMT
+      server: 
+      - nginx/1.0.13
+      content-length: 
+      - "4444"
+      x-ratelimit-remaining: 
+      - "4988"
+      vary: 
+      - Accept
+      cache-control: 
+      - public, s-maxage=60, max-age=60
+      status: 
+      - 200 OK
+    body: 
+      string: "[{\"gravatar_id\":\"f009205a899da22248cca0b772aec9c9\",\"login\":\"bkessler\",\"avatar_url\":\"https://secure.gravatar.com/avatar/f009205a899da22248cca0b772aec9c9?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/bkessler\",\"id\":1533742},{\"gravatar_id\":\"8fbb8f95c839dd7fcda64484b13fb6d2\",\"login\":\"bkoles\",\"avatar_url\":\"https://secure.gravatar.com/avatar/8fbb8f95c839dd7fcda64484b13fb6d2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/bkoles\",\"id\":1520717},{\"gravatar_id\":\"5ca79e98b58912c64c025abf2c22d191\",\"login\":\"coldjuly\",\"avatar_url\":\"https://secure.gravatar.com/avatar/5ca79e98b58912c64c025abf2c22d191?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/coldjuly\",\"id\":607567},{\"gravatar_id\":\"30e9b9399e2550faf840e5be21899c84\",\"login\":\"holly12\",\"avatar_url\":\"https://secure.gravatar.com/avatar/30e9b9399e2550faf840e5be21899c84?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/holly12\",\"id\":482730},{\"gravatar_id\":\"ed957dc9ac370af026f758357bfdc314\",\"login\":\"ilyakatz\",\"avatar_url\":\"https://secure.gravatar.com/avatar/ed957dc9ac370af026f758357bfdc314?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/ilyakatz\",\"id\":282514},{\"gravatar_id\":\"2d20d0edc591c7e4524dd7e2e1a91b96\",\"login\":\"jcmuller\",\"avatar_url\":\"https://secure.gravatar.com/avatar/2d20d0edc591c7e4524dd7e2e1a91b96?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/jcmuller\",\"id\":208500},{\"gravatar_id\":\"49cc454955e9dd99561edf64b8624557\",\"login\":\"marend\",\"avatar_url\":\"https://secure.gravatar.com/avatar/49cc454955e9dd99561edf64b8624557?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/marend\",\"id\":1799340},{\"gravatar_id\":\"c0f5a8a1b1c54a4d471b0bb38bf3def7\",\"login\":\"marnysmith\",\"avatar_url\":\"https://secure.gravatar.com/avatar/c0f5a8a1b1c54a4d471b0bb38bf3def7?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/marnysmith\",\"id\":699974},{\"gravatar_id\":\"29941743a06edc8ac198ef8cef8e8eeb\",\"login\":\"midu\",\"avatar_url\":\"https://secure.gravatar.com/avatar/29941743a06edc8ac198ef8cef8e8eeb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/midu\",\"id\":188390},{\"gravatar_id\":\"17dd146c6ef6acc844501945bf2fe6f2\",\"login\":\"mtully\",\"avatar_url\":\"https://secure.gravatar.com/avatar/17dd146c6ef6acc844501945bf2fe6f2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/mtully\",\"id\":129630},{\"gravatar_id\":\"d43dc36474bd0a252ed907d46511ded7\",\"login\":\"niuage\",\"avatar_url\":\"https://secure.gravatar.com/avatar/d43dc36474bd0a252ed907d46511ded7?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/niuage\",\"id\":208622},{\"gravatar_id\":\"f2280a3b4988d3635e62c9634ef9ce1a\",\"login\":\"pjrobinson\",\"avatar_url\":\"https://secure.gravatar.com/avatar/f2280a3b4988d3635e62c9634ef9ce1a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/pjrobinson\",\"id\":1612903},{\"gravatar_id\":\"e117a79e0e2b4bc4b3464803bde9d60c\",\"login\":\"returntrue\",\"avatar_url\":\"https://secure.gravatar.com/avatar/e117a79e0e2b4bc4b3464803bde9d60c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/returntrue\",\"id\":593172},{\"gravatar_id\":\"b0169a78f851962058d63337ad0147d6\",\"login\":\"rossta\",\"avatar_url\":\"https://secure.gravatar.com/avatar/b0169a78f851962058d63337ad0147d6?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/rossta\",\"id\":11673},{\"gravatar_id\":\"193f23d2369d96b67c2e4de772083c8c\",\"login\":\"Serena101\",\"avatar_url\":\"https://secure.gravatar.com/avatar/193f23d2369d96b67c2e4de772083c8c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"url\":\"https://api.github.com/users/Serena101\",\"id\":1815937}]"
+    http_version: "1.1"
+  recorded_at: Tue, 21 Aug 2012 15:42:30 GMT

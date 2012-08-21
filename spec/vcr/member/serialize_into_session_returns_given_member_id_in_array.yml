@@ -1,89 +1,46 @@
----
-http_interactions:
-- request:
+--- 
+recorded_with: VCR 2.2.4
+http_interactions: 
+- request: 
     method: get
     uri: https://api.github.com/orgs/challengepost/members
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
+    body: 
+      string: ""
+    headers: 
+      accept: 
+      - "*/*"
+  response: 
+    status: 
       code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        bmdpbngvMS4wLjEz
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        VHVlLCAyMSBBdWcgMjAxMiAxMzowNzo1NSBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        U2F0LCAxOCBBdWcgMjAxMiAwMDoyMDo1NyBHTVQ=
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBzLW1heGFnZT02MCwgbWF4LWFnZT02MA==
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjkzMTA4NmZjZDlmYzMwNjMxODMzNTRiMTg2OGIwZTNkIg==
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDk5NQ==
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA7WY24rjRhCG38WQu127q7r6UAshd/sCuQwh9KHao1nZHnQI
-        TMK+e9rZnVkpDki60IXBYOn/Sx9/dZX829+H9nZurodPh/hF+r6V7vDhcO7C
-        n2EI3R9Nrj8UpRiVCZ45B0Qkn1JQ0TkMkjhxvWHs2nrh0zC89J9Op/DSHM/N
-        8DTGY7pdTmMvXX+ayH8Xn9/USxo7Ob5Z/3vntwtPSwX8kn9+t67VHeUYvoRL
-        aI5XGU6h72XoJ/X8hJ+bSzhLX7+8uU2/fwRSx5fruT7W/fHBaO0Iv36Ykrq1
-        0j9w8iVGX9gkrzlnV1IOlshTBF2izbiW03fxrZSW7HemhMqBm1JKtzY/j+3r
-        AyeTgmNhH41nwGQpKTQhFkyIGRjWcZrIbyW1VMCupKxyxs5APd3a9hXu8Zj3
-        nVbCkTWzoDGqhOJJiYmCUDsxeVrH6Yf6VkxL/rtiIo9Oq2memva1tvXw1wMn
-        yWxcThySdioUhbY447VxseSkYSWnifxWUEsF7AoKPRqgKajndBnb/zvIMaPK
-        SnIyDMkJGaR6TgkKBIbIdl2gJvJbQS0VsC8o5Y2aJeoSOrnmhzwRp0SG2Bip
-        5zizsSC5WIreIhnj1mF6F98Kacl+V0jgmDX9l9L1tb/Uef5AKqlS14IAEZKh
-        QJkcRBWj9rHoLGU9qR8GW2ktlbArLcvMbtZ7lyaPD5iQmcCRDsrW5vMhAXsp
-        PtWPeJG4MlDfpLcCWjLfFRD4ugvN0zTUs+lxJwCXM5BNVooNqQ43MgqYTN0K
-        itiycne6vIlvhbRkvy8kZDsfdddmrAvqQ44y6TrQLDmKWQU0WAePcpmsAciS
-        V7bbu/hWSEv2u0JCVU/f2Rb+8tzdYnPtb9cHUAXRq6AjsfdZW23EYqqQSQqn
-        Ou3WNdzMYCuspRJ2hQUWkJWeLgWdDGN3HbrxMVYC4O4buRKMFBNFTZa80jHX
-        +WdVWkdrZrCV1lIJu9IyrMHNotXd+n64p2S+kEcFloPzxRtgW1+Jfba6vh2G
-        rIBcXrk/vYtvhbRkvyskAOtmgfpV6vIUQN1f1+aYgHVBnVFbzmyjdQmFstT/
-        C5TXya/M01R/K6mlCvYl5aEmyn39/R/7gCt0XBEAAA==
-    http_version: !binary |-
-      MS4x
-  recorded_at: Tue, 21 Aug 2012 13:07:55 GMT
-recorded_with: VCR 2.2.4
+      message: OK
+    headers: 
+      x-content-type-options: 
+      - nosniff
+      etag: 
+      - "\"931086fcd9fc3063183354b1868b0e3d\""
+      x-ratelimit-limit: 
+      - "5000"
+      last-modified: 
+      - Sat, 18 Aug 2012 00:20:57 GMT
+      connection: 
+      - close
+      content-type: 
+      - application/json; charset=utf-8
+      date: 
+      - Tue, 21 Aug 2012 15:42:26 GMT
+      server: 
+      - nginx/1.0.13
+      content-length: 
+      - "4444"
+      x-ratelimit-remaining: 
+      - "4997"
+      cache-control: 
+      - public, s-maxage=60, max-age=60
+      vary: 
+      - Accept
+      status: 
+      - 200 OK
+    body: 
+      string: "[{\"avatar_url\":\"https://secure.gravatar.com/avatar/f009205a899da22248cca0b772aec9c9?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"f009205a899da22248cca0b772aec9c9\",\"login\":\"bkessler\",\"url\":\"https://api.github.com/users/bkessler\",\"id\":1533742},{\"avatar_url\":\"https://secure.gravatar.com/avatar/8fbb8f95c839dd7fcda64484b13fb6d2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"8fbb8f95c839dd7fcda64484b13fb6d2\",\"login\":\"bkoles\",\"url\":\"https://api.github.com/users/bkoles\",\"id\":1520717},{\"avatar_url\":\"https://secure.gravatar.com/avatar/5ca79e98b58912c64c025abf2c22d191?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"5ca79e98b58912c64c025abf2c22d191\",\"login\":\"coldjuly\",\"url\":\"https://api.github.com/users/coldjuly\",\"id\":607567},{\"avatar_url\":\"https://secure.gravatar.com/avatar/30e9b9399e2550faf840e5be21899c84?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"30e9b9399e2550faf840e5be21899c84\",\"login\":\"holly12\",\"url\":\"https://api.github.com/users/holly12\",\"id\":482730},{\"avatar_url\":\"https://secure.gravatar.com/avatar/ed957dc9ac370af026f758357bfdc314?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"ed957dc9ac370af026f758357bfdc314\",\"login\":\"ilyakatz\",\"url\":\"https://api.github.com/users/ilyakatz\",\"id\":282514},{\"avatar_url\":\"https://secure.gravatar.com/avatar/2d20d0edc591c7e4524dd7e2e1a91b96?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"2d20d0edc591c7e4524dd7e2e1a91b96\",\"login\":\"jcmuller\",\"url\":\"https://api.github.com/users/jcmuller\",\"id\":208500},{\"avatar_url\":\"https://secure.gravatar.com/avatar/49cc454955e9dd99561edf64b8624557?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"49cc454955e9dd99561edf64b8624557\",\"login\":\"marend\",\"url\":\"https://api.github.com/users/marend\",\"id\":1799340},{\"avatar_url\":\"https://secure.gravatar.com/avatar/c0f5a8a1b1c54a4d471b0bb38bf3def7?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"c0f5a8a1b1c54a4d471b0bb38bf3def7\",\"login\":\"marnysmith\",\"url\":\"https://api.github.com/users/marnysmith\",\"id\":699974},{\"avatar_url\":\"https://secure.gravatar.com/avatar/29941743a06edc8ac198ef8cef8e8eeb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"29941743a06edc8ac198ef8cef8e8eeb\",\"login\":\"midu\",\"url\":\"https://api.github.com/users/midu\",\"id\":188390},{\"avatar_url\":\"https://secure.gravatar.com/avatar/17dd146c6ef6acc844501945bf2fe6f2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"17dd146c6ef6acc844501945bf2fe6f2\",\"login\":\"mtully\",\"url\":\"https://api.github.com/users/mtully\",\"id\":129630},{\"avatar_url\":\"https://secure.gravatar.com/avatar/d43dc36474bd0a252ed907d46511ded7?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"d43dc36474bd0a252ed907d46511ded7\",\"login\":\"niuage\",\"url\":\"https://api.github.com/users/niuage\",\"id\":208622},{\"avatar_url\":\"https://secure.gravatar.com/avatar/f2280a3b4988d3635e62c9634ef9ce1a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"f2280a3b4988d3635e62c9634ef9ce1a\",\"login\":\"pjrobinson\",\"url\":\"https://api.github.com/users/pjrobinson\",\"id\":1612903},{\"avatar_url\":\"https://secure.gravatar.com/avatar/e117a79e0e2b4bc4b3464803bde9d60c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"e117a79e0e2b4bc4b3464803bde9d60c\",\"login\":\"returntrue\",\"url\":\"https://api.github.com/users/returntrue\",\"id\":593172},{\"avatar_url\":\"https://secure.gravatar.com/avatar/b0169a78f851962058d63337ad0147d6?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"b0169a78f851962058d63337ad0147d6\",\"login\":\"rossta\",\"url\":\"https://api.github.com/users/rossta\",\"id\":11673},{\"avatar_url\":\"https://secure.gravatar.com/avatar/193f23d2369d96b67c2e4de772083c8c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png\",\"gravatar_id\":\"193f23d2369d96b67c2e4de772083c8c\",\"login\":\"Serena101\",\"url\":\"https://api.github.com/users/Serena101\",\"id\":1815937}]"
+    http_version: "1.1"
+  recorded_at: Tue, 21 Aug 2012 15:42:27 GMT
