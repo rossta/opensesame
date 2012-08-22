@@ -7,8 +7,8 @@ module OpenSesame
     after_filter :clear_auto_attempt!, :only => :create
 
     def new
-      if warden.message
-        flash.now[:notice] = warden.message
+      if error_message
+        flash.now[:notice] = error_message
       end
       render :layout => 'open_sesame/application'
     end
@@ -28,6 +28,10 @@ module OpenSesame
     end
 
     protected
+
+    def error_message
+      warden.message || env['omniauth.error'] || env['omniauth.error.type']
+    end
 
     def attempt_auto_authenticate
       return unless attempt_auto_access?
