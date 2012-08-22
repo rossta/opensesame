@@ -37,5 +37,5 @@ Mount OpenSesame in your Rails routes.rb:
 ```ruby
 # Rails config/routes.rb
 
-mount OpenSesame::Engine => "/opensesame", :as => "opensesame"
+mount OpenSesame::Engine => OpenSesame.mount_prefix
 ```
