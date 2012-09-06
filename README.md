@@ -1,5 +1,7 @@
 # OpenSesame
 
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/rossta/opensesame)
+
 OpenSesame is a [Warden](https://github.com/hassox/warden) strategy for providing "walled garden" authentication for access to Rack-based applications via Omniauth. The intent is protect the visibility of your app from the outside world. For example, your company has internal apps and/or staging enviroments for multiple projects and you want something better than HTTP basic auth.
 
 Enter OpenSesame. To authenticate, OpenSesame currently uses Omniauth and the Github API to require that a user is both logged in to Github and a member of the Github organization for which OpenSesame is configured.
