@@ -1,5 +1,6 @@
 # OpenSesame
 
+[![Build Status](https://secure.travis-ci.org/rossta/opensesame.png)](http://travis-ci.org/rossta/opensesame)
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/rossta/opensesame)
 
 OpenSesame is a [Warden](https://github.com/hassox/warden) strategy for providing "walled garden" authentication for access to Rack-based applications via Omniauth. The intent is protect the visibility of your app from the outside world. For example, your company has internal apps and/or staging enviroments for multiple projects and you want something better than HTTP basic auth.
