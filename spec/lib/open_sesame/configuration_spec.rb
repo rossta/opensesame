@@ -12,8 +12,8 @@ describe OpenSesame::Configuration do
 
   it "github sets github client credentials" do
     configuration.github "client_id", "client_secret"
-    configuration.github_client[:id].should == "client_id"
-    configuration.github_client[:secret].should == "client_secret"
+    configuration.github_application[:id].should == "client_id"
+    configuration.github_application[:secret].should == "client_secret"
   end
 
   it "mounted_at sets mount_prefix" do
@@ -35,7 +35,7 @@ describe OpenSesame::Configuration do
       configuration.github "client_id", "client_secret"
       configuration.should_not be_valid
 
-      configuration.github_client = nil
+      configuration.github_application = nil
       configuration.mounted_at "/foobar"
       configuration.should_not be_valid
     end

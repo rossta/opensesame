@@ -20,7 +20,15 @@ module OpenSesame
     end
 
     def self.github_api
-      @github_api ||= Octokit.new
+      @github_api ||= begin
+        if OpenSesame.github_account
+          Octokit::Client.new(
+            login: OpenSesame.github_account[:login],
+            oauth_token: OpenSesame.github_account[:oauth_token])
+        else
+          Octokit.new
+        end
+      end
     end
 
     def self.lazy_attr_reader(*attrs)

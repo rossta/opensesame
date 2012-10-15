@@ -3,8 +3,15 @@ module OpenSesame
   class ConfigurationError < RuntimeError; end
 
   class Configuration
-    CONFIGURABLE_ATTRIBUTES = [:organization_name, :mount_prefix, :github_client,
-      :enabled, :full_host, :auto_access_provider]
+    CONFIGURABLE_ATTRIBUTES = [
+      :organization_name,
+      :mount_prefix,
+      :github_application,
+      :github_account,
+      :enabled,
+      :full_host,
+      :auto_access_provider
+    ]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
     def mounted_at(mount_prefix)
@@ -15,8 +22,17 @@ module OpenSesame
       self.full_host = full_host
     end
 
+    # DEPRECATED
     def github(client_id, client_secret)
-      self.github_client = { :id => client_id, :secret => client_secret }
+      self.github_application = { :id => client_id, :secret => client_secret }
+    end
+
+    def github_application_credentials(client_id, client_secret)
+      self.github_application = { :id => client_id, :secret => client_secret }
+    end
+
+    def github_account_credentials(login, oauth_token)
+      self.github_account = { :login => login, :oauth_token => oauth_token }
     end
 
     def organization(organization_name)
@@ -52,12 +68,12 @@ module OpenSesame
     def valid?
       self.organization_name && self.organization_name.is_a?(String) &&
       self.mount_prefix && self.mount_prefix.is_a?(String) &&
-      self.github_client.is_a?(Hash) &&
-      [:id, :secret].all? { |key| self.github_client.keys.include?(key) }
+      self.github_application.is_a?(Hash) &&
+      [:id, :secret].all? { |key| self.github_application.keys.include?(key) }
     end
 
     def configured?
-      [:organization_name, :mount_prefix, :github_client].any? { |required| send(required).present? }
+      [:organization_name, :mount_prefix, :github_application].any? { |required| send(required).present? }
     end
 
     def validate!
