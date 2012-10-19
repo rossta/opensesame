@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 3.2"
   s.add_dependency "omniauth-github"
-  s.add_dependency "octokit", "~> 1.10"
+  # s.add_dependency "octokit", "~> 1.10"
   s.add_dependency "warden"
 
   s.add_development_dependency "sqlite3"

@@ -15,3 +15,5 @@ gem "jquery-rails"
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem 'octokit', :git => 'git://github.com/joeyw/octokit.git', :branch => 'fix-org-members'
