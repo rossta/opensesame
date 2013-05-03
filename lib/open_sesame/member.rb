@@ -23,8 +23,8 @@ module OpenSesame
       @github_api ||= begin
         if OpenSesame.github_account
           Octokit::Client.new(
-            login: OpenSesame.github_account[:login],
-            oauth_token: OpenSesame.github_account[:oauth_token])
+            :login => OpenSesame.github_account[:login],
+            :oauth_token => OpenSesame.github_account[:oauth_token])
         else
           Octokit.new
         end
