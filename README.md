@@ -43,7 +43,7 @@ Mount OpenSesame in your Rails routes.rb:
 mount OpenSesame::Engine => OpenSesame.mount_prefix
 ```
 
-Place the following into you appplication_contrrollerb.rb:
+Place the following into your appplication_contrrollerb.rb:
 
 ```ruby
 before_filter :authenticate_opensesame!
