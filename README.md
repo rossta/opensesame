@@ -17,7 +17,7 @@ Register your application(s) with Github for OAuth access. For each application,
 and a callback for OAuth. The OmniAuth-Github OAuth strategy used under the hood will expect the callback at mount path + '/github/callback'. So the development version of your client application might be registered as:
 
     Name: MyApp - local
-    URL: http://localhost:3000
+    URL: http://localhost:3000 
     Callback URL: http://localhost:3000/opensesame/github/callback
 
 Configure OpenSesame:
@@ -42,3 +42,10 @@ Mount OpenSesame in your Rails routes.rb:
 
 mount OpenSesame::Engine => OpenSesame.mount_prefix
 ```
+
+Place the following into your appplication_contrrollerb.rb:
+
+```ruby
+before_filter :authenticate_opensesame!
+```
+
