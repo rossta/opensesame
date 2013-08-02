@@ -8,7 +8,7 @@ module OpenSesame
     end
 
     def authenticate_opensesame!
-      warden.authenticate!(:scope => :opensesame)
+      warden.authenticate!(:scope => :opensesame) unless current_opensesame_user
     end
 
     def current_opensesame_user
