@@ -21,24 +21,25 @@ module OpenSesame
     end
 
     initializer "opensesame.middleware", :after => :load_config_initializers do |app|
-      require 'open_sesame/github_warden'
+      if OpenSesame.enabled?
+        require 'open_sesame/github_warden'
+        app.config.middleware.use OpenSesame::GithubAuth,
+          OpenSesame.github_application[:id],
+          OpenSesame.github_application[:secret],
+          :path_prefix => OpenSesame.mount_prefix
 
-      app.config.middleware.use OpenSesame::GithubAuth,
-        OpenSesame.github_application[:id],
-        OpenSesame.github_application[:secret],
-        :path_prefix => OpenSesame.mount_prefix
-
-      if defined?(Devise)
-        Devise.setup do |config|
-          config.warden do |manager|
-            manager.default_strategies(:opensesame_github, :scope => :opensesame)
-            manager.failure_app = OpenSesame::Failure::DeviseApp.new
+        if defined?(Devise)
+          Devise.setup do |config|
+            config.warden do |manager|
+              manager.default_strategies(:opensesame_github, :scope => :opensesame)
+              manager.failure_app = OpenSesame::Failure::DeviseApp.new
+            end
           end
-        end
-      else
-        app.config.middleware.use ::Warden::Manager do |manager|
-          manager.default_strategies(:opensesame_github, :scope => :opensesame)
-          manager.failure_app = OpenSesame::Failure::App.new
+        else
+          app.config.middleware.use ::Warden::Manager do |manager|
+            manager.default_strategies(:opensesame_github, :scope => :opensesame)
+            manager.failure_app = OpenSesame::Failure::App.new
+          end
         end
       end
 
