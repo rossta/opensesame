@@ -8,3 +8,4 @@ spec/dummy/.sass-cache
 Guardfile
 .env
 Gemfile.lock
+.ruby-version
