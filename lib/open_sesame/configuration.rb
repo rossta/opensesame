@@ -8,6 +8,7 @@ module OpenSesame
       :mount_prefix,
       :github_application,
       :enabled,
+      :debug,
       :full_host,
       :auto_access_provider
     ]
@@ -50,7 +51,11 @@ module OpenSesame
     end
 
     def enabled?
-      self.enabled
+      !!self.enabled
+    end
+
+    def debug?
+      !!self.debug
     end
 
     def configure
