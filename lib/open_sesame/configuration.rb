@@ -22,17 +22,8 @@ module OpenSesame
       self.full_host = full_host
     end
 
-    # DEPRECATED
     def github(client_id, client_secret)
       self.github_application = { :id => client_id, :secret => client_secret }
-    end
-
-    def github_application_credentials(client_id, client_secret)
-      self.github_application = { :id => client_id, :secret => client_secret }
-    end
-
-    def github_account_credentials(login, oauth_token)
-      self.github_account = { :login => login, :oauth_token => oauth_token }
     end
 
     def organization(organization_name)

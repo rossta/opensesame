@@ -5,7 +5,8 @@ module CapybaraHelper
   def setup_for_github_login(user = test_user)
     OmniAuth.config.mock_auth[:github] = {
       "provider" => 'github',
-      "uid" => test_user.id
+      "uid" => user.id,
+      "nickname" => user.login
     }
   end
 

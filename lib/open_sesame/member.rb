@@ -10,30 +10,25 @@ module OpenSesame
 
     def self.find(member_id)
       return nil unless member_id.present?
-      attributes = organization_members.detect { |member| member.id.to_s == member_id.to_s }
-      return nil unless attributes.present?
-      new(attributes)
+      return unless member?(member_id)
+      new(login: member_id)
     end
 
-    # memoize members so we don't make repeated API requests
-    def self.organization_members
-      @organization_members ||= github_api.organization_members(organization_name)
+    def self.member?(member_id)
+      members.include?(member_id) || begin
+        client.organization_member?(organization_name, member_id)
+      rescue Octokit::ServerError => e
+        OpenSesame.logger.info e
+      end
     end
 
-    # necessary to update when changes made to the GH organization
-    def self.reset_organization_members
-      @organization_members = nil
+    def self.members
+      @members ||= []
     end
 
-    def self.github_api
-      @github_api ||= begin
-        if OpenSesame.github_account
-          Octokit::Client.new(
-            :login => OpenSesame.github_account[:login],
-            :oauth_token => OpenSesame.github_account[:oauth_token])
-        else
-          Octokit.new
-        end
+    def self.client
+      @client ||= begin
+        Octokit::Client.new(OpenSesame.github_application)
       end
     end
 
@@ -57,15 +52,13 @@ module OpenSesame
     end
 
     attr_accessor :attributes
-    lazy_attr_reader :id, :login, :avatar_url, :gravatar_id, :url
+    lazy_attr_reader :login
 
     def initialize(attributes = {})
       @attributes = attributes
     end
 
-    def id
-      @attributes["id"]
-    end
+    def id; login; end
 
     def organization_name
       self.class.organization_name

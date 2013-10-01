@@ -2,187 +2,110 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/orgs/challengepost/members
+    uri: https://api.github.com/orgs/challengepost/members/rossta
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       accept:
-      - ! '*/*'
+      - application/vnd.github.beta+json
+      user-agent:
+      - Octokit Ruby Gem 2.3.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 200
-      message: OK
+      code: 302
+      message: Found
     headers:
+      server:
+      - GitHub.com
+      date:
+      - Tue, 01 Oct 2013 19:22:08 GMT
+      content-type:
+      - text/html;charset=utf-8
+      connection:
+      - close
+      status:
+      - 302 Found
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '59'
+      x-ratelimit-reset:
+      - '1380658928'
+      location:
+      - https://api.github.com/organizations/199945/public_members/rossta
       x-content-type-options:
       - nosniff
-      etag:
-      - ! '"a15607b962c849a75315fa5d68d6c4bb"'
-      x-ratelimit-limit:
-      - '5000'
-      last-modified:
-      - Tue, 21 Aug 2012 18:19:04 GMT
-      connection:
-      - close
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Tue, 21 Aug 2012 20:22:32 GMT
-      server:
-      - nginx/1.0.13
-      x-ratelimit-remaining:
-      - '4999'
       content-length:
-      - '4444'
+      - '0'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      access-control-allow-origin:
+      - ! '*'
+      x-github-request-id:
+      - 324A188A:2436:5D271EF:524B20E0
       vary:
-      - Accept
-      cache-control:
-      - public, max-age=60, s-maxage=60
-      status:
-      - 200 OK
+      - Accept-Encoding
     body:
-      encoding: UTF-8
-      string: ! '[{"gravatar_id":"f009205a899da22248cca0b772aec9c9","login":"bkessler","avatar_url":"https://secure.gravatar.com/avatar/f009205a899da22248cca0b772aec9c9?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/bkessler","id":1533742},{"gravatar_id":"8fbb8f95c839dd7fcda64484b13fb6d2","login":"bkoles","avatar_url":"https://secure.gravatar.com/avatar/8fbb8f95c839dd7fcda64484b13fb6d2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/bkoles","id":1520717},{"gravatar_id":"5ca79e98b58912c64c025abf2c22d191","login":"coldjuly","avatar_url":"https://secure.gravatar.com/avatar/5ca79e98b58912c64c025abf2c22d191?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/coldjuly","id":607567},{"gravatar_id":"30e9b9399e2550faf840e5be21899c84","login":"holly12","avatar_url":"https://secure.gravatar.com/avatar/30e9b9399e2550faf840e5be21899c84?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/holly12","id":482730},{"gravatar_id":"ed957dc9ac370af026f758357bfdc314","login":"ilyakatz","avatar_url":"https://secure.gravatar.com/avatar/ed957dc9ac370af026f758357bfdc314?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/ilyakatz","id":282514},{"gravatar_id":"2d20d0edc591c7e4524dd7e2e1a91b96","login":"jcmuller","avatar_url":"https://secure.gravatar.com/avatar/2d20d0edc591c7e4524dd7e2e1a91b96?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/jcmuller","id":208500},{"gravatar_id":"49cc454955e9dd99561edf64b8624557","login":"marend","avatar_url":"https://secure.gravatar.com/avatar/49cc454955e9dd99561edf64b8624557?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/marend","id":1799340},{"gravatar_id":"c0f5a8a1b1c54a4d471b0bb38bf3def7","login":"marnysmith","avatar_url":"https://secure.gravatar.com/avatar/c0f5a8a1b1c54a4d471b0bb38bf3def7?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/marnysmith","id":699974},{"gravatar_id":"29941743a06edc8ac198ef8cef8e8eeb","login":"midu","avatar_url":"https://secure.gravatar.com/avatar/29941743a06edc8ac198ef8cef8e8eeb?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/midu","id":188390},{"gravatar_id":"17dd146c6ef6acc844501945bf2fe6f2","login":"mtully","avatar_url":"https://secure.gravatar.com/avatar/17dd146c6ef6acc844501945bf2fe6f2?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/mtully","id":129630},{"gravatar_id":"d43dc36474bd0a252ed907d46511ded7","login":"niuage","avatar_url":"https://secure.gravatar.com/avatar/d43dc36474bd0a252ed907d46511ded7?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/niuage","id":208622},{"gravatar_id":"f2280a3b4988d3635e62c9634ef9ce1a","login":"pjrobinson","avatar_url":"https://secure.gravatar.com/avatar/f2280a3b4988d3635e62c9634ef9ce1a?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/pjrobinson","id":1612903},{"gravatar_id":"e117a79e0e2b4bc4b3464803bde9d60c","login":"returntrue","avatar_url":"https://secure.gravatar.com/avatar/e117a79e0e2b4bc4b3464803bde9d60c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/returntrue","id":593172},{"gravatar_id":"b0169a78f851962058d63337ad0147d6","login":"rossta","avatar_url":"https://secure.gravatar.com/avatar/b0169a78f851962058d63337ad0147d6?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/rossta","id":11673},{"gravatar_id":"193f23d2369d96b67c2e4de772083c8c","login":"Serena101","avatar_url":"https://secure.gravatar.com/avatar/193f23d2369d96b67c2e4de772083c8c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png","url":"https://api.github.com/users/Serena101","id":1815937}]'
+      encoding: US-ASCII
+      string: ''
     http_version: '1.1'
-  recorded_at: Tue, 21 Aug 2012 20:22:32 GMT
+  recorded_at: Tue, 01 Oct 2013 19:22:08 GMT
 - request:
     method: get
-    uri: https://api.github.com/orgs/challengepost/members?access_token=oauth_token
+    uri: https://api.github.com/organizations/199945/public_members/rossta
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      accept:
+      - application/vnd.github.beta+json
+      user-agent:
+      - Octokit Ruby Gem 2.3.1
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 204
+      message: No Content
     headers:
       server:
-      - nginx
+      - GitHub.com
       date:
-      - Mon, 15 Oct 2012 20:23:22 GMT
-      content-type:
-      - application/json; charset=utf-8
+      - Tue, 01 Oct 2013 19:22:08 GMT
       connection:
       - close
       status:
-      - 401 Unauthorized
-      cache-control:
-      - !binary ""
-      content-length:
-      - '29'
+      - 204 No Content
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '58'
+      x-ratelimit-reset:
+      - '1380658928'
       x-github-media-type:
-      - github.beta
-    body:
-      encoding: US-ASCII
-      string: ! '{"message":"Bad credentials"}'
-    http_version: '1.1'
-  recorded_at: Mon, 15 Oct 2012 20:23:22 GMT
-- request:
-    method: get
-    uri: https://api.github.com/orgs/challengepost/members?access_token=aae8a07cc7f3a8a487e779191ae16ba3a0949c08
+      - github.beta; format=json
+      x-content-type-options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      access-control-allow-origin:
+      - ! '*'
+      x-github-request-id:
+      - 324A188A:2436:5D27238:524B20E0
+      vary:
+      - Accept-Encoding
     body:
       encoding: US-ASCII
       string: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        bmdpbng=
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        TW9uLCAxNSBPY3QgMjAxMiAyMDoyNTo1OCBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0LCBBdXRob3JpemF0aW9uLCBDb29raWU=
-      !binary "eC1vYXV0aC1zY29wZXM=":
-      - !binary ""
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHJpdmF0ZSwgcy1tYXhhZ2U9NjAsIG1heC1hZ2U9NjA=
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjhmZGVlNjYxMzJjOTBmMWM0OThhNjliYWUzZjZhZWI1Ig==
-      !binary "eC1naXRodWItbWVkaWEtdHlwZQ==":
-      - !binary |-
-        Z2l0aHViLmJldGE=
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        TW9uLCAxNSBPY3QgMjAxMiAyMDowMDo1OSBHTVQ=
-      !binary "eC1hY2NlcHRlZC1vYXV0aC1zY29wZXM=":
-      - !binary |-
-        dXNlciwgcmVwbw==
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDk5Mw==
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NTAwMA==
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA72ZTYvjRhCG/4sht1lPf3fXQghkSQ7JZSGnEMLSH9Uezcjy
-        IMkLk2X+e8r22GMvYiVaoIOxD6W39T563a5q//Nt9aWumqdu9fHbqsM6H94f
-        WqT31UPfP3cf7+/9c7XeVP3DPqzjbnu/77Dt7sMTdl2N7er19W61af1X3/v2
-        S5XouswYCKa9A0heCKFcjJ4Fa4XHCBFWd6u38n1bX63TYdy3uD6LHRc7Fd6P
-        Sf6Sfr7cLa23xrV/8ltfrRvs733XYd9dWfhJ/F5t/QY7+nBe7frzh4PFD0qw
-        9XOzobutd5uqoRu9eL5b3d75jwndrQ5YuJbSKvF6V058V2M3wNvlEFwGHZ2E
-        lGyOyRulnApc5mCSKOA9JrkU76PjibTfak+sBbPclrOOuzo97uuXAdo6egsI
-        LmgHXESjIhPahyyiEIkDL6A9JrkM7YvnSbyvqg/EDbPazAD+6fNvDX3J8G/f
-        pgHoPIcI2eQoozU882iksgwiR7A2JVkAfUxyGeg3vieB/+6KA3wtFJuT9k+f
-        /8DmqWqGNhcdlfPRQMohq2RtdsFZjSxI7mJWuoD8mORS5M+mJ2J/Lz9tMU4x
-        Z8q3mIddXb9wMRB2yRACSAAUWrPsM62EOqDg9IsanSpAPia5DPKz5UnA34sP
-        uJUTVrJy2lX9Qh1B/98AbkygbYrgo7TMZyZMttpJbUNOUfIS3GOSy+C+eJ7E
-        +6r6AFw4obkqB/4Yt/t6uD8USbDEMEUNPFpUtH1R24ICuQcewBTke0xyGeAX
-        z5OAX1UfgTOn2YyE/4lfq+bXXbPxbT+UcumYpGfKTBYyGyZRixwcNY1gGHos
-        gI4jkstAv/E9Cfx3V5x2c2XmwN/6FpuhxkVBjEor0BqpNwfQhmPKRgVnhNLa
-        FmAfk1wG+5vjScAvtUfUFkCqGUEnteal29JAOhDzyDINnp4HHrXyKinLAwtB
-        upBlwlzCe0xyMd5n11OZv9cfuBsAsDM29G2V9gPABYDiVknPDO3o1CpycJhd
-        pBc6xFAQ8DHJhYAf/E5Dfao8htvRDD4n2z39aA5NnZymHK5MNJiNj9QEKs04
-        KE1zZ0ba0gswj0kuhPnkeBroc+0RtQAzpyNsqj0dAQ0kOilJfZ9RVoXEvNCC
-        ujlmkzKa84SpZAsZk1wG9ZvjSagvtW+tiREzTq6eH9tdoPFy1wzgzkI45mVQ
-        4FySRmo0ItKjVZghUktYkOwxyWVwX7mehPym/phwQxlnsrwHb7Hft03f7odi
-        jpzbw0kWQxFUiCpIZRT1iCFRp2JYLOA+JrkM9yvXk7jf1B+4a5Dczoh7u+u6
-        3g9EPTBuwFuXneZg6IjcJSPpVNgnxpVNJYPPmORCyE+Op+E+1x4jzo2dEfC/
-        kNpuzxkfgM1B0qSThKSzKzDB2ChQJaR/IZiT0ZXke0xyGdjvpifxvi4/tSic
-        Aj7jqPbFb593dfdUDfUpyAw90+SMy0bQEaHn0XvHrQErlXQlp+NjkstQv3I9
-        CftN/YG7oolP6td//weh7+gwchsAAA==
-    http_version: !binary |-
-      MS4x
-  recorded_at: Mon, 15 Oct 2012 20:25:58 GMT
+    http_version: '1.1'
+  recorded_at: Tue, 01 Oct 2013 19:22:08 GMT
 recorded_with: VCR 2.2.4

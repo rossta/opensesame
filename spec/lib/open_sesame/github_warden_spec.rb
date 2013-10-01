@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe OpenSesame::GithubWarden do
-
   let(:strategy) { OpenSesame::GithubWarden.new(@env_with_params) }
 
   it "is not valid without omniauth hash" do
@@ -25,16 +24,16 @@ describe OpenSesame::GithubWarden do
   end
 
   it "authenticates successfully when OpenSesame::Member is found" do
-    @env_with_params = env_with_params("/", {}, 'omniauth.auth' => { "provider" => "github", "uid" => "123" })
+    @env_with_params = env_with_params("/", {}, 'omniauth.auth' => { "provider" => "github", "uid" => "123", "nickname" => "rickybobby" })
 
-    OpenSesame::Member.should_receive(:find).with("123").and_return(OpenSesame::Member.new(:id => "123"))
+    OpenSesame::Member.should_receive(:find).with("rickybobby").and_return(OpenSesame::Member.new(:login => "rickybobby"))
     strategy.authenticate!
     strategy.result.should == :success
   end
 
   it "fails authentication when OpenSesame::Member is not found" do
-    @env_with_params = env_with_params("/", {}, 'omniauth.auth' => { "provider" => "github", "uid" => "123" })
-    OpenSesame::Member.should_receive(:find).with("123").and_return(nil)
+    @env_with_params = env_with_params("/", {}, 'omniauth.auth' => { "provider" => "github", "uid" => "123", "nickname" => "rickybobby" })
+    OpenSesame::Member.should_receive(:find).with("rickybobby").and_return(nil)
 
     strategy.authenticate!
     strategy.result.should == :failure

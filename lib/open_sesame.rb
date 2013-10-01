@@ -29,6 +29,10 @@ module OpenSesame
     yield configuration
     configuration
   end
+
+  def logger
+    @logger ||= defined?(Rails) ? Rails.logger : Logger.new(STDOUT)
+  end
 end
 
 require "open_sesame/engine" if defined?(Rails)
