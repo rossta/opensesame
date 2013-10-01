@@ -28,6 +28,14 @@ module OpenSesame
 
     def self.client
       @client ||= begin
+        require "faraday-http-cache"
+        stack = Faraday::Builder.new do |builder|
+          builder.response :logger, OpenSesame.logger
+          builder.use Faraday::HttpCache unless OpenSesame.debug?
+          builder.use Octokit::Response::RaiseError
+          builder.adapter Faraday.default_adapter
+        end
+        Octokit.middleware = stack
         Octokit::Client.new(OpenSesame.github_application)
       end
     end
