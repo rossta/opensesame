@@ -25,6 +25,7 @@ module OpenSesame
   @@configuration = Configuration.new
 
   def configure(&block)
+    configuration.enable! # defaults to true
     yield configuration
     configuration
   end
