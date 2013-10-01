@@ -9,15 +9,18 @@ module OpenSesame
     end
 
     def authenticate!
-      if member = OpenSesame::Member.find(auth_hash["nickname"])
+      if member = OpenSesame::Member.find(github_login)
         success! member
       else
         fail 'Sorry, you do not have access'
       end
     end
 
+    def github_login
+      auth_hash['info']['nickname']
+    end
+
     def auth_hash
-      Rails.logger.info "Github auth_hash: #{request.env['omniauth.auth']}"
       request.env['omniauth.auth']
     end
 
