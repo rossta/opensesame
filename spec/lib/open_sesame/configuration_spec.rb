@@ -16,6 +16,11 @@ describe OpenSesame::Configuration do
     configuration.github_application[:secret].should == "client_secret"
   end
 
+  it "github sets github token credentials" do
+    configuration.github_access_token "access_token"
+    configuration.github_application[:access_token].should == "access_token"
+  end
+
   it "mounted_at sets mount_prefix" do
     configuration.mounted_at "/foobar"
     configuration.mount_prefix.should == "/foobar"

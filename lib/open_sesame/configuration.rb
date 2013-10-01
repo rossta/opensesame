@@ -7,7 +7,6 @@ module OpenSesame
       :organization_name,
       :mount_prefix,
       :github_application,
-      :github_account,
       :enabled,
       :full_host,
       :auto_access_provider
@@ -24,6 +23,10 @@ module OpenSesame
 
     def github(client_id, client_secret)
       self.github_application = { :id => client_id, :secret => client_secret }
+    end
+
+    def github_access_token(access_token)
+      self.github_application = { :access_token => access_token }
     end
 
     def organization(organization_name)
