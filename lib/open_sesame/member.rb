@@ -8,22 +8,38 @@ module OpenSesame
       OpenSesame.organization_name
     end
 
-    def self.find(member_id)
-      return nil unless member_id.present?
-      return unless member?(member_id)
-      new(login: member_id)
+    def self.find(member_login)
+      return nil unless member_login.present?
+      return unless member?(member_login)
+      member = find_member(member_login) # Sawyer::Resource
+      return unless member # may have been an API error
+      members << member
+      new(member.attrs)
     end
 
-    def self.member?(member_id)
-      members.include?(member_id) || begin
-        client.organization_member?(organization_name, member_id)
+    def self.find_member(member_login)
+      members.detect { |m| m.login == member_login } || begin
+        client.user(member_login)
+      rescue Octokit::Error => e
+        OpenSesame.logger.info e
+      end
+    end
+
+    def self.member?(member_login)
+      member_logins.include?(member_login) || begin
+        client.organization_member?(organization_name, member_login)
       rescue Octokit::ServerError => e
         OpenSesame.logger.info e
       end
     end
 
+    # memoized list of accepted member
     def self.members
       @members ||= []
+    end
+
+    def self.member_logins
+      members.map(&:login)
     end
 
     def self.client
@@ -40,33 +56,35 @@ module OpenSesame
       end
     end
 
+    def self.reset
+      @members = nil
+    end
+
     def self.lazy_attr_reader(*attrs)
       attrs.each do |attribute|
         class_eval do
           define_method(attribute) do
-            @attributes[attribute.to_s] || @attributes[attribute] # allow string or symbol access
+            @attributes[attribute] || @attributes[attribute] # allow string or symbol access
           end
         end
       end
     end
 
     def self.serialize_into_session(member)
-      [member.id]
+      [member.login]
     end
 
     def self.serialize_from_session(*args)
-      id = args.shift
-      find(id)
+      login = args.shift
+      find(login)
     end
 
     attr_accessor :attributes
-    lazy_attr_reader :login
+    lazy_attr_reader :id, :login, :email
 
     def initialize(attributes = {})
       @attributes = attributes
     end
-
-    def id; login; end
 
     def organization_name
       self.class.organization_name

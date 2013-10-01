@@ -108,4 +108,165 @@ http_interactions:
       string: ''
     http_version: '1.1'
   recorded_at: Tue, 01 Oct 2013 19:22:08 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/rossta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.beta+json
+      user-agent:
+      - Octokit Ruby Gem 2.3.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "c2VydmVy":
+      - !binary |-
+        R2l0SHViLmNvbQ==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VHVlLCAwMSBPY3QgMjAxMyAyMDowODoyMCBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
+      - !binary |-
+        NjA=
+      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
+      - !binary |-
+        MzE=
+      !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
+      - !binary |-
+        MTM4MDY1ODkyOA==
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        VHVlLCAwMSBPY3QgMjAxMyAxOTo1ODozNCBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjQwOWMzYzc0ZGEzMzdmZTlmNjMyNWFmY2ZlNjRkOTYxIg==
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "eC1naXRodWItbWVkaWEtdHlwZQ==":
+      - !binary |-
+        Z2l0aHViLmJldGE7IGZvcm1hdD1qc29u
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctY3JlZGVudGlhbHM=":
+      - !binary |-
+        dHJ1ZQ==
+      !binary "YWNjZXNzLWNvbnRyb2wtZXhwb3NlLWhlYWRlcnM=":
+      - !binary |-
+        RVRhZywgTGluaywgWC1SYXRlTGltaXQtTGltaXQsIFgtUmF0ZUxpbWl0LVJl
+        bWFpbmluZywgWC1SYXRlTGltaXQtUmVzZXQsIFgtT0F1dGgtU2NvcGVzLCBY
+        LUFjY2VwdGVkLU9BdXRoLVNjb3Blcw==
+      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctb3JpZ2lu":
+      - !binary |-
+        Kg==
+      !binary "eC1naXRodWItcmVxdWVzdC1pZA==":
+      - !binary |-
+        MzI0QTE4OEE6NUIwMzoxOUNGNDNDOjUyNEIyQkI0
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA5VUTYvbMBT8K8GwtyS27PgjhtKWQi+FHsr20F6CLMm2WEUy
+        spyQhv3vHdnJJptDiyEQ25qZNxq9p3OgTCN1UAbW9L2jwTKQPCgJyfJkGdAD
+        ddTuBqsAaJ3r+jIMybqx08KamX04PYZVRLItzYu6SMk2i6O04FmSJDnlEdnk
+        PPvIP4wCT8nnp/grfpIL7SQzul830rVD5dXwfQN6WnNaJayKKx7VnG3SJONJ
+        TCjf1Gzd6QYurx523m7wv+ogvN8E7eRd2XDohe3Dtwhat1cPu755vMFqo5Q5
+        gvmA/Yd4+MaBpelZ6mY2H5xzaFwrcDiw/uoDkb2bY2TEn0P/hwy9Ao7fWsFn
+        mLkwYOWo4eIcWtGZUWqoemZl5yTOd47gPQ86xjZUyz90rg54PejezpzyIx48
+        cUBvziFOhHPYWXmg7OQjsIIJeUCcs8UemNByp06gy3/iqPGm6d6//cDALr7R
+        uha6ErYZlzBCHdWny7RiWFlLlRK68RtzfsIAqjDyN4Rv+heoXBaVYWPaAHwX
+        x8UvY18WX6Q7+VT2VPqL4Mr41PgPF14rraCVgrGaql6gijRBqQellkE3VEqy
+        3ZRumabXzsfk4KrJ7gYhKGNcOwxSDslRh2pxFBWrKF3F+TMpyjgH4TfMDB2/
+        x5BkRaJVRJ7JtkyLMtl4zKXu2Ole+fUvD1nHB+4EAAA=
+    http_version: !binary |-
+      MS4x
+  recorded_at: Tue, 01 Oct 2013 20:08:20 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/rossta
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.beta+json
+      user-agent:
+      - Octokit Ruby Gem 2.3.1
+      if-modified-since:
+      - Tue, 01 Oct 2013 19:58:34 GMT
+      if-none-match:
+      - ! '"409c3c74da337fe9f6325afcfe64d961"'
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 304
+      message: Not Modified
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Tue, 01 Oct 2013 20:23:26 GMT
+      connection:
+      - close
+      status:
+      - 304 Not Modified
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '60'
+      x-ratelimit-reset:
+      - '1380662606'
+      cache-control:
+      - public, max-age=60, s-maxage=60
+      last-modified:
+      - Tue, 01 Oct 2013 19:58:34 GMT
+      etag:
+      - ! '"409c3c74da337fe9f6325afcfe64d961"'
+      x-content-type-options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
+        X-Accepted-OAuth-Scopes
+      access-control-allow-origin:
+      - ! '*'
+      x-github-request-id:
+      - 324A188A:2436:5E8069A:524B2F3E
+      vary:
+      - Accept-Encoding
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Tue, 01 Oct 2013 20:23:26 GMT
 recorded_with: VCR 2.2.4
