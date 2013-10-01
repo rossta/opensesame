@@ -15,8 +15,14 @@ module OpenSesame
       new(attributes)
     end
 
+    # memoize members so we don't make repeated API requests
     def self.organization_members
-      github_api.organization_members(organization_name)
+      @organization_members ||= github_api.organization_members(organization_name)
+    end
+
+    # necessary to update when changes made to the GH organization
+    def self.reset_organization_members
+      @organization_members = nil
     end
 
     def self.github_api

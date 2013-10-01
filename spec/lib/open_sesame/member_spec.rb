@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe OpenSesame::Member, :vcr, :record => :new_episodes do
+  after { OpenSesame::Member.reset_organization_members }
+
   ROSSTA_GITHUB_ID = 11673
 
   describe "self.find" do
