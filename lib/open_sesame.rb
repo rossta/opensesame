@@ -36,3 +36,4 @@ module OpenSesame
 end
 
 require "open_sesame/engine" if defined?(Rails)
+Opensesame = OpenSesame

@@ -32,9 +32,9 @@ module OpenSesame
           Devise.setup do |config|
             config.warden do |manager|
               manager.default_strategies(:opensesame_github, :scope => :opensesame)
-              manager.failure_app = OpenSesame::Failure::DeviseApp.new
             end
           end
+          Devise.add_mapping(:opensesame, {failure_app: OpenSesame::Failure::DeviseApp.new})
         else
           app.config.middleware.use ::Warden::Manager do |manager|
             manager.default_strategies(:opensesame_github, :scope => :opensesame)
