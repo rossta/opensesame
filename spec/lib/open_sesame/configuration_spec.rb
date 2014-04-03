@@ -12,8 +12,8 @@ describe OpenSesame::Configuration do
 
   it "github sets github client credentials" do
     configuration.github "client_id", "client_secret"
-    configuration.github_application[:id].should == "client_id"
-    configuration.github_application[:secret].should == "client_secret"
+    configuration.github_application[:client_id].should == "client_id"
+    configuration.github_application[:client_secret].should == "client_secret"
   end
 
   it "github sets github token credentials" do

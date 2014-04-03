@@ -23,7 +23,7 @@ module OpenSesame
     end
 
     def github(client_id, client_secret)
-      self.github_application = { :id => client_id, :secret => client_secret }
+      self.github_application = { :client_id => client_id, :client_secret => client_secret }
     end
 
     def github_access_token(access_token)
@@ -68,7 +68,7 @@ module OpenSesame
       self.organization_name && self.organization_name.is_a?(String) &&
       self.mount_prefix && self.mount_prefix.is_a?(String) &&
       self.github_application.is_a?(Hash) &&
-      [:id, :secret].all? { |key| self.github_application.keys.include?(key) }
+      [:client_id, :client_secret].all? { |key| self.github_application.keys.include?(key) }
     end
 
     def configured?

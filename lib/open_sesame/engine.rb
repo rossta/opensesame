@@ -24,8 +24,8 @@ module OpenSesame
       if OpenSesame.enabled?
         require 'open_sesame/github_warden'
         app.config.middleware.use OpenSesame::GithubAuth,
-          OpenSesame.github_application[:id],
-          OpenSesame.github_application[:secret],
+          OpenSesame.github_application[:client_id],
+          OpenSesame.github_application[:client_secret],
           :path_prefix => OpenSesame.mount_prefix
 
         if defined?(Devise)
