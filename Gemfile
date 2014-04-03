@@ -8,6 +8,9 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 
+gem "pry"
+gem "pry-debugger"
+
 # gem "launchy"
 
 # Declare any dependencies that are still in development here instead of in
