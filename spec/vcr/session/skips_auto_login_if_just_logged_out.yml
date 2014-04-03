@@ -2,108 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/users/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept:
-      - application/vnd.github.beta+json
-      user-agent:
-      - Octokit Ruby Gem 2.3.1
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        R2l0SHViLmNvbQ==
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        VHVlLCAwMSBPY3QgMjAxMyAxOToyMjoxMSBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NjA=
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NDQ=
-      !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
-      - !binary |-
-        MTM4MDY1ODkyOA==
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        VHVlLCAwMSBPY3QgMjAxMyAxNzo0MjowMyBHTVQ=
-      !binary "ZXRhZw==":
-      - !binary |-
-        ImVhNDU1NTMxZmI4MWIxNjZmZDVhMDg0MTI0NmEzNzJhIg==
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "eC1naXRodWItbWVkaWEtdHlwZQ==":
-      - !binary |-
-        Z2l0aHViLmJldGE7IGZvcm1hdD1qc29u
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctY3JlZGVudGlhbHM=":
-      - !binary |-
-        dHJ1ZQ==
-      !binary "YWNjZXNzLWNvbnRyb2wtZXhwb3NlLWhlYWRlcnM=":
-      - !binary |-
-        RVRhZywgTGluaywgWC1SYXRlTGltaXQtTGltaXQsIFgtUmF0ZUxpbWl0LVJl
-        bWFpbmluZywgWC1SYXRlTGltaXQtUmVzZXQsIFgtT0F1dGgtU2NvcGVzLCBY
-        LUFjY2VwdGVkLU9BdXRoLVNjb3Blcw==
-      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctb3JpZ2lu":
-      - !binary |-
-        Kg==
-      !binary "eC1naXRodWItcmVxdWVzdC1pZA==":
-      - !binary |-
-        MzI0QTE4OEE6MjQzNjo1RDI3NTRFOjUyNEIyMEUz
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA5VUwYrbMBT8lSDYWxJbdmxnDaW7FHop9FC2h/YSZEm2xSqS
-        keWENOy/d+Qkm2wOLYZAbGtm3mj0no5E20YZUhJn+94zMidKkJLSvEjnhO2Y
-        Z24zOA1A633Xl1GULBt3Wlhyu41Oj1EV0/yRFet6ndHHPImztcjTNC2YiOmq
-        EPln8WkUeEifH5Kv+CkhjVfcmn7ZKN8OVVDD9xXoWS1YlfIqqURcC77K0lyk
-        CWViVfNlZxq4vHjYBLvkf9VB+LgJ1qmbstHQS9dH7xG0fqvvdn31eIXVVmu7
-        B/MO+w/x6J0DS6dnZZrJfHCOkfWtxOHA+lsIRPV+ipERf4zCHzIMCjh+56SY
-        YObMgJW9gYtj5GRnR6mh6rlTnVc43ymCtzzoWNcwo/6wqTrg9aAHO1PKj3jw
-        5A69OYV4Ihyjzqkd44cQgZNcqh3inCx2x4SWP3QSXf4TR403w7bh7QcGdvaN
-        1bU0lXTNuIQR6pg5nKcVw8pbprU0TdiYDxMGUIWRvyJC079C5byoLR/TBuC7
-        3M9+Wfc6+6L8IaSyZSpcBBfGUxM+nHmtcpJVGsZqpnuJKsqS0gxaz0k3VFrx
-        zSndMssunY/JwVWT3wwCKRNcOxxSHskxj2pJHK8XcbZIihe6LpMChN8wM3Ti
-        FkPTBY0XMX2hRblKyjgNmHPdsdOD8ttffK1IAe4EAAA=
-    http_version: !binary |-
-      MS4x
-  recorded_at: Tue, 01 Oct 2013 19:22:11 GMT
-- request:
-    method: get
-    uri: https://api.github.com/orgs/challengepost/members/rossta
+    uri: https://api.github.com/orgs/challengepost/members/rossta?client_id=dummy_app_id&client_secret=dummy_secret
     body:
       encoding: US-ASCII
       string: ''
@@ -122,7 +21,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 01 Oct 2013 19:22:11 GMT
+      - Thu, 03 Apr 2014 19:46:29 GMT
       content-type:
       - text/html;charset=utf-8
       connection:
@@ -132,9 +31,9 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '43'
+      - '45'
       x-ratelimit-reset:
-      - '1380658928'
+      - '1396557269'
       location:
       - https://api.github.com/organizations/199945/public_members/rossta
       x-content-type-options:
@@ -144,22 +43,24 @@ http_interactions:
       access-control-allow-credentials:
       - 'true'
       access-control-expose-headers:
-      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
-        X-Accepted-OAuth-Scopes
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:2436:5D27586:524B20E3
+      - 324A188A:0240:3CE342C:533DBA95
       vary:
       - Accept-Encoding
+      x-served-by:
+      - 88d924ed861736d2749ce1a55766cb53
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 01 Oct 2013 19:22:11 GMT
+  recorded_at: Thu, 03 Apr 2014 19:46:33 GMT
 - request:
     method: get
-    uri: https://api.github.com/organizations/199945/public_members/rossta
+    uri: https://api.github.com/organizations/199945/public_members/rossta?client_id=dummy_app_id&client_secret=dummy_secret
     body:
       encoding: US-ASCII
       string: ''
@@ -178,7 +79,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 01 Oct 2013 19:22:12 GMT
+      - Thu, 03 Apr 2014 19:46:29 GMT
       connection:
       - close
       status:
@@ -186,9 +87,9 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '42'
+      - '44'
       x-ratelimit-reset:
-      - '1380658928'
+      - '1396557269'
       x-github-media-type:
       - github.beta; format=json
       x-content-type-options:
@@ -196,127 +97,21 @@ http_interactions:
       access-control-allow-credentials:
       - 'true'
       access-control-expose-headers:
-      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
-        X-Accepted-OAuth-Scopes
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:2436:5D275BF:524B20E3
+      - 324A188A:0242:45DD81E:533DBA95
       vary:
       - Accept-Encoding
+      x-served-by:
+      - 88d924ed861736d2749ce1a55766cb53
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 01 Oct 2013 19:22:12 GMT
-- request:
-    method: get
-    uri: https://api.github.com/orgs/challengepost/members/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept:
-      - application/vnd.github.beta+json
-      user-agent:
-      - Octokit Ruby Gem 2.3.1
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 302
-      message: Found
-    headers:
-      server:
-      - GitHub.com
-      date:
-      - Tue, 01 Oct 2013 19:22:12 GMT
-      content-type:
-      - text/html;charset=utf-8
-      connection:
-      - close
-      status:
-      - 302 Found
-      x-ratelimit-limit:
-      - '60'
-      x-ratelimit-remaining:
-      - '41'
-      x-ratelimit-reset:
-      - '1380658928'
-      location:
-      - https://api.github.com/organizations/199945/public_members/rossta
-      x-content-type-options:
-      - nosniff
-      content-length:
-      - '0'
-      access-control-allow-credentials:
-      - 'true'
-      access-control-expose-headers:
-      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
-        X-Accepted-OAuth-Scopes
-      access-control-allow-origin:
-      - ! '*'
-      x-github-request-id:
-      - 324A188A:2436:5D275F3:524B20E4
-      vary:
-      - Accept-Encoding
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Tue, 01 Oct 2013 19:22:12 GMT
-- request:
-    method: get
-    uri: https://api.github.com/organizations/199945/public_members/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept:
-      - application/vnd.github.beta+json
-      user-agent:
-      - Octokit Ruby Gem 2.3.1
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 204
-      message: No Content
-    headers:
-      server:
-      - GitHub.com
-      date:
-      - Tue, 01 Oct 2013 19:22:12 GMT
-      connection:
-      - close
-      status:
-      - 204 No Content
-      x-ratelimit-limit:
-      - '60'
-      x-ratelimit-remaining:
-      - '40'
-      x-ratelimit-reset:
-      - '1380658928'
-      x-github-media-type:
-      - github.beta; format=json
-      x-content-type-options:
-      - nosniff
-      access-control-allow-credentials:
-      - 'true'
-      access-control-expose-headers:
-      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
-        X-Accepted-OAuth-Scopes
-      access-control-allow-origin:
-      - ! '*'
-      x-github-request-id:
-      - 324A188A:2436:5D2763C:524B20E4
-      vary:
-      - Accept-Encoding
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Tue, 01 Oct 2013 19:22:12 GMT
+  recorded_at: Thu, 03 Apr 2014 19:46:34 GMT
 - request:
     method: get
     uri: https://api.github.com/users/rossta
@@ -329,9 +124,9 @@ http_interactions:
       user-agent:
       - Octokit Ruby Gem 2.3.1
       if-modified-since:
-      - Tue, 01 Oct 2013 19:58:34 GMT
+      - Thu, 03 Apr 2014 16:09:39 GMT
       if-none-match:
-      - ! '"409c3c74da337fe9f6325afcfe64d961"'
+      - ! '"0404f554669bd13b304e12f55f44a55e"'
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -342,7 +137,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Tue, 01 Oct 2013 20:19:08 GMT
+      - Thu, 03 Apr 2014 19:50:31 GMT
       connection:
       - close
       status:
@@ -350,91 +145,33 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '30'
+      - '44'
       x-ratelimit-reset:
-      - '1380658928'
+      - '1396557269'
       cache-control:
       - public, max-age=60, s-maxage=60
       last-modified:
-      - Tue, 01 Oct 2013 19:58:34 GMT
+      - Thu, 03 Apr 2014 16:09:39 GMT
       etag:
-      - ! '"409c3c74da337fe9f6325afcfe64d961"'
+      - ! '"0404f554669bd13b304e12f55f44a55e"'
       x-content-type-options:
       - nosniff
       access-control-allow-credentials:
       - 'true'
       access-control-expose-headers:
-      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
-        X-Accepted-OAuth-Scopes
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:2436:5E66D1D:524B2E3C
+      - 324A188A:1BC9:3C84A8D:533DBB86
       vary:
       - Accept-Encoding
+      x-served-by:
+      - a8d8e492d6966f0c23dee2eed64c678a
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Tue, 01 Oct 2013 20:19:08 GMT
-- request:
-    method: get
-    uri: https://api.github.com/users/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept:
-      - application/vnd.github.beta+json
-      user-agent:
-      - Octokit Ruby Gem 2.3.1
-      if-modified-since:
-      - Tue, 01 Oct 2013 19:58:34 GMT
-      if-none-match:
-      - ! '"409c3c74da337fe9f6325afcfe64d961"'
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 304
-      message: Not Modified
-    headers:
-      server:
-      - GitHub.com
-      date:
-      - Tue, 01 Oct 2013 20:21:04 GMT
-      connection:
-      - close
-      status:
-      - 304 Not Modified
-      x-ratelimit-limit:
-      - '60'
-      x-ratelimit-remaining:
-      - '27'
-      x-ratelimit-reset:
-      - '1380658928'
-      cache-control:
-      - public, max-age=60, s-maxage=60
-      last-modified:
-      - Tue, 01 Oct 2013 19:58:34 GMT
-      etag:
-      - ! '"409c3c74da337fe9f6325afcfe64d961"'
-      x-content-type-options:
-      - nosniff
-      access-control-allow-credentials:
-      - 'true'
-      access-control-expose-headers:
-      - ETag, Link, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes,
-        X-Accepted-OAuth-Scopes
-      access-control-allow-origin:
-      - ! '*'
-      x-github-request-id:
-      - 324A188A:34EE:1A4953E:524B2EB0
-      vary:
-      - Accept-Encoding
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Tue, 01 Oct 2013 20:21:04 GMT
+  recorded_at: Thu, 03 Apr 2014 19:50:35 GMT
 recorded_with: VCR 2.2.4

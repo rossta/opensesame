@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/orgs/challengepost/members/-1
+    uri: https://api.github.com/orgs/challengepost/members/-1?client_id=dummy_app_id&client_secret=dummy_secret
     body:
       encoding: US-ASCII
       string: ''
@@ -24,7 +24,7 @@ http_interactions:
         R2l0SHViLmNvbQ==
       !binary "ZGF0ZQ==":
       - !binary |-
-        VHVlLCAwMSBPY3QgMjAxMyAxOToyMjowOSBHTVQ=
+        VGh1LCAwMyBBcHIgMjAxNCAxOTo0NjoyNyBHTVQ=
       !binary "Y29udGVudC10eXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
@@ -42,10 +42,10 @@ http_interactions:
         NjA=
       !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
       - !binary |-
-        NTc=
+        NTU=
       !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
       - !binary |-
-        MTM4MDY1ODkyOA==
+        MTM5NjU1NzI2OQ==
       !binary "eC1naXRodWItbWVkaWEtdHlwZQ==":
       - !binary |-
         Z2l0aHViLmJldGE7IGZvcm1hdD1qc29u
@@ -57,15 +57,16 @@ http_interactions:
         dHJ1ZQ==
       !binary "YWNjZXNzLWNvbnRyb2wtZXhwb3NlLWhlYWRlcnM=":
       - !binary |-
-        RVRhZywgTGluaywgWC1SYXRlTGltaXQtTGltaXQsIFgtUmF0ZUxpbWl0LVJl
-        bWFpbmluZywgWC1SYXRlTGltaXQtUmVzZXQsIFgtT0F1dGgtU2NvcGVzLCBY
-        LUFjY2VwdGVkLU9BdXRoLVNjb3Blcw==
+        RVRhZywgTGluaywgWC1HaXRIdWItT1RQLCBYLVJhdGVMaW1pdC1MaW1pdCwg
+        WC1SYXRlTGltaXQtUmVtYWluaW5nLCBYLVJhdGVMaW1pdC1SZXNldCwgWC1P
+        QXV0aC1TY29wZXMsIFgtQWNjZXB0ZWQtT0F1dGgtU2NvcGVzLCBYLVBvbGwt
+        SW50ZXJ2YWw=
       !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctb3JpZ2lu":
       - !binary |-
         Kg==
       !binary "eC1naXRodWItcmVxdWVzdC1pZA==":
       - !binary |-
-        MzI0QTE4OEE6MjQzNjo1RDI3MjdEOjUyNEIyMEUx
+        MzI0QTE4OEE6MDI0Mjo0NUREM0REOjUzM0RCQTkz
       !binary "Y29udGVudC1lbmNvZGluZw==":
       - !binary |-
         Z3ppcA==
@@ -77,5 +78,5 @@ http_interactions:
         tEwAAAA=
     http_version: !binary |-
       MS4x
-  recorded_at: Tue, 01 Oct 2013 19:22:09 GMT
+  recorded_at: Thu, 03 Apr 2014 19:46:31 GMT
 recorded_with: VCR 2.2.4
