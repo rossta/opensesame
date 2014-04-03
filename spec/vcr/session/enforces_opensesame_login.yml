@@ -216,4 +216,66 @@ http_interactions:
       string: ''
     http_version: '1.1'
   recorded_at: Thu, 03 Apr 2014 19:46:33 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/rossta?client_id=dummy_app_id&client_secret=dummy_secret
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.beta+json
+      user-agent:
+      - Octokit Ruby Gem 2.3.1
+      if-modified-since:
+      - Thu, 03 Apr 2014 16:09:39 GMT
+      if-none-match:
+      - ! '"0404f554669bd13b304e12f55f44a55e"'
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 304
+      message: Not Modified
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Thu, 03 Apr 2014 19:51:47 GMT
+      connection:
+      - close
+      status:
+      - 304 Not Modified
+      x-ratelimit-limit:
+      - '60'
+      x-ratelimit-remaining:
+      - '44'
+      x-ratelimit-reset:
+      - '1396557269'
+      cache-control:
+      - public, max-age=60, s-maxage=60
+      last-modified:
+      - Thu, 03 Apr 2014 16:09:39 GMT
+      etag:
+      - ! '"0404f554669bd13b304e12f55f44a55e"'
+      x-content-type-options:
+      - nosniff
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - ! '*'
+      x-github-request-id:
+      - 324A188A:023B:1457ACA:533DBBD3
+      vary:
+      - Accept-Encoding
+      x-served-by:
+      - 6d7de9e645814cac34ea2a8d72ba3141
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: '1.1'
+  recorded_at: Thu, 03 Apr 2014 19:51:52 GMT
 recorded_with: VCR 2.2.4
