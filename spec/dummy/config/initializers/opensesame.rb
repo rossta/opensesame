@@ -20,4 +20,5 @@ OpenSesame.configure do |config|
   config.organization 'challengepost'
   config.mounted_at   '/opensesame'
   config.github app_id, secret
+  config.debug = true
 end

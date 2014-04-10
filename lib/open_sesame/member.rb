@@ -20,7 +20,7 @@ module OpenSesame
     def self.find_member(member_login)
       members.detect { |m| m.login == member_login } || begin
         client.user(member_login)
-      rescue Octokit::Error => e
+      rescue Octokit::Error => ek
         OpenSesame.logger.info e
       end
     end

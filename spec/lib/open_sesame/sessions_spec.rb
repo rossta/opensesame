@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "Session", :vcr, :record => :new_episodes, :type => :request do
-
   context "successful login" do
     before { setup_for_github_login }
 
@@ -39,7 +38,7 @@ describe "Session", :vcr, :record => :new_episodes, :type => :request do
   end
 
   it "tries auto login and ends up on opensesame page after failure" do
-    setup_for_github_login(mock('NonUser', :id => "123", :login => "rickybobby"))
+    setup_for_github_login(id: "123", login: "rickybobby")
     visit root_path
     page.should have_content "Login"
     page.should_not have_content "Welcome Home"
