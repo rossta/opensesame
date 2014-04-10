@@ -21,7 +21,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Thu, 03 Apr 2014 19:46:28 GMT
+      - Thu, 10 Apr 2014 22:07:53 GMT
       content-type:
       - text/html;charset=utf-8
       connection:
@@ -31,13 +31,17 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '47'
+      - '53'
       x-ratelimit-reset:
-      - '1396557269'
+      - '1397169971'
       location:
       - https://api.github.com/organizations/199945/public_members/rossta
-      x-content-type-options:
-      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
       content-length:
       - '0'
       access-control-allow-credentials:
@@ -48,16 +52,20 @@ http_interactions:
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:0240:3CE338F:533DBA94
+      - 324A188A:20C3:AAFEB7:53471639
+      strict-transport-security:
+      - max-age=31536000
+      x-content-type-options:
+      - nosniff
       vary:
       - Accept-Encoding
       x-served-by:
-      - 3061975e1f37121b3751604ad153c687
+      - 971af40390ac4398fcdd45c8dab0fbe7
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 03 Apr 2014 19:46:33 GMT
+  recorded_at: Thu, 10 Apr 2014 22:08:04 GMT
 - request:
     method: get
     uri: https://api.github.com/organizations/199945/public_members/rossta?client_id=dummy_app_id&client_secret=dummy_secret
@@ -79,7 +87,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Thu, 03 Apr 2014 19:46:29 GMT
+      - Thu, 10 Apr 2014 22:07:53 GMT
       connection:
       - close
       status:
@@ -87,13 +95,17 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '46'
+      - '52'
       x-ratelimit-reset:
-      - '1396557269'
+      - '1397169971'
       x-github-media-type:
       - github.beta; format=json
-      x-content-type-options:
-      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
       access-control-allow-credentials:
       - 'true'
       access-control-expose-headers:
@@ -102,78 +114,20 @@ http_interactions:
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:0242:45DD769:533DBA95
-      vary:
-      - Accept-Encoding
-      x-served-by:
-      - 3061975e1f37121b3751604ad153c687
-    body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Thu, 03 Apr 2014 19:46:33 GMT
-- request:
-    method: get
-    uri: https://api.github.com/users/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept:
-      - application/vnd.github.beta+json
-      user-agent:
-      - Octokit Ruby Gem 2.3.1
-      if-modified-since:
-      - Thu, 03 Apr 2014 16:09:39 GMT
-      if-none-match:
-      - ! '"0404f554669bd13b304e12f55f44a55e"'
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 304
-      message: Not Modified
-    headers:
-      server:
-      - GitHub.com
-      date:
-      - Thu, 03 Apr 2014 19:49:26 GMT
-      connection:
-      - close
-      status:
-      - 304 Not Modified
-      x-ratelimit-limit:
-      - '60'
-      x-ratelimit-remaining:
-      - '44'
-      x-ratelimit-reset:
-      - '1396557269'
-      cache-control:
-      - public, max-age=60, s-maxage=60
-      last-modified:
-      - Thu, 03 Apr 2014 16:09:39 GMT
-      etag:
-      - ! '"0404f554669bd13b304e12f55f44a55e"'
+      - 324A188A:20C2:8F32F7:53471639
+      strict-transport-security:
+      - max-age=31536000
       x-content-type-options:
       - nosniff
-      access-control-allow-credentials:
-      - 'true'
-      access-control-expose-headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      access-control-allow-origin:
-      - ! '*'
-      x-github-request-id:
-      - 324A188A:023E:20FB05F:533DBB45
       vary:
       - Accept-Encoding
       x-served-by:
-      - a8d8e492d6966f0c23dee2eed64c678a
+      - c046d59f93ede9ab52d5ac29f1ed70f7
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 03 Apr 2014 19:49:30 GMT
+  recorded_at: Thu, 10 Apr 2014 22:08:04 GMT
 - request:
     method: get
     uri: https://api.github.com/users/rossta?client_id=dummy_app_id&client_secret=dummy_secret
@@ -185,10 +139,6 @@ http_interactions:
       - application/vnd.github.beta+json
       user-agent:
       - Octokit Ruby Gem 2.3.1
-      if-modified-since:
-      - Thu, 03 Apr 2014 16:09:39 GMT
-      if-none-match:
-      - ! '"0404f554669bd13b304e12f55f44a55e"'
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -202,7 +152,7 @@ http_interactions:
         R2l0SHViLmNvbQ==
       !binary "ZGF0ZQ==":
       - !binary |-
-        VGh1LCAwMyBBcHIgMjAxNCAyMDowMjo1NyBHTVQ=
+        VGh1LCAxMCBBcHIgMjAxNCAyMjowNzo1MyBHTVQ=
       !binary "Y29udGVudC10eXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
@@ -220,19 +170,19 @@ http_interactions:
         NjA=
       !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
       - !binary |-
-        NDM=
+        NTE=
       !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
       - !binary |-
-        MTM5NjU1NzI2OQ==
+        MTM5NzE2OTk3MQ==
       !binary "Y2FjaGUtY29udHJvbA==":
       - !binary |-
         cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
       !binary "bGFzdC1tb2RpZmllZA==":
       - !binary |-
-        VGh1LCAwMyBBcHIgMjAxNCAxOTo1MTo1OCBHTVQ=
+        VGh1LCAxMCBBcHIgMjAxNCAxOToxMjo1MiBHTVQ=
       !binary "ZXRhZw==":
       - !binary |-
-        IjIzOTFkNDU4YzMyNTFlOWI1MTIzNmI2N2MzMmFhNGI3Ig==
+        IjRkYWViYTRjZjYwNGI5NmMxNzkzMTBjYjkyYzU1MjhmIg==
       !binary "dmFyeQ==":
       - !binary |-
         QWNjZXB0
@@ -241,9 +191,15 @@ http_interactions:
       !binary "eC1naXRodWItbWVkaWEtdHlwZQ==":
       - !binary |-
         Z2l0aHViLmJldGE7IGZvcm1hdD1qc29u
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
       - !binary |-
-        bm9zbmlmZg==
+        MTsgbW9kZT1ibG9jaw==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        ZGVueQ==
+      !binary "Y29udGVudC1zZWN1cml0eS1wb2xpY3k=":
+      - !binary |-
+        ZGVmYXVsdC1zcmMgJ25vbmUn
       !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctY3JlZGVudGlhbHM=":
       - !binary |-
         dHJ1ZQ==
@@ -258,28 +214,34 @@ http_interactions:
         Kg==
       !binary "eC1naXRodWItcmVxdWVzdC1pZA==":
       - !binary |-
-        MzI0QTE4OEE6MDIzRjozMDIwMEQyOjUzM0RCRTcx
+        MzI0QTE4OEE6MjBCRjoyNjczNDU6NTM0NzE2Mzk=
+      !binary "c3RyaWN0LXRyYW5zcG9ydC1zZWN1cml0eQ==":
+      - !binary |-
+        bWF4LWFnZT0zMTUzNjAwMA==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
       !binary "eC1zZXJ2ZWQtYnk=":
       - !binary |-
-        NmQ3ZGU5ZTY0NTgxNGNhYzM0ZWEyYThkNzJiYTMxNDE=
+        YzQzNmIyYjQ0MzQ1YzcyZmY5MDYwNTlmNjA0OTkxZTc=
       !binary "Y29udGVudC1lbmNvZGluZw==":
       - !binary |-
         Z3ppcA==
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA5VUwW6jMBT8lcjnpMahAcJlK/W40h5W3cP2EhkwYNXYyDaJ
-        sqj/vmOg2TbSHpCQwGZm3vD8hpEo00hNcmKNc56TLZEVyRlL0nhL+Jl7bk+D
-        VQC03vcup3TedA+N9O1QDE7Y0mgvtH8oTUcHOnG/QaixCz8okiJiyZGnWZ0d
-        2DHZR4esSuI4TnkVsce0SkC4q9PLpcYsjEKO3ly2vlN3xmZDE/gGq41S5gLm
-        /Uf8X5zeOLA0P0vdrOaDM1LjW4H+wfp7aIh0fo2RCT/ScDvJKijghKwV1Qoz
-        CwNWLhouRmpFbyapoXCllb2XRq8x9YUHHWMbruUfvlYHPAd6sLOm/IQHT5wx
-        cWuIM2GkvZVnXl5DC6wohTyjnavF7pjQ8tdeYMp/4ahDc6UXJ151IVk1V05s
-        ieZdAPxEzDbfeV0LXQjbTGhMbM/1dckYIla2XCmhm/CtU6wAKhDUf4gw4G9Q
-        WV4qU04HAMAPcdn8NvZt8yz9NTSq4zLE94Px1ISNhddKK3ihYGxxWUhDcj0o
-        tSX9UChZnuaG5wm77UxjSfJ9+hEPxAvL6FNasMTvo4S4R3u5R/19FGW76LDb
-        py8sAzlnySvsDX31GcMedxGu+IUd8wPLD9kref8LFZN84KQEAAA=
+        H4sIAAAAAAAAA5VUwY6bMBT8lcjnZI1JAoRLK/VYqYdqe+heIgMGrDU2sk2i
+        FO2/dwxsuhupB05gMzNv/PyGkSjTSE1yYo1znpMtkRXJGUvS/ZbwC/fcnger
+        AGi9711O6bzpnhrp26EYnLCl0V5o/1Sajg504n6BUGMXflAkRcSSE0+zOjuy
+        UxJHx6xK9vt9yquIHdIqAeGhTi+XGrMwCjl6d9n6Tj0Ymw1N4DusNkqZK5iP
+        h/i/OL1zYGl+l7pZzQdnpMa3Av2D9bfQEOn8GiMTfqThcZZVUMANWSuqFWYW
+        BqxcNVyM1IreTFJD4Uorey+NXmPqEw86xjZcyz98rQ54DvRgZ035CQ+euGDi
+        1hBnwkh7Ky+8vIUWWFEKeUE7V4s9MKHlb73AlP/CVYfmSi/OvOpCsmqunNgS
+        zbsA+ImYbb7zuha6ELaZ0JjYnuvbkjFErGy5UkI34axTrAAqENR/iDDgr1BZ
+        PipTThcAwA9x3fw29nXzTfpbaFTHZYjvO+NrEzYWXiut4IWCscVlIQ3J9aDU
+        lvRDoWR5nhueJ/F9ZxpLksfpezwQLyyjD2nBEr+PEuIe7eUe9eMoynbRcRen
+        zywDOWfJC+wNffURww676LBj0TM75SzOj/ELefsLbSQjfqQEAAA=
     http_version: !binary |-
       MS4x
-  recorded_at: Thu, 03 Apr 2014 20:03:02 GMT
+  recorded_at: Thu, 10 Apr 2014 22:08:04 GMT
 recorded_with: VCR 2.2.4

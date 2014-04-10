@@ -2,110 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/users/rossta
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      accept:
-      - application/vnd.github.beta+json
-      user-agent:
-      - Octokit Ruby Gem 2.3.1
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 200
-      message: !binary |-
-        T0s=
-    headers:
-      !binary "c2VydmVy":
-      - !binary |-
-        R2l0SHViLmNvbQ==
-      !binary "ZGF0ZQ==":
-      - !binary |-
-        VGh1LCAwMyBBcHIgMjAxNCAxOTo0NjoyOCBHTVQ=
-      !binary "Y29udGVudC10eXBl":
-      - !binary |-
-        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
-      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
-      - !binary |-
-        Y2h1bmtlZA==
-      !binary "Y29ubmVjdGlvbg==":
-      - !binary |-
-        Y2xvc2U=
-      !binary "c3RhdHVz":
-      - !binary |-
-        MjAwIE9L
-      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
-      - !binary |-
-        NjA=
-      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
-      - !binary |-
-        NTA=
-      !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
-      - !binary |-
-        MTM5NjU1NzI2OQ==
-      !binary "Y2FjaGUtY29udHJvbA==":
-      - !binary |-
-        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
-      !binary "bGFzdC1tb2RpZmllZA==":
-      - !binary |-
-        VGh1LCAwMyBBcHIgMjAxNCAxNjowOTozOSBHTVQ=
-      !binary "ZXRhZw==":
-      - !binary |-
-        IjA0MDRmNTU0NjY5YmQxM2IzMDRlMTJmNTVmNDRhNTVlIg==
-      !binary "dmFyeQ==":
-      - !binary |-
-        QWNjZXB0
-      - !binary |-
-        QWNjZXB0LUVuY29kaW5n
-      !binary "eC1naXRodWItbWVkaWEtdHlwZQ==":
-      - !binary |-
-        Z2l0aHViLmJldGE7IGZvcm1hdD1qc29u
-      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
-      - !binary |-
-        bm9zbmlmZg==
-      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctY3JlZGVudGlhbHM=":
-      - !binary |-
-        dHJ1ZQ==
-      !binary "YWNjZXNzLWNvbnRyb2wtZXhwb3NlLWhlYWRlcnM=":
-      - !binary |-
-        RVRhZywgTGluaywgWC1HaXRIdWItT1RQLCBYLVJhdGVMaW1pdC1MaW1pdCwg
-        WC1SYXRlTGltaXQtUmVtYWluaW5nLCBYLVJhdGVMaW1pdC1SZXNldCwgWC1P
-        QXV0aC1TY29wZXMsIFgtQWNjZXB0ZWQtT0F1dGgtU2NvcGVzLCBYLVBvbGwt
-        SW50ZXJ2YWw=
-      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctb3JpZ2lu":
-      - !binary |-
-        Kg==
-      !binary "eC1naXRodWItcmVxdWVzdC1pZA==":
-      - !binary |-
-        MzI0QTE4OEE6MDIzRToyMEVFRjhBOjUzM0RCQTk0
-      !binary "eC1zZXJ2ZWQtYnk=":
-      - !binary |-
-        MDNkOTEwMjZhZDg0MjhmNGQ5OTY2ZDc0MzRmOWQ4MmU=
-      !binary "Y29udGVudC1lbmNvZGluZw==":
-      - !binary |-
-        Z3ppcA==
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA5VUwW6jMBT8lcjnpMahAcJlK/W40h5W3cP2EhkwYNXYyDaJ
-        sqj/vmOg2TbSHpCQwGZm3vD8hpEo00hNcmKNc56TLZEVyRlL0nhL+Jl7bk+D
-        VQC03vcup3TedA+N9O1QDE7Y0mgvtH8oTUcHOnG/QaixCz8okiJiyZGnWZ0d
-        2DHZR4esSuI4TnkVsce0SkC4q9PLpcYsjEKO3ly2vlN3xmZDE/gGq41S5gLm
-        /Uf8X5zeOLA0P0vdrOaDM1LjW4H+wfp7aIh0fo2RCT/ScDvJKijghKwV1Qoz
-        CwNWLhouRmpFbyapoXCllb2XRq8x9YUHHWMbruUfvlYHPAd6sLOm/IQHT5wx
-        cWuIM2GkvZVnXl5DC6wohTyjnavF7pjQ8tdeYMp/4ahDc6UXJ151IVk1V05s
-        ieZdAPxEzDbfeV0LXQjbTGhMbM/1dckYIla2XCmhm/CtU6wAKhDUf4gw4G9Q
-        WV4qU04HAMAPcdn8NvZt8yz9NTSq4zLE94Px1ISNhddKK3ihYGxxWUhDcj0o
-        tSX9UChZnuaG5wm77UxjSfJ9+hEPxAvL6FNasMTvo4S4R3u5R/19FGW76LDb
-        py8sAzlnySvsDX31GcMedxGu+IUleXTM4+Mref8LXhqEXaQEAAA=
-    http_version: !binary |-
-      MS4x
-  recorded_at: Thu, 03 Apr 2014 19:46:32 GMT
-- request:
-    method: get
     uri: https://api.github.com/orgs/challengepost/members/rossta?client_id=dummy_app_id&client_secret=dummy_secret
     body:
       encoding: US-ASCII
@@ -125,7 +21,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Thu, 03 Apr 2014 19:46:28 GMT
+      - Thu, 10 Apr 2014 21:49:27 GMT
       content-type:
       - text/html;charset=utf-8
       connection:
@@ -135,13 +31,17 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '49'
+      - '56'
       x-ratelimit-reset:
-      - '1396557269'
+      - '1397169971'
       location:
       - https://api.github.com/organizations/199945/public_members/rossta
-      x-content-type-options:
-      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
       content-length:
       - '0'
       access-control-allow-credentials:
@@ -152,7 +52,11 @@ http_interactions:
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:0242:45DD651:533DBA94
+      - 324A188A:20C3:A3C743:534711E7
+      strict-transport-security:
+      - max-age=31536000
+      x-content-type-options:
+      - nosniff
       vary:
       - Accept-Encoding
       x-served-by:
@@ -161,7 +65,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 03 Apr 2014 19:46:33 GMT
+  recorded_at: Thu, 10 Apr 2014 21:49:38 GMT
 - request:
     method: get
     uri: https://api.github.com/organizations/199945/public_members/rossta?client_id=dummy_app_id&client_secret=dummy_secret
@@ -183,7 +87,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Thu, 03 Apr 2014 19:46:28 GMT
+      - Thu, 10 Apr 2014 21:49:27 GMT
       connection:
       - close
       status:
@@ -191,13 +95,17 @@ http_interactions:
       x-ratelimit-limit:
       - '60'
       x-ratelimit-remaining:
-      - '48'
+      - '55'
       x-ratelimit-reset:
-      - '1396557269'
+      - '1397169971'
       x-github-media-type:
       - github.beta; format=json
-      x-content-type-options:
-      - nosniff
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
       access-control-allow-credentials:
       - 'true'
       access-control-expose-headers:
@@ -206,7 +114,11 @@ http_interactions:
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:023F:2FC8C06:533DBA94
+      - 324A188A:20C3:A3C79D:534711E7
+      strict-transport-security:
+      - max-age=31536000
+      x-content-type-options:
+      - nosniff
       vary:
       - Accept-Encoding
       x-served-by:
@@ -215,7 +127,7 @@ http_interactions:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 03 Apr 2014 19:46:33 GMT
+  recorded_at: Thu, 10 Apr 2014 21:49:38 GMT
 - request:
     method: get
     uri: https://api.github.com/users/rossta?client_id=dummy_app_id&client_secret=dummy_secret
@@ -227,55 +139,109 @@ http_interactions:
       - application/vnd.github.beta+json
       user-agent:
       - Octokit Ruby Gem 2.3.1
-      if-modified-since:
-      - Thu, 03 Apr 2014 16:09:39 GMT
-      if-none-match:
-      - ! '"0404f554669bd13b304e12f55f44a55e"'
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
-      code: 304
-      message: Not Modified
+      code: 200
+      message: !binary |-
+        T0s=
     headers:
-      server:
-      - GitHub.com
-      date:
-      - Thu, 03 Apr 2014 19:51:47 GMT
-      connection:
-      - close
-      status:
-      - 304 Not Modified
-      x-ratelimit-limit:
-      - '60'
-      x-ratelimit-remaining:
-      - '44'
-      x-ratelimit-reset:
-      - '1396557269'
-      cache-control:
-      - public, max-age=60, s-maxage=60
-      last-modified:
-      - Thu, 03 Apr 2014 16:09:39 GMT
-      etag:
-      - ! '"0404f554669bd13b304e12f55f44a55e"'
-      x-content-type-options:
-      - nosniff
-      access-control-allow-credentials:
-      - 'true'
-      access-control-expose-headers:
-      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
-        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
-      access-control-allow-origin:
-      - ! '*'
-      x-github-request-id:
-      - 324A188A:023B:1457ACA:533DBBD3
-      vary:
-      - Accept-Encoding
-      x-served-by:
-      - 6d7de9e645814cac34ea2a8d72ba3141
+      !binary "c2VydmVy":
+      - !binary |-
+        R2l0SHViLmNvbQ==
+      !binary "ZGF0ZQ==":
+      - !binary |-
+        VGh1LCAxMCBBcHIgMjAxNCAyMTo0OToyOSBHTVQ=
+      !binary "Y29udGVudC10eXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "dHJhbnNmZXItZW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Y29ubmVjdGlvbg==":
+      - !binary |-
+        Y2xvc2U=
+      !binary "c3RhdHVz":
+      - !binary |-
+        MjAwIE9L
+      !binary "eC1yYXRlbGltaXQtbGltaXQ=":
+      - !binary |-
+        NjA=
+      !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
+      - !binary |-
+        NTQ=
+      !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
+      - !binary |-
+        MTM5NzE2OTk3MQ==
+      !binary "Y2FjaGUtY29udHJvbA==":
+      - !binary |-
+        cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
+      !binary "bGFzdC1tb2RpZmllZA==":
+      - !binary |-
+        VGh1LCAxMCBBcHIgMjAxNCAxOToxMjo1MiBHTVQ=
+      !binary "ZXRhZw==":
+      - !binary |-
+        IjRkYWViYTRjZjYwNGI5NmMxNzkzMTBjYjkyYzU1MjhmIg==
+      !binary "dmFyeQ==":
+      - !binary |-
+        QWNjZXB0
+      - !binary |-
+        QWNjZXB0LUVuY29kaW5n
+      !binary "eC1naXRodWItbWVkaWEtdHlwZQ==":
+      - !binary |-
+        Z2l0aHViLmJldGE7IGZvcm1hdD1qc29u
+      !binary "eC14c3MtcHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "eC1mcmFtZS1vcHRpb25z":
+      - !binary |-
+        ZGVueQ==
+      !binary "Y29udGVudC1zZWN1cml0eS1wb2xpY3k=":
+      - !binary |-
+        ZGVmYXVsdC1zcmMgJ25vbmUn
+      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctY3JlZGVudGlhbHM=":
+      - !binary |-
+        dHJ1ZQ==
+      !binary "YWNjZXNzLWNvbnRyb2wtZXhwb3NlLWhlYWRlcnM=":
+      - !binary |-
+        RVRhZywgTGluaywgWC1HaXRIdWItT1RQLCBYLVJhdGVMaW1pdC1MaW1pdCwg
+        WC1SYXRlTGltaXQtUmVtYWluaW5nLCBYLVJhdGVMaW1pdC1SZXNldCwgWC1P
+        QXV0aC1TY29wZXMsIFgtQWNjZXB0ZWQtT0F1dGgtU2NvcGVzLCBYLVBvbGwt
+        SW50ZXJ2YWw=
+      !binary "YWNjZXNzLWNvbnRyb2wtYWxsb3ctb3JpZ2lu":
+      - !binary |-
+        Kg==
+      !binary "eC1naXRodWItcmVxdWVzdC1pZA==":
+      - !binary |-
+        MzI0QTE4OEE6MjBDMTo2NkExMTc6NTM0NzExRTk=
+      !binary "c3RyaWN0LXRyYW5zcG9ydC1zZWN1cml0eQ==":
+      - !binary |-
+        bWF4LWFnZT0zMTUzNjAwMA==
+      !binary "eC1jb250ZW50LXR5cGUtb3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "eC1zZXJ2ZWQtYnk=":
+      - !binary |-
+        ODhkOTI0ZWQ4NjE3MzZkMjc0OWNlMWE1NTc2NmNiNTM=
+      !binary "Y29udGVudC1lbmNvZGluZw==":
+      - !binary |-
+        Z3ppcA==
     body:
-      encoding: US-ASCII
-      string: ''
-    http_version: '1.1'
-  recorded_at: Thu, 03 Apr 2014 19:51:52 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA5VUwY6bMBT8lcjnZI1JAoRLK/VYqYdqe+heIgMGrDU2sk2i
+        FO2/dwxsuhupB05gMzNv/PyGkSjTSE1yYo1znpMtkRXJGUvS/ZbwC/fcnger
+        AGi9711O6bzpnhrp26EYnLCl0V5o/1Sajg504n6BUGMXflAkRcSSE0+zOjuy
+        UxJHx6xK9vt9yquIHdIqAeGhTi+XGrMwCjl6d9n6Tj0Ymw1N4DusNkqZK5iP
+        h/i/OL1zYGl+l7pZzQdnpMa3Av2D9bfQEOn8GiMTfqThcZZVUMANWSuqFWYW
+        BqxcNVyM1IreTFJD4Uorey+NXmPqEw86xjZcyz98rQ54DvRgZ035CQ+euGDi
+        1hBnwkh7Ky+8vIUWWFEKeUE7V4s9MKHlb73AlP/CVYfmSi/OvOpCsmqunNgS
+        zbsA+ImYbb7zuha6ELaZ0JjYnuvbkjFErGy5UkI34axTrAAqENR/iDDgr1BZ
+        PipTThcAwA9x3fw29nXzTfpbaFTHZYjvO+NrEzYWXiut4IWCscVlIQ3J9aDU
+        lvRDoWR5nhueJ/F9ZxpLksfpezwQLyyjD2nBEr+PEuIe7eUe9eMoynbRcRen
+        zywDOWfJC+wNffURww676LBj0TM75SzOj/ELefsLbSQjfqQEAAA=
+    http_version: !binary |-
+      MS4x
+  recorded_at: Thu, 10 Apr 2014 21:49:40 GMT
 recorded_with: VCR 2.2.4
