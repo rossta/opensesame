@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/orgs/challengepost/members/rossta?client_id=dummy_app_id&client_secret=dummy_secret
+    uri: https://api.github.com/orgs/challengepost/members/rossta?client_id=65c6c34afdfc113d4698&client_secret=59c44f344f9c45b4f15b03935bb2cc0501d40e46
     body:
       encoding: US-ASCII
       string: ''
@@ -21,7 +21,7 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Thu, 10 Apr 2014 22:09:16 GMT
+      - Thu, 10 Apr 2014 22:33:47 GMT
       content-type:
       - text/html;charset=utf-8
       connection:
@@ -29,9 +29,9 @@ http_interactions:
       status:
       - 302 Found
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '40'
+      - '4906'
       x-ratelimit-reset:
       - '1397169971'
       location:
@@ -52,7 +52,7 @@ http_interactions:
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:6D3D:8A2147:5347168C
+      - 324A188A:20C1:707C8D:53471C4B
       strict-transport-security:
       - max-age=31536000
       x-content-type-options:
@@ -60,15 +60,15 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - d818ddef80f4c7d10683dd483558952a
+      - c046d59f93ede9ab52d5ac29f1ed70f7
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 10 Apr 2014 22:09:27 GMT
+  recorded_at: Thu, 10 Apr 2014 22:33:58 GMT
 - request:
     method: get
-    uri: https://api.github.com/organizations/199945/public_members/rossta?client_id=dummy_app_id&client_secret=dummy_secret
+    uri: https://api.github.com/organizations/199945/public_members/rossta?client_id=65c6c34afdfc113d4698&client_secret=59c44f344f9c45b4f15b03935bb2cc0501d40e46
     body:
       encoding: US-ASCII
       string: ''
@@ -87,15 +87,15 @@ http_interactions:
       server:
       - GitHub.com
       date:
-      - Thu, 10 Apr 2014 22:09:16 GMT
+      - Thu, 10 Apr 2014 22:33:47 GMT
       connection:
       - close
       status:
       - 204 No Content
       x-ratelimit-limit:
-      - '60'
+      - '5000'
       x-ratelimit-remaining:
-      - '39'
+      - '4905'
       x-ratelimit-reset:
       - '1397169971'
       x-github-media-type:
@@ -114,7 +114,7 @@ http_interactions:
       access-control-allow-origin:
       - ! '*'
       x-github-request-id:
-      - 324A188A:6D3D:8A218E:5347168C
+      - 324A188A:20C4:38E863:53471C4B
       strict-transport-security:
       - max-age=31536000
       x-content-type-options:
@@ -122,15 +122,15 @@ http_interactions:
       vary:
       - Accept-Encoding
       x-served-by:
-      - a1d8c69b807c8e21f06cad9da377d1b0
+      - a8d8e492d6966f0c23dee2eed64c678a
     body:
       encoding: US-ASCII
       string: ''
     http_version: '1.1'
-  recorded_at: Thu, 10 Apr 2014 22:09:27 GMT
+  recorded_at: Thu, 10 Apr 2014 22:33:58 GMT
 - request:
     method: get
-    uri: https://api.github.com/users/rossta?client_id=dummy_app_id&client_secret=dummy_secret
+    uri: https://api.github.com/users/rossta?client_id=65c6c34afdfc113d4698&client_secret=59c44f344f9c45b4f15b03935bb2cc0501d40e46
     body:
       encoding: US-ASCII
       string: ''
@@ -152,7 +152,7 @@ http_interactions:
         R2l0SHViLmNvbQ==
       !binary "ZGF0ZQ==":
       - !binary |-
-        VGh1LCAxMCBBcHIgMjAxNCAyMjowOToxNiBHTVQ=
+        VGh1LCAxMCBBcHIgMjAxNCAyMjozMzo0NyBHTVQ=
       !binary "Y29udGVudC10eXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
@@ -167,10 +167,10 @@ http_interactions:
         MjAwIE9L
       !binary "eC1yYXRlbGltaXQtbGltaXQ=":
       - !binary |-
-        NjA=
+        NTAwMA==
       !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
       - !binary |-
-        Mzg=
+        NDkwNA==
       !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
       - !binary |-
         MTM5NzE2OTk3MQ==
@@ -179,10 +179,10 @@ http_interactions:
         cHVibGljLCBtYXgtYWdlPTYwLCBzLW1heGFnZT02MA==
       !binary "bGFzdC1tb2RpZmllZA==":
       - !binary |-
-        VGh1LCAxMCBBcHIgMjAxNCAxOToxMjo1MiBHTVQ=
+        VGh1LCAxMCBBcHIgMjAxNCAyMjoyMzowMiBHTVQ=
       !binary "ZXRhZw==":
       - !binary |-
-        IjRkYWViYTRjZjYwNGI5NmMxNzkzMTBjYjkyYzU1MjhmIg==
+        ImYwODJlZDZiNzhlNTFiMzBhZTQ3Y2RjMGM0Yjg3YjIyIg==
       !binary "dmFyeQ==":
       - !binary |-
         QWNjZXB0
@@ -214,7 +214,7 @@ http_interactions:
         Kg==
       !binary "eC1naXRodWItcmVxdWVzdC1pZA==":
       - !binary |-
-        MzI0QTE4OEE6NkQzRTpBNkJDMkU6NTM0NzE2OEM=
+        MzI0QTE4OEE6MjBDMzpCNEVDMTg6NTM0NzFDNEI=
       !binary "c3RyaWN0LXRyYW5zcG9ydC1zZWN1cml0eQ==":
       - !binary |-
         bWF4LWFnZT0zMTUzNjAwMA==
@@ -223,25 +223,25 @@ http_interactions:
         bm9zbmlmZg==
       !binary "eC1zZXJ2ZWQtYnk=":
       - !binary |-
-        ODhkOTI0ZWQ4NjE3MzZkMjc0OWNlMWE1NTc2NmNiNTM=
+        YzQzNmIyYjQ0MzQ1YzcyZmY5MDYwNTlmNjA0OTkxZTc=
       !binary "Y29udGVudC1lbmNvZGluZw==":
       - !binary |-
         Z3ppcA==
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAA5VUwY6bMBT8lcjnZI1JAoRLK/VYqYdqe+heIgMGrDU2sk2i
-        FO2/dwxsuhupB05gMzNv/PyGkSjTSE1yYo1znpMtkRXJGUvS/ZbwC/fcnger
-        AGi9711O6bzpnhrp26EYnLCl0V5o/1Sajg504n6BUGMXflAkRcSSE0+zOjuy
-        UxJHx6xK9vt9yquIHdIqAeGhTi+XGrMwCjl6d9n6Tj0Ymw1N4DusNkqZK5iP
-        h/i/OL1zYGl+l7pZzQdnpMa3Av2D9bfQEOn8GiMTfqThcZZVUMANWSuqFWYW
-        BqxcNVyM1IreTFJD4Uorey+NXmPqEw86xjZcyz98rQ54DvRgZ035CQ+euGDi
-        1hBnwkh7Ky+8vIUWWFEKeUE7V4s9MKHlb73AlP/CVYfmSi/OvOpCsmqunNgS
-        zbsA+ImYbb7zuha6ELaZ0JjYnuvbkjFErGy5UkI34axTrAAqENR/iDDgr1BZ
-        PipTThcAwA9x3fw29nXzTfpbaFTHZYjvO+NrEzYWXiut4IWCscVlIQ3J9aDU
-        lvRDoWR5nhueJ/F9ZxpLksfpezwQLyyjD2nBEr+PEuIe7eUe9eMoynbRcRen
-        zywDOWfJC+wNffURww676LBj0TM75SzOj/ELefsLbSQjfqQEAAA=
+        H4sIAAAAAAAAA5VUwW6jMBT8lcjnpDYkAcplK/W40h5W3cP2EhkwYNXYyDaJ
+        sqj/vmOg2TbSHjiBzcy88fMbRqJMIzXJiTXOeU62RFYkj6Ik3W8JP3PP7Wmw
+        CoDW+97llM6b7qGRvh2KwQlbGu2F9g+l6ehAJ+43CDV24QdFUrAoeeRpVmfH
+        6DGJ2TGrkv1+n/KKRYe0SkC4q9PLpcYsjEKO3ly2vlN3xmZDE/gGq41S5gLm
+        /SH+L05vHFia36VuVvPBGanxrUD/YP09NEQ6v8bIhB9peJxkFRRwQ9aKaoWZ
+        hQErFw0XI7WiN5PUULjSyt5Lo9eY+sKDjrEN1/IPX6sDngM92FlTfsKDJ86Y
+        uDXEmTDS3sozL6+hBVaUQp7RztVid0xo+WsvMOW/cNWhudKLE6+6kKyaKye2
+        RPMuAH4iZpvvvK6FLoRtJjQmtuf6umQMEStbrpTQTTjrFCuACgT1HyIM+BtU
+        lo/KlNMFAPBDXDa/jX3bPEt/DY3quAzx/WA8NWFj4bXSCl4oGFtcFtKQXA9K
+        bUk/FEqWp7nheRLfdqaxJHmcfsQD8cKSfUoLlvh9lBD3aC/3qB8zlu3YcRen
+        L1EGch4lr7A39NVnTHTYscMuYi9xDImcxa/k/S+8Ojn/pAQAAA==
     http_version: !binary |-
       MS4x
-  recorded_at: Thu, 10 Apr 2014 22:09:27 GMT
+  recorded_at: Thu, 10 Apr 2014 22:33:58 GMT
 recorded_with: VCR 2.2.4

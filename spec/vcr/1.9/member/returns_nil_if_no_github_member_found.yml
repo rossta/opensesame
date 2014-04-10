@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/orgs/challengepost/members/-1?client_id=dummy_app_id&client_secret=dummy_secret
+    uri: https://api.github.com/orgs/challengepost/members/-1?client_id=65c6c34afdfc113d4698&client_secret=59c44f344f9c45b4f15b03935bb2cc0501d40e46
     body:
       encoding: US-ASCII
       string: ''
@@ -24,7 +24,7 @@ http_interactions:
         R2l0SHViLmNvbQ==
       !binary "ZGF0ZQ==":
       - !binary |-
-        VGh1LCAxMCBBcHIgMjAxNCAyMjowOToxNSBHTVQ=
+        VGh1LCAxMCBBcHIgMjAxNCAyMjozMzo0NyBHTVQ=
       !binary "Y29udGVudC10eXBl":
       - !binary |-
         YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
@@ -39,10 +39,10 @@ http_interactions:
         NDA0IE5vdCBGb3VuZA==
       !binary "eC1yYXRlbGltaXQtbGltaXQ=":
       - !binary |-
-        NjA=
+        NTAwMA==
       !binary "eC1yYXRlbGltaXQtcmVtYWluaW5n":
       - !binary |-
-        NDQ=
+        NDkwMw==
       !binary "eC1yYXRlbGltaXQtcmVzZXQ=":
       - !binary |-
         MTM5NzE2OTk3MQ==
@@ -72,7 +72,7 @@ http_interactions:
         Kg==
       !binary "eC1naXRodWItcmVxdWVzdC1pZA==":
       - !binary |-
-        MzI0QTE4OEE6NkQzODo1NEY4Qzo1MzQ3MTY4Qg==
+        MzI0QTE4OEE6MjBDMDo0OTI1NzE6NTM0NzFDNEI=
       !binary "c3RyaWN0LXRyYW5zcG9ydC1zZWN1cml0eQ==":
       - !binary |-
         bWF4LWFnZT0zMTUzNjAwMA==
@@ -90,5 +90,5 @@ http_interactions:
         TUJNAAAA
     http_version: !binary |-
       MS4x
-  recorded_at: Thu, 10 Apr 2014 22:09:26 GMT
+  recorded_at: Thu, 10 Apr 2014 22:33:59 GMT
 recorded_with: VCR 2.2.4

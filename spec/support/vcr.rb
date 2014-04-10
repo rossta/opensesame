@@ -3,7 +3,8 @@ require 'vcr'
 require 'fakeweb'
 
 VCR.configure do |c|
-  c.cassette_library_dir  = 'spec/vcr'
+  ruby_major_minor = RUBY_VERSION.split('.')[0,2].join('.')
+  c.cassette_library_dir  = "spec/vcr/#{ruby_major_minor}"
   c.allow_http_connections_when_no_cassette = true
   c.hook_into :fakeweb
 end
