@@ -8,6 +8,10 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 
+if ENV['DEVISE'] == 'require'
+  gem 'devise'
+end
+
 gem "pry"
 gem "pry-debugger"
 

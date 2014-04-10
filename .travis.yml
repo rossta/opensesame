@@ -1,3 +1,7 @@
+env:
+  - "DEVISE=require"
+  - "DEVISE=ignore"
+
 rvm:
   - 2.0.0
   - 1.9.3
