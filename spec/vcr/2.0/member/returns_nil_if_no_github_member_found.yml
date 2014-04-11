@@ -1,6 +1,67 @@
 ---
 http_interactions:
-- :request: 
-  :response: 
-  :recorded_at: 
-recorded_with: VCR 2.2.4
+- request:
+    method: get
+    uri: https://api.github.com/orgs/challengepost/members/-1?client_id=65c6c34afdfc113d4698&client_secret=59c44f344f9c45b4f15b03935bb2cc0501d40e46
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.github.beta+json
+      user-agent:
+      - Octokit Ruby Gem 2.3.1
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      server:
+      - GitHub.com
+      date:
+      - Fri, 11 Apr 2014 14:53:17 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 404 Not Found
+      x-ratelimit-limit:
+      - '5000'
+      x-ratelimit-remaining:
+      - '4957'
+      x-ratelimit-reset:
+      - '1397230923'
+      x-github-media-type:
+      - github.beta; format=json
+      x-xss-protection:
+      - 1; mode=block
+      x-frame-options:
+      - deny
+      content-security-policy:
+      - default-src 'none'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-expose-headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      access-control-allow-origin:
+      - '*'
+      x-github-request-id:
+      - 324A188A:013F:2A312D:534801DD
+      strict-transport-security:
+      - max-age=31536000
+      x-content-type-options:
+      - nosniff
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not Found","documentation_url":"https://developer.github.com/v3"}'
+    http_version: '1.1'
+  recorded_at: Fri, 11 Apr 2014 14:53:28 GMT
+recorded_with: VCR 2.9.0
