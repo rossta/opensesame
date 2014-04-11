@@ -1,6 +1,7 @@
-if ENV['DEVISE_VERSION'] != 'ignore'
-  Rails.logger.info "Loading Devise version #{ENV['DEVISE_VERSION']}"
+begin
   require 'devise'
+  require 'devise/version'
+  Rails.logger.info "Loading Devise version #{Devise::VERSION}"
 
   # Use this hook to configure devise mailer, warden hooks and so forth.
   # Many of these configuration options can be set straight in your model.
@@ -260,6 +261,7 @@ if ENV['DEVISE_VERSION'] != 'ignore'
     # so you need to do it manually. For the users scope, it would be:
     # config.omniauth_path_prefix = '/my_engine/users/auth'
   end
-else
+rescue LoadError
+
   Rails.logger.info("Ignoring Devise")
 end
