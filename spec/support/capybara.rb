@@ -25,4 +25,4 @@ module GeneralHelper
 end
 
 RSpec.configuration.send :include, GeneralHelper
-RSpec.configuration.send :include, CapybaraHelper, :type => :request
+RSpec.configuration.send :include, CapybaraHelper, :type => :feature

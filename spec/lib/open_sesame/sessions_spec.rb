@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Session", :vcr, :record => :new_episodes, :type => :request do
+describe "Session", :vcr, :record => :new_episodes, :type => :feature do
   context "successful login" do
     before { setup_for_github_login }
 
