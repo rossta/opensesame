@@ -1,9 +1,11 @@
 env:
-  - "DEVISE=require"
-  - "DEVISE=ignore"
-
+  matrix:
+  - DEVISE=require
+  - DEVISE=ignore
+  global:
+  - secure: oQs2AG/S1KoECnRqrg8htnB+D8lbrphR2RCz8GbYkCzK8ksR0scXM/kBnhV0oTel1H2mMPU29Gopr/uL+gcExVTF+nMOGZh5guTpZdWD49AnWQqIdKGlpyzOBGHPw3A1a9h50lLQi/CEmoDkeAMwA0pAFt5MRgLELPU9O3p/t8Q=
+  - secure: TUP2EXBw9M+pRSfjfFNKpcr8cxksg38tco4NvLsHZE5skuzMsxTaL/KG0gf7/GqQI1xxpFwj2SFD3NtKRDf5mJHeRQtsVPHznnFJ1GtekVy9PE3/ixppfF5Y32JIYFbjBxoZ9Qfa9P7aY8tBnfShzXw6yGkzsEApIT35WnGCbbM=
 rvm:
-  - 2.0.0
-  - 1.9.3
-
-before_script: "sh -c 'cd spec/dummy && bundle exec rake db:create db:migrate'"
+- 2.0.0
+- 1.9.3
+before_script: sh -c 'cd spec/dummy && bundle exec rake db:create db:migrate'
