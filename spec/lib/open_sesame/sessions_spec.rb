@@ -15,7 +15,7 @@ describe "Session", :vcr, :record => :new_episodes, :type => :request do
     end
 
     describe "auto login" do
-      before { OpenSesame.stub!(:auto_access_provider).and_return('github') }
+      before { OpenSesame.stub(:auto_access_provider => 'github') }
 
       it "allows auto login" do
         visit root_path
