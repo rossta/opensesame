@@ -8,8 +8,12 @@ gemspec
 # jquery-rails is used by the dummy application
 gem "jquery-rails"
 
-if ENV['DEVISE'] == 'require'
-  gem 'devise'
+devise_version = ENV.fetch('DEVISE_VERSION') { 'ignore' }
+case devise_version
+when 'ignore'
+  # don't include
+else
+  gem 'devise', "~> #{devise_version}"
 end
 
 gem "pry"

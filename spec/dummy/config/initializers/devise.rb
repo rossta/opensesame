@@ -1,4 +1,5 @@
-if ENV['DEVISE'] == 'require'
+if ENV['DEVISE_VERSION'] != 'ignore'
+  Rails.logger.info "Loading Devise version #{ENV['DEVISE_VERSION']}"
   require 'devise'
 
   # Use this hook to configure devise mailer, warden hooks and so forth.
@@ -7,7 +8,9 @@ if ENV['DEVISE'] == 'require'
     # The secret key used by Devise. Devise uses this key to generate
     # random tokens. Changing this key will render invalid all existing
     # confirmation, reset password and unlock tokens in the database.
-    config.secret_key = '6085f5216b0ce333f6b83443853c4afa38f8aaa97f22460ff622ab43298fdb60201946abba17250ba5bed603bc100e0762f12e22d113a26d8a4a939bc301e90e'
+    if config.respond_to?(:secret_key=)
+      config.secret_key = '6085f5216b0ce333f6b83443853c4afa38f8aaa97f22460ff622ab43298fdb60201946abba17250ba5bed603bc100e0762f12e22d113a26d8a4a939bc301e90e'
+    end
 
     # ==> Mailer Configuration
     # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -257,4 +260,6 @@ if ENV['DEVISE'] == 'require'
     # so you need to do it manually. For the users scope, it would be:
     # config.omniauth_path_prefix = '/my_engine/users/auth'
   end
+else
+  Rails.logger.info("Ignoring Devise")
 end
