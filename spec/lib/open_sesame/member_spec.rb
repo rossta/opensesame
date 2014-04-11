@@ -1,10 +1,9 @@
 require 'spec_helper'
 
 describe OpenSesame::Member, :vcr, :record => :new_episodes do
-  ROSSTA = { :login => 'rossta', :id => 11673 }
 
-  let(:github_login) { ROSSTA[:login] }
-  let(:github_id) { ROSSTA[:id] }
+  let(:github_login) { user_attributes[:login] }
+  let(:github_id) { user_attributes[:id] }
 
   describe "self.find" do
     it "retrieves attributes from github" do

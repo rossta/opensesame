@@ -29,12 +29,7 @@ module OpenSesame
           :path_prefix => OpenSesame.mount_prefix
 
         if defined?(Devise)
-          Devise.setup do |config|
-            config.warden do |manager|
-              manager.default_strategies(:opensesame_github, :scope => :opensesame)
-            end
-          end
-          Devise.add_mapping(:opensesame, {failure_app: OpenSesame::Failure::DeviseApp.new})
+          require 'open_sesame/devise'
         else
           app.config.middleware.use ::Warden::Manager do |manager|
             manager.default_strategies(:opensesame_github, :scope => :opensesame)

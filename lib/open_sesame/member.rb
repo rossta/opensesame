@@ -20,7 +20,7 @@ module OpenSesame
     def self.find_member(member_login)
       members.detect { |m| m.login == member_login } || begin
         client.user(member_login)
-      rescue Octokit::Error => e
+      rescue Octokit::Error => ek
         OpenSesame.logger.info e
       end
     end
@@ -45,7 +45,7 @@ module OpenSesame
     def self.client
       @client ||= begin
         require "faraday-http-cache"
-        stack = Faraday::Builder.new do |builder|
+        stack = Faraday::RackBuilder.new do |builder|
           builder.response :logger, OpenSesame.logger
           builder.use Faraday::HttpCache unless OpenSesame.debug?
           builder.use Octokit::Response::RaiseError

@@ -2,8 +2,6 @@ require "opensesame"
 
 app_id  = ENV['GITHUB_APP_ID']
 secret  = ENV['GITHUB_SECRET']
-login   = ENV['GITHUB_LOGIN']
-token   = ENV['GITHUB_OAUTH_TOKEN']
 
 if app_id.nil?
   puts "Setting app_id to dummy string"
@@ -20,4 +18,5 @@ OpenSesame.configure do |config|
   config.organization 'challengepost'
   config.mounted_at   '/opensesame'
   config.github app_id, secret
+  config.debug = true
 end
