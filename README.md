@@ -11,7 +11,9 @@ Enter OpenSesame. To authenticate, OpenSesame currently uses Omniauth and the Gi
 
 In your Gemfile:
 
-    $ gem "opensesame"
+```ruby
+gem "opensesame"
+```
 
 Register your application(s) with Github for OAuth access. For each application, you need a name, the site url,
 and a callback for OAuth. The OmniAuth-Github OAuth strategy used under the hood will expect the callback at mount path + '/github/callback'. So the development version of your client application might be registered as:
