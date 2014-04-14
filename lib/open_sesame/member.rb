@@ -45,7 +45,7 @@ module OpenSesame
     def self.client
       @client ||= begin
         require "faraday-http-cache"
-        stack = Faraday::RackBuilder.new do |builder|
+        stack = faraday_builder.new do |builder|
           builder.response :logger, OpenSesame.logger
           builder.use Faraday::HttpCache unless OpenSesame.debug?
           builder.use Octokit::Response::RaiseError
@@ -77,6 +77,13 @@ module OpenSesame
     def self.serialize_from_session(*args)
       login = args.shift
       find(login)
+    end
+
+    # Faraday v0.9.0 deprecated Faraday::Builder
+    def self.faraday_builder
+      Faraday::RackBuilder
+    rescue NameError
+      Faraday::Builder
     end
 
     attr_accessor :attributes
