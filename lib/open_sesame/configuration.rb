@@ -10,7 +10,9 @@ module OpenSesame
       :enabled,
       :debug,
       :full_host,
-      :auto_access_provider
+      :auto_access_provider,
+      :after_login_redirect_to,
+      :after_logout_redirect_to
     ]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
@@ -48,6 +50,19 @@ module OpenSesame
 
     def enable(enabled)
       self.enabled = !!enabled
+    end
+
+    def redirect_to(to)
+      self.after_login_redirect_to = to
+      self.after_logout_redirect_to = to
+    end
+
+    def redirect_after_login(to)
+      self.after_login_redirect_to = to
+    end
+
+    def redirect_after_logout(to)
+      self.after_logout_redirect_to = to
     end
 
     def enabled?
