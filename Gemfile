@@ -22,4 +22,4 @@ end
 
 gem "pry"
 gem "pry-debugger", :platforms => :mri_19
-gem "pry-byebug", :platforms => [:mri_20, :mri_21, :mri_22]
+gem "pry-byebug", :platforms => [:mri_20, :mri_21]
