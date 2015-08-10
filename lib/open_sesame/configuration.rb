@@ -11,8 +11,8 @@ module OpenSesame
       :debug,
       :full_host,
       :auto_access_provider,
-      :after_login_redirect_to,
-      :after_logout_redirect_to
+      :after_login_path,
+      :after_logout_path
     ]
     attr_accessor *CONFIGURABLE_ATTRIBUTES
 
@@ -53,16 +53,16 @@ module OpenSesame
     end
 
     def redirect_to(to)
-      self.after_login_redirect_to = to
-      self.after_logout_redirect_to = to
+      self.after_login_path = to
+      self.after_logout_path = to
     end
 
     def redirect_after_login(to)
-      self.after_login_redirect_to = to
+      self.after_login_path = to
     end
 
     def redirect_after_logout(to)
-      self.after_logout_redirect_to = to
+      self.after_logout_path = to
     end
 
     def enabled?

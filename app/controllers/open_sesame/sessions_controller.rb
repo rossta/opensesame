@@ -15,12 +15,12 @@ module OpenSesame
 
     def create
       login_opensesame
-      redirect_to after_login_redirect_to
+      redirect_to after_login_path
     end
 
     def destroy
       logout_opensesame
-      redirect_to after_logout_redirect_to
+      redirect_to after_logout_path
     end
 
     def failure
@@ -68,12 +68,12 @@ module OpenSesame
       flash[:notice] = "Logged out!"
     end
 
-    def after_login_redirect_to
-      OpenSesame.after_login_redirect_to || main_app.root_url
+    def after_login_path
+      OpenSesame.after_login_path || main_app.root_url
     end
 
-    def after_logout_redirect_to
-      OpenSesame.after_logout_redirect_to || main_app.root_url
+    def after_logout_path
+      OpenSesame.after_logout_path || main_app.root_url
     end
 
   end

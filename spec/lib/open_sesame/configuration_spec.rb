@@ -33,18 +33,18 @@ describe OpenSesame::Configuration do
 
   it "sets all redirects to" do
     configuration.redirect_to "/foobar"
-    configuration.after_login_redirect_to.should == "/foobar"
-    configuration.after_logout_redirect_to.should == "/foobar"
+    configuration.after_login_path.should == "/foobar"
+    configuration.after_logout_path.should == "/foobar"
   end
 
-  it "sets after_login redirect_to" do
+  it "sets after_login path" do
     configuration.redirect_after_login "/foobar"
-    configuration.after_login_redirect_to.should == "/foobar"
+    configuration.after_login_path.should == "/foobar"
   end
 
   it "sets after_logout redirect_to" do
     configuration.redirect_after_logout "/foobar"
-    configuration.after_logout_redirect_to.should == "/foobar"
+    configuration.after_logout_path.should == "/foobar"
   end
 
   describe "valid?" do
