@@ -16,7 +16,7 @@ module OpenSesame
       include OpenSesame::Helpers::ViewHelper
     end
 
-    initializer "openseseame precompile" do |app|
+    initializer "opensesame.precompile" do |app|
       app.config.assets.precompile += ['open_sesame/opensesame.css']
     end
 
