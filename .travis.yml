@@ -13,3 +13,4 @@ rvm:
 - 2.0.0
 - 1.9.3
 before_script: sh -c 'cd spec/dummy && bundle exec rake db:create db:migrate'
+cache: bundler
