@@ -21,4 +21,5 @@ else
 end
 
 gem "pry"
-gem "pry-debugger"
+gem "pry-debugger", :platforms => :mri_19
+gem "pry-byebug", :platforms => [:mri_20, :mri_21]

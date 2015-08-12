@@ -34,6 +34,10 @@ OpenSesame.configure do |config|
   config.github ENV['GITHUB_APP_ID'], ENV['GITHUB_SECRET']
   config.organization 'challengepost'
   config.mounted_at   '/opensesame'
+
+  config.redirect_to '/path' # Set redirect to for both login and logout
+  config.redirect_after_login '/path'
+  config.redirect_after_logout '/path'
 end
 ```
 

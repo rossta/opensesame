@@ -31,6 +31,22 @@ describe OpenSesame::Configuration do
     configuration.auto_access_provider.should == "github"
   end
 
+  it "sets all redirects to" do
+    configuration.redirect_to "/foobar"
+    configuration.after_login_path.should == "/foobar"
+    configuration.after_logout_path.should == "/foobar"
+  end
+
+  it "sets after_login path" do
+    configuration.redirect_after_login "/foobar"
+    configuration.after_login_path.should == "/foobar"
+  end
+
+  it "sets after_logout redirect_to" do
+    configuration.redirect_after_logout "/foobar"
+    configuration.after_logout_path.should == "/foobar"
+  end
+
   describe "valid?" do
     it "false when values not set" do
       configuration.organization "challengepost"
