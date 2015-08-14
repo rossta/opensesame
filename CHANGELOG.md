@@ -1,3 +1,9 @@
+## 0.4.0
+
+  * Ability to configure redirect paths (@jcmuller)
+  * Added pry debugging gems for development (@jcmuller)
+  * Support for Faraday pre v0.9.0
+
 ## 0.3.0
 
   * Support for Rails `>= 3.2`
