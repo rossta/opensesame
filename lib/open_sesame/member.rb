@@ -20,17 +20,21 @@ module OpenSesame
     def self.find_member(member_login)
       members.detect { |m| m.login == member_login } || begin
         client.user(member_login)
-      rescue Octokit::Error => ek
+      rescue Octokit::Error => e
         OpenSesame.logger.info e
       end
     end
 
     def self.member?(member_login)
-      member_logins.include?(member_login) || begin
+      member_logins.include?(member_login) ||
+        vetted_github_login?(member_login) ||
         client.organization_member?(organization_name, member_login)
-      rescue Octokit::ServerError => e
-        OpenSesame.logger.info e
-      end
+    rescue Octokit::ServerError => e
+      OpenSesame.logger.info e
+    end
+
+    def self.vetted_github_login?(member_login)
+      OpenSesame.vetted_github_logins.include?(member_login)
     end
 
     # memoized list of accepted member
