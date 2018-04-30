@@ -33,7 +33,7 @@ module OpenSesame
       OpenSesame.logger.info e
     end
 
-    def vetted_github_login?(member_login)
+    def self.vetted_github_login?(member_login)
       OpenSesame.vetted_github_logins.include?(member_login)
     end
 
