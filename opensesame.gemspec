@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 3.2"
   s.add_dependency "omniauth-github"
-  s.add_dependency "octokit", "~> 2.3"
+  s.add_dependency 'octokit', '~> 4.16'
   s.add_dependency "faraday-http-cache"
   s.add_dependency "warden"
 
