@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :authenticate_opensesame!
+  before_action :authenticate_opensesame!
 end

@@ -51,5 +51,5 @@ mount OpenSesame::Engine => OpenSesame.mount_prefix
 Place the following in your application_controller:
 
 ```ruby
-before_filter :authenticate_opensesame!
+before_action :authenticate_opensesame!
 ```

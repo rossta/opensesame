@@ -1,10 +1,10 @@
 module OpenSesame
   class SessionsController < OpenSesame::ApplicationController
 
-    skip_before_filter :authenticate_opensesame!
+    skip_before_action :authenticate_opensesame!, raise: false
     skip_authorization_check if defined?(CanCan)
-    before_filter :attempt_auto_authenticate, :only => :new
-    after_filter :clear_auto_attempt!, :only => :create
+    before_action :attempt_auto_authenticate, :only => :new
+    after_action :clear_auto_attempt!, :only => :create
 
     def new
       if error_message
