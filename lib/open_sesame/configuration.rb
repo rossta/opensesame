@@ -10,6 +10,7 @@ module OpenSesame
       :enabled,
       :debug,
       :full_host,
+      :vetted_github_logins,
       :auto_access_provider,
       :after_login_path,
       :after_logout_path

@@ -18,5 +18,6 @@ OpenSesame.configure do |config|
   config.organization 'challengepost'
   config.mounted_at   '/opensesame'
   config.github app_id, secret
+  config.vetted_github_logins = []
   config.debug = true
 end
